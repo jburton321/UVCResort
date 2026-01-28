@@ -55,7 +55,7 @@ export function BookingCard({
         </h3>
       </div>
 
-      <div className="bg-gray-100 py-3 sm:py-4 px-3 sm:px-4">
+      <div className="bg-gray-100 py-3 sm:py-4 pr-3 sm:pr-4">
         <div className="flex items-center gap-2 sm:gap-4">
           <div className="bg-violet-700 text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight">
             <div>84%</div>
