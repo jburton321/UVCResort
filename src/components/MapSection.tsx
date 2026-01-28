@@ -7,8 +7,8 @@ const locations = [
   {
     id: 'hyatt',
     name: 'Hyatt Zilara',
-    distance: 'Your Resort',
-    time: '',
+    distance: 'Carretera Federal 387, Km 299 Solidaridad,',
+    time: 'Riviera Maya, QR, 77710, Mexico',
     lat: 20.6976,
     lng: -87.0198,
     isMain: true,
@@ -57,7 +57,7 @@ function createLocationMarker(location: typeof locations[0]) {
   const textColor = isMain ? 'rgb(37, 99, 235)' : 'rgb(249, 115, 22)';
 
   const distanceText = isMain
-    ? location.distance
+    ? `${location.distance}<br/>${location.time}`
     : `${location.distance} | ${location.time}`;
 
   const html = `
