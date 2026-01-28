@@ -1,7 +1,6 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { divIcon } from 'leaflet';
 import { Navigation, ExternalLink } from 'lucide-react';
-import { renderToString } from 'react-dom/server';
 import 'leaflet/dist/leaflet.css';
 
 const locations = [
@@ -52,46 +51,36 @@ const locations = [
   },
 ];
 
-function createLocationIcon(location: typeof locations[0]) {
+function createLocationMarker(location: typeof locations[0]) {
   const isMain = location.isMain;
   const color = isMain ? '#2563eb' : '#f97316';
+  const textColor = isMain ? 'rgb(37, 99, 235)' : 'rgb(249, 115, 22)';
+
+  const distanceText = isMain
+    ? location.distance
+    : `${location.distance} | ${location.time}`;
 
   const html = `
-    <div style="position: relative; transform: translate(-16px, -40px);">
-      <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
-        <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
-        <circle cx="16" cy="16" r="4" fill="white"/>
-      </svg>
+    <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content;">
+      <div style="flex-shrink: 0;">
+        <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
+          <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
+          <circle cx="16" cy="16" r="4" fill="white"/>
+        </svg>
+      </div>
+      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; white-space: nowrap;">
+        <h3 style="font-weight: bold; color: rgb(17, 24, 39); font-size: 16px; line-height: 1.2; margin: 0 0 4px 0;">${location.name}</h3>
+        <p style="color: rgb(75, 85, 99); font-size: 14px; margin: 0;">${distanceText}</p>
+      </div>
     </div>
   `;
 
   return divIcon({
     html,
     className: 'custom-location-marker',
-    iconSize: [32, 40],
-    iconAnchor: [16, 40],
+    iconSize: [400, 80],
+    iconAnchor: [16, 20],
   });
-}
-
-function LocationTooltip({ location }: { location: typeof locations[0] }) {
-  const isMain = location.isMain;
-
-  return (
-    <div className="flex items-center gap-3 bg-white rounded-lg shadow-lg px-4 py-3 whitespace-nowrap border-0 m-0 min-w-[200px]">
-      <div className={`flex-shrink-0 ${isMain ? 'text-blue-600' : 'text-orange-500'}`}>
-        <svg width="32" height="40" viewBox="0 0 32 40" fill="currentColor">
-          <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
-          <circle cx="16" cy="16" r="4" fill="white"/>
-        </svg>
-      </div>
-      <div className="text-left">
-        <h3 className="font-bold text-gray-900 text-base leading-tight">{location.name}</h3>
-        <p className="text-gray-600 text-sm">
-          {isMain ? location.distance : `${location.distance} | ${location.time}`}
-        </p>
-      </div>
-    </div>
-  );
 }
 
 export function MapSection() {
@@ -127,19 +116,8 @@ export function MapSection() {
               <Marker
                 key={location.id}
                 position={[location.lat, location.lng]}
-                icon={createLocationIcon(location)}
-              >
-                <Popup
-                  closeButton={false}
-                  autoClose={false}
-                  closeOnClick={false}
-                  className="custom-popup"
-                  permanent={true}
-                  offset={[0, -40]}
-                >
-                  <LocationTooltip location={location} />
-                </Popup>
-              </Marker>
+                icon={createLocationMarker(location)}
+              />
             ))}
           </MapContainer>
 
