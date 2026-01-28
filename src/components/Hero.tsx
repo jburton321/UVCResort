@@ -17,7 +17,7 @@ export function Hero() {
                 alt="Mexico destination"
               />
               <img
-                className="w-full h-auto -mt-8 sm:-mt-10 md:-mt-12"
+                className="w-full h-auto"
                 src="layer-0-10.png"
                 alt="Resort view"
               />
