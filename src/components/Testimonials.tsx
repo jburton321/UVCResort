@@ -47,34 +47,34 @@ const galleryImages = [
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <article className="bg-gray-100 rounded-2xl p-6 flex flex-col h-full max-w-xs">
-      <div className="flex items-start gap-3 mb-6">
+    <article className="bg-gray-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col h-full w-full sm:max-w-xs">
+      <div className="flex items-start gap-3 mb-4 sm:mb-6">
         <img
           src={review.avatar}
           alt={review.name}
-          className="w-10 h-10 rounded-full object-cover"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0"
         />
-        <div>
-          <h4 className="font-bold text-sm text-gray-900">{review.name}</h4>
+        <div className="min-w-0">
+          <h4 className="font-bold text-sm text-gray-900 truncate">{review.name}</h4>
           <p className="text-gray-500 text-xs">{review.date}</p>
         </div>
       </div>
 
-      <div className="flex gap-1 mb-4">
+      <div className="flex gap-0.5 sm:gap-1 mb-3 sm:mb-4">
         {Array.from({ length: review.rating }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+          <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400 text-amber-400" />
         ))}
       </div>
 
-      <p className="text-gray-800 text-sm leading-relaxed flex-1">
+      <p className="text-gray-800 text-xs sm:text-sm leading-relaxed flex-1">
         {review.text}
       </p>
 
-      <div className="mt-6">
+      <div className="mt-4 sm:mt-6">
         <img
           src="_67-d-0924777-f-9-fd-4-ea-51-ba-47-f-tripadvisor-svg0.svg"
           alt="TripAdvisor"
-          className="h-5"
+          className="h-4 sm:h-5"
         />
       </div>
     </article>
@@ -83,22 +83,22 @@ function ReviewCard({ review }: { review: Review }) {
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-24 px-4">
+    <section className="bg-white py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-gray-800 text-3xl font-bold text-center uppercase mb-16">
+        <h2 className="text-gray-800 text-2xl sm:text-3xl font-bold text-center uppercase mb-8 sm:mb-12 md:mb-16">
           Guest Reviews
         </h2>
 
-        <Gallery images={galleryImages} className="mb-12" />
+        <Gallery images={galleryImages} className="mb-8 sm:mb-10 md:mb-12" />
 
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <Button className="w-full max-w-3xl">Reserve Now</Button>
+        <div className="mt-10 sm:mt-12 md:mt-16 flex justify-center px-2">
+          <Button className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[400px] lg:max-w-3xl">Reserve Now</Button>
         </div>
       </div>
     </section>

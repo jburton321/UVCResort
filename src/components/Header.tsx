@@ -15,23 +15,23 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
-          <div className="p-2">
+          <div className="p-1 sm:p-2">
             <img
-              className="h-6 w-auto"
+              className="h-5 sm:h-6 w-auto"
               src="vacation-vip-full-color-horiz0.png"
               alt="VacationVIP Logo"
             />
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8">
-            <ul className="flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <ul className="flex items-center gap-4 xl:gap-6">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href="#"
-                    className={`text-sm font-normal uppercase tracking-wide transition-colors ${
+                    className={`text-sm font-normal uppercase tracking-wide transition-colors py-2 ${
                       link.active
                         ? 'text-rose-500'
                         : 'text-gray-800 hover:text-rose-500'
@@ -46,9 +46,10 @@ export function Header() {
           </nav>
 
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-3 -mr-2 min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -56,12 +57,12 @@ export function Header() {
 
         {mobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href="#"
-                    className={`text-sm font-normal uppercase tracking-wide ${
+                    className={`block py-4 px-2 text-base font-normal uppercase tracking-wide min-h-[48px] flex items-center touch-manipulation active:bg-gray-100 ${
                       link.active ? 'text-rose-500' : 'text-gray-800'
                     }`}
                   >
@@ -70,8 +71,8 @@ export function Header() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4">
-              <Button variant="small">reserve now</Button>
+            <div className="mt-4 px-2">
+              <Button variant="small" className="w-full min-h-[48px]">reserve now</Button>
             </div>
           </nav>
         )}

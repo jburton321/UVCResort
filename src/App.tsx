@@ -12,6 +12,7 @@ import {
   Testimonials,
   Location,
   Footer,
+  MobileStickyCTA,
 } from "./components";
 
 const galleryImages = [
@@ -27,7 +28,7 @@ const galleryImages = [
 
 export default function App() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pb-20 lg:pb-0">
       <Header />
       <main>
         <Hero />
@@ -37,7 +38,7 @@ export default function App() {
         <ParadiseSection />
         <Amenities />
         <img
-          className="w-full h-auto"
+          className="w-full h-auto hidden sm:block"
           src="frame-19840779510.svg"
           alt="Decorative divider"
         />
@@ -45,12 +46,13 @@ export default function App() {
         <Testimonials />
         <Location />
         <img
-          className="w-full h-56 object-cover"
+          className="w-full h-32 sm:h-40 md:h-56 object-cover"
           src="frame-19840779511.png"
           alt="Beach scene"
         />
       </main>
       <Footer />
+      <MobileStickyCTA />
     </div>
   );
 }

@@ -13,11 +13,11 @@ export function Button({
   className = '',
   onClick
 }: ButtonProps) {
-  const baseStyles = 'bg-violet-700 text-white text-center font-bold uppercase tracking-wide cursor-pointer transition-colors hover:bg-violet-800';
+  const baseStyles = 'bg-violet-700 text-white text-center font-bold uppercase tracking-wide cursor-pointer transition-all hover:bg-violet-800 active:scale-[0.98] touch-manipulation';
 
   const variantStyles = {
-    primary: 'rounded-3xl py-3.5 px-16 text-base',
-    small: 'rounded-3xl py-1 px-3 text-xs w-32'
+    primary: 'rounded-3xl py-3 sm:py-3.5 px-8 sm:px-16 text-sm sm:text-base min-h-[48px]',
+    small: 'rounded-3xl py-2 px-4 text-xs min-h-[44px] min-w-[100px] sm:min-w-[120px]'
   };
 
   return (

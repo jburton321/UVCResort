@@ -23,27 +23,27 @@ const whyYouGetIt = `The only thing you need to do to unlock this Incredible pri
 
 export function AboutPackage() {
   return (
-    <section className="bg-white py-20 px-4 lg:px-10">
+    <section className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-10">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-navy-900 text-3xl font-bold uppercase tracking-tight">
+        <div className="text-center mb-8 sm:mb-10 md:mb-14">
+          <h2 className="text-slate-800 text-2xl sm:text-3xl font-bold uppercase tracking-tight">
             About This Package
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <article className="flex flex-col gap-8">
-            <header className="bg-gray-800 py-3 px-5">
-              <h3 className="text-white text-xl font-bold text-center uppercase">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <article className="flex flex-col gap-5 sm:gap-8">
+            <header className="bg-gray-800 py-2.5 sm:py-3 px-4 sm:px-5">
+              <h3 className="text-white text-lg sm:text-xl font-bold text-center uppercase">
                 What you get
               </h3>
             </header>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 sm:gap-4 px-1">
               {whatYouGet.map((item, index) => (
                 <div key={index} className="flex gap-3">
-                  <item.icon className="w-6 h-6 text-gray-600 shrink-0 mt-1" />
-                  <p className="text-gray-800 text-base leading-relaxed">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 shrink-0 mt-0.5" />
+                  <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
                     <span className="font-bold">{item.title}</span>{' '}
                     {item.description}
                   </p>
@@ -52,16 +52,16 @@ export function AboutPackage() {
             </div>
           </article>
 
-          <article className="flex flex-col gap-8">
-            <header className="bg-violet-700 py-3 px-5">
-              <h3 className="text-white text-xl font-bold text-center uppercase">
+          <article className="flex flex-col gap-5 sm:gap-8">
+            <header className="bg-violet-700 py-2.5 sm:py-3 px-4 sm:px-5">
+              <h3 className="text-white text-lg sm:text-xl font-bold text-center uppercase">
                 Why you get it
               </h3>
             </header>
 
-            <div className="flex gap-3">
-              <Star className="w-6 h-6 text-amber-500 shrink-0 mt-1" />
-              <p className="text-gray-800 text-base leading-relaxed">
+            <div className="flex gap-3 px-1">
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500 shrink-0 mt-0.5" />
+              <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
                 {whyYouGetIt.split('attend a relaxed 120-Minute Tour')[0]}
                 <span className="font-bold">attend a relaxed 120-Minute Tour</span>
                 {whyYouGetIt.split('attend a relaxed 120-Minute Tour')[1]}
@@ -70,8 +70,8 @@ export function AboutPackage() {
           </article>
         </div>
 
-        <div className="mt-14 flex justify-center">
-          <Button className="w-full max-w-3xl">Reserve Now</Button>
+        <div className="mt-10 sm:mt-12 md:mt-14 flex justify-center px-2">
+          <Button className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[400px] lg:max-w-3xl">Reserve Now</Button>
         </div>
       </div>
     </section>

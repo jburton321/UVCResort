@@ -11,3 +11,4 @@ export { Location } from './Location';
 export { Footer } from './Footer';
 export { Button } from './Button';
 export { BookingCard } from './BookingCard';
+export { MobileStickyCTA } from './MobileStickyCTA';

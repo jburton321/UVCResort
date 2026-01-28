@@ -18,7 +18,6 @@ import {
   Sailboat,
   CircleDot,
   TreePine,
-  CircleCheck
 } from 'lucide-react';
 import { Button } from './Button';
 
@@ -50,40 +49,40 @@ const nearbyAttractions = [
 
 export function Amenities() {
   return (
-    <section className="bg-gray-800 py-24 px-4 lg:px-10">
+    <section className="bg-gray-800 py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16">
           <article>
-            <h3 className="text-white text-2xl font-bold mb-8">
+            <h3 className="text-white text-xl sm:text-2xl font-bold mb-5 sm:mb-6 md:mb-8">
               Featured Amenities
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {featuredAmenities.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <item.icon className="w-6 h-6 text-white shrink-0" />
-                  <span className="text-white text-base">{item.text}</span>
+                <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" />
+                  <span className="text-white text-sm sm:text-base">{item.text}</span>
                 </div>
               ))}
             </div>
           </article>
 
           <article>
-            <h3 className="text-white text-2xl font-bold mb-8">
+            <h3 className="text-white text-xl sm:text-2xl font-bold mb-5 sm:mb-6 md:mb-8">
               Nearby Attractions
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {nearbyAttractions.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <item.icon className="w-6 h-6 text-white shrink-0" />
-                  <span className="text-white text-base">{item.text}</span>
+                <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" />
+                  <span className="text-white text-sm sm:text-base">{item.text}</span>
                 </div>
               ))}
             </div>
           </article>
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <Button className="w-full max-w-3xl">Reserve Now</Button>
+        <div className="mt-10 sm:mt-12 md:mt-16 flex justify-center px-2">
+          <Button className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[400px] lg:max-w-3xl">Reserve Now</Button>
         </div>
       </div>
     </section>

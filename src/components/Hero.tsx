@@ -4,31 +4,31 @@ import { BookingCard } from './BookingCard';
 export function Hero() {
   return (
     <section
-      className="relative min-h-[600px] lg:min-h-[800px] bg-cover bg-center py-12"
+      className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] bg-cover bg-center py-6 sm:py-8 md:py-12"
       style={{ backgroundImage: 'url(section0.png)' }}
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
-            <div className="relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 md:gap-8">
+          <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
+            <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
               <img
-                className="w-full max-w-xl"
+                className="w-full h-auto"
                 src="mexico-10.png"
                 alt="Mexico destination"
               />
               <img
-                className="w-full max-w-xl -mt-12"
+                className="w-full h-auto -mt-8 sm:-mt-10 md:-mt-12"
                 src="layer-0-10.png"
                 alt="Resort view"
               />
-              <button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-full py-2 px-4 flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow">
-                <Play className="w-6 h-6 text-gray-800" />
-                <span className="text-gray-900 font-medium text-sm">Play video</span>
+              <button className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-full py-2 sm:py-2.5 px-4 sm:px-5 flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow min-h-[44px] touch-manipulation active:scale-95">
+                <Play className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
+                <span className="text-gray-900 font-medium text-sm sm:text-base">Play video</span>
               </button>
             </div>
           </div>
 
-          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
+          <div className="w-full sm:w-auto flex justify-center lg:justify-end order-1 lg:order-2 px-2 sm:px-0">
             <BookingCard />
           </div>
         </div>
