@@ -12,3 +12,6 @@ export { Footer } from './Footer';
 export { Button } from './Button';
 export { BookingCard } from './BookingCard';
 export { MobileStickyCTA } from './MobileStickyCTA';
+export { BackgroundSection } from './BackgroundSection';
+export { CarouselButton } from './CarouselButton';
+export { ImageCard } from './ImageCard';

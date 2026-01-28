@@ -1,14 +1,16 @@
 import { Play } from 'lucide-react';
 import { BookingCard } from './BookingCard';
+import { BackgroundSection } from './BackgroundSection';
 
 export function Hero() {
   return (
-    <section
-      className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] bg-cover bg-center py-6 sm:py-8 md:py-12"
-      style={{ backgroundImage: 'url(section0.png)' }}
+    <BackgroundSection
+      backgroundImage="section0.png"
+      overlay
+      overlayOpacity={30}
+      className="min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] py-6 sm:py-8 md:py-12"
     >
-      <div className="absolute inset-0 bg-black/30"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 md:gap-8">
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
             <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
@@ -34,6 +36,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </BackgroundSection>
   );
 }

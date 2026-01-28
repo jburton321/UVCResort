@@ -1,8 +1,10 @@
+import { BackgroundSection } from './BackgroundSection';
+
 export function ParadiseSection() {
   return (
-    <section
-      className="relative py-10 sm:py-12 md:py-16 bg-cover bg-center"
-      style={{ backgroundImage: 'url(section-wrapper0.png)' }}
+    <BackgroundSection
+      backgroundImage="section-wrapper0.png"
+      className="py-10 sm:py-12 md:py-16"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <div className="mb-6 sm:mb-8">
@@ -50,6 +52,6 @@ export function ParadiseSection() {
           </p>
         </div>
       </div>
-    </section>
+    </BackgroundSection>
   );
 }

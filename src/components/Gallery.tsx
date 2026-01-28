@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { CarouselButton } from './CarouselButton';
 
 interface GalleryProps {
   images: string[];
@@ -25,19 +25,8 @@ export function Gallery({ images, className = '' }: GalleryProps) {
         </div>
       </div>
 
-      <button
-        className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-black/30 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm hover:bg-black/50 active:scale-95 transition-all touch-manipulation min-w-[44px] min-h-[44px]"
-        aria-label="Previous"
-      >
-        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
-      </button>
-
-      <button
-        className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-black/30 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm hover:bg-black/50 active:scale-95 transition-all touch-manipulation min-w-[44px] min-h-[44px]"
-        aria-label="Next"
-      >
-        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
-      </button>
+      <CarouselButton direction="left" />
+      <CarouselButton direction="right" />
     </section>
   );
 }

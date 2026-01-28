@@ -1,0 +1,34 @@
+import { ReactNode } from 'react';
+
+interface ImageCardProps {
+  src: string;
+  alt: string;
+  label?: string;
+  overlay?: boolean;
+  className?: string;
+  imageClassName?: string;
+  children?: ReactNode;
+}
+
+export function ImageCard({
+  src,
+  alt,
+  label,
+  overlay = false,
+  className = '',
+  imageClassName = '',
+  children,
+}: ImageCardProps) {
+  return (
+    <div className={`relative rounded-xl sm:rounded-2xl overflow-hidden ${className}`}>
+      <img src={src} alt={alt} className={`object-cover ${imageClassName}`} />
+      {overlay && <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />}
+      {label && (
+        <span className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 text-white font-bold text-xs sm:text-sm whitespace-nowrap">
+          {label}
+        </span>
+      )}
+      {children}
+    </div>
+  );
+}
