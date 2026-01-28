@@ -16,23 +16,23 @@ export function BookingCard({
 }: BookingCardProps) {
   return (
     <aside className="bg-white rounded-2xl shadow-xl w-full max-w-[340px] sm:max-w-sm overflow-hidden backdrop-blur-sm">
-      <div className="bg-amber-300 px-2 sm:px-3 py-2 flex flex-wrap items-center justify-center gap-1 sm:gap-2">
-        <Zap className="w-4 h-5 text-black" />
-        <span className="text-black font-bold text-sm sm:text-lg uppercase">Offer expires:</span>
-        <div className="flex items-center gap-1 text-orange-600 font-bold">
+      <div className="bg-gold-400 px-2 sm:px-3 py-2 flex flex-wrap items-center justify-center gap-1 sm:gap-2">
+        <Zap className="w-4 h-5 text-gold-900" />
+        <span className="text-gold-950 font-bold text-sm sm:text-lg uppercase">Offer expires:</span>
+        <div className="flex items-center gap-1 text-gold-800 font-bold">
           <div className="text-center">
             <span className="text-base sm:text-lg">00</span>
-            <span className="text-[10px] sm:text-xs text-black uppercase block">hr</span>
+            <span className="text-[10px] sm:text-xs text-gold-950 uppercase block">hr</span>
           </div>
           <span>:</span>
           <div className="text-center">
             <span className="text-base sm:text-lg">44</span>
-            <span className="text-[10px] sm:text-xs text-black uppercase block">min</span>
+            <span className="text-[10px] sm:text-xs text-gold-950 uppercase block">min</span>
           </div>
           <span>:</span>
           <div className="text-center">
             <span className="text-base sm:text-lg">54</span>
-            <span className="text-[10px] sm:text-xs text-black uppercase block">sec</span>
+            <span className="text-[10px] sm:text-xs text-gold-950 uppercase block">sec</span>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ export function BookingCard({
 
       <div className="bg-gray-100 py-3 sm:py-4 pr-3 sm:pr-4">
         <div className="flex items-center gap-2 sm:gap-4">
-          <div className="bg-violet-700 text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight">
+          <div className="bg-gold-700 text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg">
             <div>84%</div>
             <div>OFF!</div>
           </div>
@@ -100,12 +100,12 @@ export function BookingCard({
         <img src="vector31.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20" />
       </div>
 
-      <div className="bg-slate-900 px-3 sm:px-4 py-2 flex items-center justify-between gap-2">
+      <div className="bg-brand-900 px-3 sm:px-4 py-2 flex items-center justify-between gap-2">
         <p className="text-white text-xs sm:text-sm text-center flex-1">
           This offer is getting a lot of attention.<br />
           Viewed 181 times in the past hour!
         </p>
-        <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" />
+        <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-gold-400 shrink-0" />
       </div>
     </aside>
   );

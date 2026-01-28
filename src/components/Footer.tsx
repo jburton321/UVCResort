@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-gray-800 py-8 sm:py-10 px-4 sm:px-6">
+    <footer className="bg-brand-900 py-8 sm:py-10 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto text-center">
         <img
           src="layer-20.svg"

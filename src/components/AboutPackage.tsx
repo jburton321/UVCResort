@@ -33,7 +33,7 @@ export function AboutPackage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <article className="flex flex-col gap-5 sm:gap-8">
-            <header className="bg-gray-800 py-2.5 sm:py-3 px-4 sm:px-5">
+            <header className="bg-brand-800 py-2.5 sm:py-3 px-4 sm:px-5 shadow-md">
               <h3 className="text-white text-lg sm:text-xl font-bold text-center uppercase">
                 What you get
               </h3>
@@ -53,14 +53,14 @@ export function AboutPackage() {
           </article>
 
           <article className="flex flex-col gap-5 sm:gap-8">
-            <header className="bg-violet-700 py-2.5 sm:py-3 px-4 sm:px-5">
+            <header className="bg-gold-700 py-2.5 sm:py-3 px-4 sm:px-5 shadow-md">
               <h3 className="text-white text-lg sm:text-xl font-bold text-center uppercase">
                 Why you get it
               </h3>
             </header>
 
             <div className="flex gap-3 px-1">
-              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500 shrink-0 mt-0.5" />
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-gold-600 shrink-0 mt-0.5" />
               <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
                 {whyYouGetIt.split('attend a relaxed 120-Minute Tour')[0]}
                 <span className="font-bold">attend a relaxed 120-Minute Tour</span>
