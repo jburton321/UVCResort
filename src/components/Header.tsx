@@ -1,0 +1,81 @@
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { Button } from './Button';
+
+const navLinks = [
+  { label: 'Home', active: true },
+  { label: 'Accommodations', active: false },
+  { label: 'Amenities', active: false },
+  { label: 'Things To Do', active: false },
+  { label: 'All-Inclusive', active: false },
+];
+
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          <div className="p-2">
+            <img
+              className="h-6 w-auto"
+              src="vacation-vip-full-color-horiz0.png"
+              alt="VacationVIP Logo"
+            />
+          </div>
+
+          <nav className="hidden lg:flex items-center gap-8">
+            <ul className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href="#"
+                    className={`text-sm font-normal uppercase tracking-wide transition-colors ${
+                      link.active
+                        ? 'text-rose-500'
+                        : 'text-gray-800 hover:text-rose-500'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Button variant="small">reserve now</Button>
+          </nav>
+
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
+            <ul className="flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href="#"
+                    className={`text-sm font-normal uppercase tracking-wide ${
+                      link.active ? 'text-rose-500' : 'text-gray-800'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4">
+              <Button variant="small">reserve now</Button>
+            </div>
+          </nav>
+        )}
+      </div>
+    </header>
+  );
+}
