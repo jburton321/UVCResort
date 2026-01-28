@@ -70,7 +70,7 @@ export function BookingCard({
             <span className="block text-[10px] sm:text-xs">PER COUPLE</span>
           </div>
         </div>
-        <p className="text-slate-800 font-bold text-xs sm:text-sm text-center mt-2">
+        <p className="text-slate-800 font-bold text-[0.8rem] text-center mt-2">
           *Pay $600 at the time of booking for all 5-days/4-nights
         </p>
       </div>
