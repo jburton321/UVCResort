@@ -7,7 +7,7 @@ import {
   Amenities,
   AmenitiesGrid,
   Testimonials,
-  Location,
+  MapSection,
 } from '../components';
 
 const galleryImages = [
@@ -37,7 +37,7 @@ export function HomePage() {
       />
       <AmenitiesGrid />
       <Testimonials />
-      <Location />
+      <MapSection />
       <img
         className="w-full h-32 sm:h-40 md:h-56 object-cover"
         src="frame-19840779511.png"
