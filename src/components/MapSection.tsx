@@ -60,6 +60,10 @@ function createLocationMarker(location: typeof locations[0]) {
     ? `${location.distance}<br/>${location.time}`
     : `${location.distance} | ${location.time}`;
 
+  const nameContent = isMain
+    ? `<img src="/image-30.png" alt="${location.name}" style="height: 28px; width: auto; margin-bottom: 4px;" />`
+    : `<h3 style="font-weight: bold; color: rgb(17, 24, 39); font-size: 16px; line-height: 1.2; margin: 0 0 4px 0;">${location.name}</h3>`;
+
   const html = `
     <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content;">
       <div style="flex-shrink: 0;">
@@ -69,7 +73,7 @@ function createLocationMarker(location: typeof locations[0]) {
         </svg>
       </div>
       <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; white-space: nowrap;">
-        <h3 style="font-weight: bold; color: rgb(17, 24, 39); font-size: 16px; line-height: 1.2; margin: 0 0 4px 0;">${location.name}</h3>
+        ${nameContent}
         <p style="color: rgb(75, 85, 99); font-size: 14px; margin: 0;">${distanceText}</p>
       </div>
     </div>
