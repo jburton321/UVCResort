@@ -1,7 +1,4 @@
-import { MapPin, Navigation, Clock } from 'lucide-react';
-import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import { MapPin, Navigation, Clock, ExternalLink } from 'lucide-react';
 
 const locations = [
   {
@@ -41,66 +38,9 @@ const locations = [
   },
 ];
 
-const routeCoordinates: [number, number][] = [
-  [20.8475, -86.8756],
-  [20.6976, -87.0198],
-  [20.6845, -87.0255],
-  [20.6282, -87.0739],
-  [20.5775, -87.1197],
-];
-
-const mainMarkerIcon = L.divIcon({
-  className: 'custom-marker',
-  html: `
-    <div style="
-      width: 32px;
-      height: 32px;
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
-      border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    ">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-        <circle cx="12" cy="10" r="3"></circle>
-      </svg>
-    </div>
-  `,
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
-});
-
-const secondaryMarkerIcon = L.divIcon({
-  className: 'custom-marker',
-  html: `
-    <div style="
-      width: 28px;
-      height: 28px;
-      background: #f97316;
-      border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    ">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-        <circle cx="12" cy="10" r="3"></circle>
-      </svg>
-    </div>
-  `,
-  iconSize: [28, 28],
-  iconAnchor: [14, 28],
-  popupAnchor: [0, -28],
-});
-
 export function MapSection() {
-  const center: [number, number] = [20.6976, -87.0198];
+  const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=-87.25%2C20.5%2C-86.8%2C20.9&layer=mapnik&marker=20.6976%2C-87.0198`;
+  const fullMapUrl = `https://www.openstreetmap.org/?mlat=20.6976&mlon=-87.0198#map=11/20.7/-87.0`;
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
@@ -114,65 +54,40 @@ export function MapSection() {
           </p>
         </div>
 
-        <div className="relative w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-          <MapContainer
-            center={center}
-            zoom={11}
-            scrollWheelZoom={false}
-            style={{ height: '100%', width: '100%' }}
-            zoomControl={true}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-            />
+        <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
+          <iframe
+            title="Resort Location Map"
+            src={mapUrl}
+            className="w-full h-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
 
-            <Polyline
-              positions={routeCoordinates}
-              pathOptions={{
-                color: '#2563eb',
-                weight: 4,
-                opacity: 0.8,
-              }}
-            />
-
-            {locations.map((location) => (
-              <Marker
-                key={location.id}
-                position={location.coordinates}
-                icon={location.isMain ? mainMarkerIcon : secondaryMarkerIcon}
-              >
-                <Popup className="custom-popup">
-                  <div className={`p-1 ${location.isMain ? 'min-w-[200px]' : ''}`}>
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className={`w-8 h-8 ${location.isMain ? 'bg-blue-500' : 'bg-orange-500'} rounded-lg flex items-center justify-center`}>
-                        <MapPin className="w-4 h-4 text-white" />
-                      </div>
-                      <h3 className="font-bold text-gray-900">{location.name}</h3>
-                    </div>
-                    <p className="text-sm text-gray-600 ml-10">{location.subtitle}</p>
-                  </div>
-                </Popup>
-              </Marker>
-            ))}
-          </MapContainer>
-
-          <div className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 z-[1000]">
+          <div className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 z-10">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                 <MapPin className="w-4 h-4 text-white" />
               </div>
               <span className="text-sm font-semibold text-gray-900">Your Resort</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                 <MapPin className="w-4 h-4 text-white" />
               </div>
               <span className="text-sm font-semibold text-gray-900">Nearby Attractions</span>
             </div>
+            <a
+              href={fullMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" />
+              View larger map
+            </a>
           </div>
 
-          <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-[1000]">
+          <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-10">
             <div className="flex items-center gap-2 mb-2">
               <Navigation className="w-5 h-5 text-blue-600" />
               <h3 className="text-sm font-bold text-gray-900">Riviera Maya</h3>
