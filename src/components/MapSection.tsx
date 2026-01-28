@@ -54,7 +54,6 @@ const locations = [
 function createLocationMarker(location: typeof locations[0]) {
   const isMain = location.isMain;
   const color = isMain ? '#2563eb' : '#f97316';
-  const textColor = isMain ? 'rgb(37, 99, 235)' : 'rgb(249, 115, 22)';
 
   const distanceText = isMain
     ? `${location.distance}<br/>${location.time}`
@@ -66,8 +65,23 @@ function createLocationMarker(location: typeof locations[0]) {
 
   const zIndex = isMain ? 'z-index: 9999;' : '';
 
-  const html = `
-    <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content; ${zIndex}">
+  const html = isMain
+    ? `
+    <div style="display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -100%); width: max-content; ${zIndex}">
+      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; text-align: center; margin-bottom: 8px;">
+        ${nameContent}
+        <p style="color: rgb(75, 85, 99); font-size: 14px; margin: 0;">${distanceText}</p>
+      </div>
+      <div style="flex-shrink: 0;">
+        <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
+          <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
+          <circle cx="16" cy="16" r="4" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  `
+    : `
+    <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content;">
       <div style="flex-shrink: 0;">
         <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
           <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
@@ -84,8 +98,8 @@ function createLocationMarker(location: typeof locations[0]) {
   return divIcon({
     html,
     className: isMain ? 'custom-location-marker main-marker' : 'custom-location-marker',
-    iconSize: isMain ? [500, 120] : [400, 80],
-    iconAnchor: [16, 20],
+    iconSize: isMain ? [300, 150] : [400, 80],
+    iconAnchor: isMain ? [150, 150] : [16, 20],
   });
 }
 
