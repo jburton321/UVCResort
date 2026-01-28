@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { divIcon } from 'leaflet';
-import { Navigation, ExternalLink, Heart } from 'lucide-react';
+import { Navigation, Heart } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 
 const locations = [
@@ -91,7 +91,6 @@ function createLocationMarker(location: typeof locations[0]) {
 
 export function MapSection() {
   const center: [number, number] = [20.7, -87.0];
-  const fullMapUrl = `https://www.openstreetmap.org/?mlat=20.6976&mlon=-87.0198#map=11/20.7/-87.0`;
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
@@ -130,16 +129,7 @@ export function MapSection() {
             ))}
           </MapContainer>
 
-          <a
-            href={fullMapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg px-4 py-2 z-[1000] flex items-center gap-2 text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors"
-          >
-            <ExternalLink className="w-4 h-4" />
-            View larger map
-          </a>
-
+          
           <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-[1000]">
             <div className="flex items-center gap-2 mb-2">
               <Navigation className="w-5 h-5 text-blue-600" />
