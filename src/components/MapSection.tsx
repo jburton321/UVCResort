@@ -1,4 +1,8 @@
-import { MapPin, Navigation, ExternalLink } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { divIcon } from 'leaflet';
+import { Navigation, ExternalLink } from 'lucide-react';
+import { renderToString } from 'react-dom/server';
+import 'leaflet/dist/leaflet.css';
 
 const locations = [
   {
@@ -48,33 +52,39 @@ const locations = [
   },
 ];
 
-const mapBounds = {
-  north: 20.92,
-  south: 20.50,
-  west: -87.25,
-  east: -86.80,
-};
+function createLocationIcon(location: typeof locations[0]) {
+  const isMain = location.isMain;
+  const color = isMain ? '#2563eb' : '#f97316';
 
-function latLngToPercent(lat: number, lng: number) {
-  const x = ((lng - mapBounds.west) / (mapBounds.east - mapBounds.west)) * 100;
-  const y = ((mapBounds.north - lat) / (mapBounds.north - mapBounds.south)) * 100;
-  return { x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) };
+  const html = `
+    <div style="position: relative; transform: translate(-16px, -40px);">
+      <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
+        <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
+        <circle cx="16" cy="16" r="4" fill="white"/>
+      </svg>
+    </div>
+  `;
+
+  return divIcon({
+    html,
+    className: 'custom-location-marker',
+    iconSize: [32, 40],
+    iconAnchor: [16, 40],
+  });
 }
 
-function LocationCard({ location, position }: { location: typeof locations[0]; position: 'left' | 'right' }) {
+function LocationTooltip({ location }: { location: typeof locations[0] }) {
   const isMain = location.isMain;
 
   return (
-    <div
-      className={`flex items-center gap-3 bg-white rounded-lg shadow-lg px-4 py-3 whitespace-nowrap ${position === 'left' ? 'flex-row-reverse' : ''}`}
-    >
+    <div className="flex items-center gap-3 bg-white rounded-lg shadow-lg px-4 py-3 whitespace-nowrap border-0 m-0 min-w-[200px]">
       <div className={`flex-shrink-0 ${isMain ? 'text-blue-600' : 'text-orange-500'}`}>
         <svg width="32" height="40" viewBox="0 0 32 40" fill="currentColor">
           <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
           <circle cx="16" cy="16" r="4" fill="white"/>
         </svg>
       </div>
-      <div className={position === 'left' ? 'text-right' : 'text-left'}>
+      <div className="text-left">
         <h3 className="font-bold text-gray-900 text-base leading-tight">{location.name}</h3>
         <p className="text-gray-600 text-sm">
           {isMain ? location.distance : `${location.distance} | ${location.time}`}
@@ -85,7 +95,7 @@ function LocationCard({ location, position }: { location: typeof locations[0]; p
 }
 
 export function MapSection() {
-  const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${mapBounds.west}%2C${mapBounds.south}%2C${mapBounds.east}%2C${mapBounds.north}&layer=mapnik`;
+  const center: [number, number] = [20.7, -87.0];
   const fullMapUrl = `https://www.openstreetmap.org/?mlat=20.6976&mlon=-87.0198#map=11/20.7/-87.0`;
 
   return (
@@ -100,49 +110,50 @@ export function MapSection() {
           </p>
         </div>
 
-        <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
-          <iframe
-            title="Resort Location Map"
-            src={mapUrl}
-            className="w-full h-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
+          <MapContainer
+            center={center}
+            zoom={11}
+            scrollWheelZoom={true}
+            className="w-full h-full"
+            zoomControl={true}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
 
-          <div className="absolute inset-0 pointer-events-none">
-            {locations.map((location) => {
-              const pos = latLngToPercent(location.lat, location.lng);
-              const isLeftSide = pos.x > 50;
-
-              return (
-                <div
-                  key={location.id}
-                  className="absolute"
-                  style={{
-                    left: `${pos.x}%`,
-                    top: `${pos.y}%`,
-                    transform: isLeftSide
-                      ? 'translate(-100%, -50%)'
-                      : 'translate(0%, -50%)',
-                  }}
+            {locations.map((location) => (
+              <Marker
+                key={location.id}
+                position={[location.lat, location.lng]}
+                icon={createLocationIcon(location)}
+              >
+                <Popup
+                  closeButton={false}
+                  autoClose={false}
+                  closeOnClick={false}
+                  className="custom-popup"
+                  permanent={true}
+                  offset={[0, -40]}
                 >
-                  <LocationCard location={location} position={isLeftSide ? 'left' : 'right'} />
-                </div>
-              );
-            })}
-          </div>
+                  <LocationTooltip location={location} />
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
 
           <a
             href={fullMapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg px-4 py-2 z-20 flex items-center gap-2 text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors pointer-events-auto"
+            className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg px-4 py-2 z-[1000] flex items-center gap-2 text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
             View larger map
           </a>
 
-          <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-20">
+          <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-[1000]">
             <div className="flex items-center gap-2 mb-2">
               <Navigation className="w-5 h-5 text-blue-600" />
               <h3 className="text-sm font-bold text-gray-900">Riviera Maya</h3>

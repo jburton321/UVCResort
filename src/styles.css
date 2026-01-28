@@ -3,4 +3,25 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.custom-popup .leaflet-popup-content-wrapper {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  width: auto !important;
+}
+
+.custom-popup .leaflet-popup-tip-container {
+  display: none;
+}
+
+.custom-location-marker {
+  background: transparent;
+  border: none;
+}
       
