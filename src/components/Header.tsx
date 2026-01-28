@@ -1,44 +1,55 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './Button';
+import { useRouter } from '../context/RouterContext';
 
 const navLinks = [
-  { label: 'Home', active: true },
-  { label: 'Accommodations', active: false },
-  { label: 'Amenities', active: false },
-  { label: 'Things To Do', active: false },
-  { label: 'All-Inclusive', active: false },
+  { label: 'Home', page: 'home' as const },
+  { label: 'Accommodations', page: 'accommodations' as const },
+  { label: 'Amenities', page: 'amenities' as const },
+  { label: 'Things To Do', page: 'things-to-do' as const },
+  { label: 'All-Inclusive', page: 'all-inclusive' as const },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { currentPage, navigateTo } = useRouter();
+
+  const handleNavClick = (page: typeof navLinks[number]['page']) => {
+    navigateTo(page);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
-          <div className="p-1 sm:p-2">
+          <button
+            onClick={() => navigateTo('home')}
+            className="p-1 sm:p-2"
+            aria-label="Go to home"
+          >
             <img
               className="h-5 sm:h-6 w-auto"
               src="vacation-vip-full-color-horiz0.png"
               alt="VacationVIP Logo"
             />
-          </div>
+          </button>
 
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             <ul className="flex items-center gap-4 xl:gap-6">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => handleNavClick(link.page)}
                     className={`text-sm font-normal uppercase tracking-wide transition-colors py-2 ${
-                      link.active
+                      currentPage === link.page
                         ? 'text-primary font-semibold'
                         : 'text-brand-700 hover:text-primary'
                     }`}
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -60,14 +71,14 @@ export function Header() {
             <ul className="flex flex-col">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href="#"
-                    className={`block py-4 px-2 text-base font-normal uppercase tracking-wide min-h-[48px] flex items-center touch-manipulation active:bg-gray-100 ${
-                      link.active ? 'text-primary font-semibold' : 'text-brand-700'
+                  <button
+                    onClick={() => handleNavClick(link.page)}
+                    className={`w-full text-left py-4 px-2 text-base font-normal uppercase tracking-wide min-h-[48px] flex items-center touch-manipulation active:bg-gray-100 ${
+                      currentPage === link.page ? 'text-primary font-semibold' : 'text-brand-700'
                     }`}
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

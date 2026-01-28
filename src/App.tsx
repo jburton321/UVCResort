@@ -1,58 +1,48 @@
 import "./styles.css";
 import "./tailwind.css";
-import {
-  Header,
-  Hero,
-  SubNav,
-  Gallery,
-  AboutPackage,
-  ParadiseSection,
-  Amenities,
-  AmenitiesGrid,
-  Testimonials,
-  Location,
-  Footer,
-  MobileStickyCTA,
-} from "./components";
+import { Header, Footer, MobileStickyCTA } from "./components";
+import { RouterProvider, useRouter } from "./context/RouterContext";
+import { HomePage } from "./pages/HomePage";
+import { AccommodationsPage } from "./pages/AccommodationsPage";
 
-const galleryImages = [
-  'resort-photo-10.png',
-  'resort-photo-20.png',
-  'resort-photo-30.png',
-  'resort-photo-40.png',
-  'resort-photo-50.png',
-  'link-dialog-open-lightbox5.png',
-  'link-dialog-open-lightbox6.png',
-  'link-dialog-open-lightbox7.png',
-];
+function AppContent() {
+  const { currentPage } = useRouter();
 
-export default function App() {
   return (
     <div className="bg-white min-h-screen pb-20 lg:pb-0">
       <Header />
       <main>
-        <Hero />
-        <SubNav />
-        <Gallery images={galleryImages} />
-        <AboutPackage />
-        <ParadiseSection />
-        <Amenities />
-        <img
-          className="w-full h-auto hidden sm:block"
-          src="frame-19840779510.svg"
-          alt="Decorative divider"
-        />
-        <AmenitiesGrid />
-        <Testimonials />
-        <Location />
-        <img
-          className="w-full h-32 sm:h-40 md:h-56 object-cover"
-          src="frame-19840779511.png"
-          alt="Beach scene"
-        />
+        {currentPage === 'home' && <HomePage />}
+        {currentPage === 'accommodations' && <AccommodationsPage />}
+        {currentPage === 'amenities' && (
+          <div className="py-20 text-center">
+            <h1 className="text-4xl font-bold">Amenities Page</h1>
+            <p className="text-gray-600 mt-4">Coming soon...</p>
+          </div>
+        )}
+        {currentPage === 'things-to-do' && (
+          <div className="py-20 text-center">
+            <h1 className="text-4xl font-bold">Things To Do Page</h1>
+            <p className="text-gray-600 mt-4">Coming soon...</p>
+          </div>
+        )}
+        {currentPage === 'all-inclusive' && (
+          <div className="py-20 text-center">
+            <h1 className="text-4xl font-bold">All-Inclusive Page</h1>
+            <p className="text-gray-600 mt-4">Coming soon...</p>
+          </div>
+        )}
       </main>
       <Footer />
       <MobileStickyCTA />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <RouterProvider>
+      <AppContent />
+    </RouterProvider>
   );
 }

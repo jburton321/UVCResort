@@ -15,3 +15,5 @@ export { MobileStickyCTA } from './MobileStickyCTA';
 export { BackgroundSection } from './BackgroundSection';
 export { CarouselButton } from './CarouselButton';
 export { ImageCard } from './ImageCard';
+export { ContentSection } from './ContentSection';
+export { FeaturedList } from './FeaturedList';
