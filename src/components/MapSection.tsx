@@ -54,21 +54,20 @@ const locations = [
 function createLocationMarker(location: typeof locations[0]) {
   const isMain = location.isMain;
   const color = isMain ? '#2563eb' : '#f97316';
-  const textColor = isMain ? 'rgb(37, 99, 235)' : 'rgb(249, 115, 22)';
 
   const distanceText = isMain
     ? location.distance
     : `${location.distance} | ${location.time}`;
 
   const html = `
-    <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content;">
-      <div style="flex-shrink: 0;">
-        <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
+    <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px 12px 50px; white-space: nowrap; position: relative; transform: translate(-50%, -50%);">
+      <div style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%);">
+        <svg width="28" height="35" viewBox="0 0 32 40" fill="${color}">
           <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
           <circle cx="16" cy="16" r="4" fill="white"/>
         </svg>
       </div>
-      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; white-space: nowrap;">
+      <div>
         <h3 style="font-weight: bold; color: rgb(17, 24, 39); font-size: 16px; line-height: 1.2; margin: 0 0 4px 0;">${location.name}</h3>
         <p style="color: rgb(75, 85, 99); font-size: 14px; margin: 0;">${distanceText}</p>
       </div>
@@ -79,7 +78,7 @@ function createLocationMarker(location: typeof locations[0]) {
     html,
     className: 'custom-location-marker',
     iconSize: [400, 80],
-    iconAnchor: [16, 20],
+    iconAnchor: [200, 40],
   });
 }
 
