@@ -8,9 +8,8 @@
     
     }
 
-    export const Group6095 = ({ 
-text="Zilara Riviera Maya is Just $299 Today for Two Adults
-Your 5-Day All-Inclusive Luxury Escape to Hyatt ", 
+    export const Group6095 = ({
+text="Zilara Riviera Maya is Just $299 Today for Two Adults - Your 5-Day All-Inclusive Luxury Escape to Hyatt", 
  className,  ...props}: IGroup6095Props ): JSX.Element => { 
     
     return(

@@ -13,14 +13,12 @@ text5?: string;
     
     }
 
-    export const FooterContainer = ({ 
-text="Normal Rate: $5,600", 
-text2="$299*", 
-text3="*Pay $600 at the time of booking for all 5-days/4-nights", 
-text4="84%
-OFF!", 
-text5="Deluxe Room for two adults at the
-5-Star Hyatt Zilara Riviera Maya", 
+    export const FooterContainer = ({
+text="Normal Rate: $5,600",
+text2="$299*",
+text3="*Pay $600 at the time of booking for all 5-days/4-nights",
+text4="84% OFF!",
+text5="Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya", 
  className,  ...props}: IFooterContainerProps ): JSX.Element => { 
     
     return(
