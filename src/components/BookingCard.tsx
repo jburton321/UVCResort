@@ -58,8 +58,8 @@ export function BookingCard({
       <div className="bg-gray-100 py-3 sm:py-4 px-3 sm:px-4">
         <div className="flex items-center gap-2 sm:gap-4">
           <div className="bg-violet-700 text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight">
-            <div>[84%]</div>
-            <div>OFF</div>
+            <div>84%</div>
+            <div>OFF!</div>
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-gray-600 line-through text-xs sm:text-sm">Normal Rate: {normalRate}</p>
