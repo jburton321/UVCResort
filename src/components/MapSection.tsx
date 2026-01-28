@@ -1,11 +1,11 @@
-import { MapPin, Navigation, Clock, ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { MapPin, Navigation, ExternalLink } from 'lucide-react';
 
 const locations = [
   {
     id: 'hyatt',
     name: 'Hyatt Zilara',
-    subtitle: 'Carretera Federal, Cancun - Chetumal Km 340',
+    distance: 'Your Resort',
+    time: '',
     lat: 20.6976,
     lng: -87.0198,
     isMain: true,
@@ -13,7 +13,8 @@ const locations = [
   {
     id: 'puerto-morelos',
     name: 'Puerto Morelos',
-    subtitle: '15-20 minutes',
+    distance: '12-15 miles',
+    time: '25-30 minutes',
     lat: 20.8475,
     lng: -86.8756,
     isMain: false,
@@ -21,7 +22,8 @@ const locations = [
   {
     id: 'playa-del-carmen',
     name: 'Downtown Playa del Carmen',
-    subtitle: '15-20 minutes',
+    distance: '8-10 miles',
+    time: '15-20 minutes',
     lat: 20.6282,
     lng: -87.0739,
     isMain: false,
@@ -29,7 +31,8 @@ const locations = [
   {
     id: 'golf-course',
     name: 'El Camaleón Golf Course',
-    subtitle: '5-10 minutes',
+    distance: '3-5 miles',
+    time: '5-10 minutes',
     lat: 20.6845,
     lng: -87.0255,
     isMain: false,
@@ -37,7 +40,8 @@ const locations = [
   {
     id: 'xcaret',
     name: 'Xcaret Park',
-    subtitle: '15-20 minutes',
+    distance: '10-12 miles',
+    time: '15-20 minutes',
     lat: 20.5775,
     lng: -87.1197,
     isMain: false,
@@ -57,8 +61,30 @@ function latLngToPercent(lat: number, lng: number) {
   return { x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) };
 }
 
+function LocationCard({ location, position }: { location: typeof locations[0]; position: 'left' | 'right' }) {
+  const isMain = location.isMain;
+
+  return (
+    <div
+      className={`flex items-center gap-3 bg-white rounded-lg shadow-lg px-4 py-3 whitespace-nowrap ${position === 'left' ? 'flex-row-reverse' : ''}`}
+    >
+      <div className={`flex-shrink-0 ${isMain ? 'text-blue-600' : 'text-orange-500'}`}>
+        <svg width="32" height="40" viewBox="0 0 32 40" fill="currentColor">
+          <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
+          <circle cx="16" cy="16" r="4" fill="white"/>
+        </svg>
+      </div>
+      <div className={position === 'left' ? 'text-right' : 'text-left'}>
+        <h3 className="font-bold text-gray-900 text-base leading-tight">{location.name}</h3>
+        <p className="text-gray-600 text-sm">
+          {isMain ? location.distance : `${location.distance} | ${location.time}`}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export function MapSection() {
-  const [activeLocation, setActiveLocation] = useState<string | null>(null);
   const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${mapBounds.west}%2C${mapBounds.south}%2C${mapBounds.east}%2C${mapBounds.north}&layer=mapnik`;
   const fullMapUrl = `https://www.openstreetmap.org/?mlat=20.6976&mlon=-87.0198#map=11/20.7/-87.0`;
 
@@ -74,7 +100,7 @@ export function MapSection() {
           </p>
         </div>
 
-        <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
+        <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
           <iframe
             title="Resort Location Map"
             src={mapUrl}
@@ -86,79 +112,35 @@ export function MapSection() {
           <div className="absolute inset-0 pointer-events-none">
             {locations.map((location) => {
               const pos = latLngToPercent(location.lat, location.lng);
-              const isActive = activeLocation === location.id;
+              const isLeftSide = pos.x > 50;
 
               return (
                 <div
                   key={location.id}
-                  className="absolute pointer-events-auto"
+                  className="absolute"
                   style={{
                     left: `${pos.x}%`,
                     top: `${pos.y}%`,
-                    transform: 'translate(-50%, -100%)',
+                    transform: isLeftSide
+                      ? 'translate(-100%, -50%)'
+                      : 'translate(0%, -50%)',
                   }}
-                  onMouseEnter={() => setActiveLocation(location.id)}
-                  onMouseLeave={() => setActiveLocation(null)}
                 >
-                  <div className="relative">
-                    <div
-                      className={`
-                        w-8 h-8 rounded-full flex items-center justify-center cursor-pointer
-                        transition-all duration-200 shadow-lg border-3 border-white
-                        ${location.isMain
-                          ? 'bg-blue-600 hover:bg-blue-700 w-10 h-10'
-                          : 'bg-orange-500 hover:bg-orange-600'
-                        }
-                        ${isActive ? 'scale-125 z-20' : 'z-10'}
-                      `}
-                    >
-                      <MapPin className={`text-white ${location.isMain ? 'w-5 h-5' : 'w-4 h-4'}`} />
-                    </div>
-
-                    {isActive && (
-                      <div
-                        className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 bg-white rounded-lg shadow-xl p-3 min-w-[180px] z-30"
-                        style={{ pointerEvents: 'none' }}
-                      >
-                        <div className="flex items-center gap-2 mb-1">
-                          <div className={`w-6 h-6 ${location.isMain ? 'bg-blue-500' : 'bg-orange-500'} rounded-md flex items-center justify-center`}>
-                            <MapPin className="w-3 h-3 text-white" />
-                          </div>
-                          <h3 className="font-bold text-gray-900 text-sm">{location.name}</h3>
-                        </div>
-                        <p className="text-xs text-gray-600 ml-8">{location.subtitle}</p>
-                        <div className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-white" />
-                      </div>
-                    )}
-                  </div>
+                  <LocationCard location={location} position={isLeftSide ? 'left' : 'right'} />
                 </div>
               );
             })}
           </div>
 
-          <div className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 z-20">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                <MapPin className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm font-semibold text-gray-900">Your Resort</span>
-            </div>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                <MapPin className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm font-semibold text-gray-900">Nearby Attractions</span>
-            </div>
-            <a
-              href={fullMapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-              View larger map
-            </a>
-          </div>
+          <a
+            href={fullMapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg px-4 py-2 z-20 flex items-center gap-2 text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors pointer-events-auto"
+          >
+            <ExternalLink className="w-4 h-4" />
+            View larger map
+          </a>
 
           <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-20">
             <div className="flex items-center gap-2 mb-2">
@@ -166,31 +148,9 @@ export function MapSection() {
               <h3 className="text-sm font-bold text-gray-900">Riviera Maya</h3>
             </div>
             <p className="text-xs text-gray-600">
-              All destinations within 20 minutes of your resort
+              All destinations within 30 minutes of your resort
             </p>
           </div>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {locations.slice(1).map((location) => (
-            <div
-              key={location.id}
-              className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow group cursor-pointer"
-              onMouseEnter={() => setActiveLocation(location.id)}
-              onMouseLeave={() => setActiveLocation(null)}
-            >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-orange-200 transition-colors">
-                  <MapPin className="w-5 h-5 text-orange-500" />
-                </div>
-                <h4 className="font-bold text-sm text-gray-900">{location.name}</h4>
-              </div>
-              <div className="flex items-center gap-2 text-gray-600">
-                <Clock className="w-4 h-4" />
-                <p className="text-xs">{location.subtitle}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
