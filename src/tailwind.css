@@ -1078,7 +1078,7 @@ video {
 
 .bg-violet-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(109 40 217 / var(--tw-bg-opacity, 1));
+  background-color: rgb(117 53 173 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -1455,7 +1455,7 @@ video {
 
 .hover\:bg-violet-800:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(91 33 182 / var(--tw-bg-opacity, 1));
+  background-color: rgb(95 42 143 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-rose-500:hover {
