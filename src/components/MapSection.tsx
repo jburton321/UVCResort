@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { divIcon } from 'leaflet';
-import { Navigation, ExternalLink } from 'lucide-react';
+import { Navigation, ExternalLink, Heart } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 
 const locations = [
@@ -92,10 +92,12 @@ export function MapSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Perfectly Located in Paradise
+            Discover Adult-Only Luxury in the <Heart className="inline w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-red-500 fill-red-500" />
+            <br />
+            of the Mayan Coast Riviera Cancun.
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Discover the Riviera Maya's most iconic destinations, all within easy reach of your luxury resort.
+            Carretera Federal 387, Km 299 Solidaridad, Riviera Maya, QR, 77710, Mexico
           </p>
         </div>
 
