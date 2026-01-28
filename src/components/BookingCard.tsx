@@ -17,7 +17,7 @@ export function BookingCard({
   return (
     <aside className="bg-white rounded-2xl shadow-xl w-full max-w-[340px] sm:max-w-sm overflow-hidden backdrop-blur-sm">
       <div className="bg-gold-400 px-2 sm:px-3 py-2 flex flex-wrap items-center justify-center gap-1 sm:gap-2">
-        <Zap className="w-4 h-5 text-gold-900" />
+        <Zap className="w-4 h-5 text-accent" />
         <span className="text-gold-950 font-bold text-sm sm:text-lg uppercase">Offer expires:</span>
         <div className="flex items-center gap-1 text-gold-800 font-bold">
           <div className="text-center">
@@ -57,7 +57,7 @@ export function BookingCard({
 
       <div className="bg-gray-100 py-3 sm:py-4 pr-3 sm:pr-4">
         <div className="flex items-center gap-2 sm:gap-4">
-          <div className="bg-gold-700 text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg">
+          <div className="bg-primary text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg">
             <div>84%</div>
             <div>OFF!</div>
           </div>
@@ -77,12 +77,12 @@ export function BookingCard({
 
       <div className="p-4 sm:p-6 flex flex-col gap-3">
         <div className="flex items-start gap-2">
-          <Bed className="w-5 h-5 text-gray-600 shrink-0 mt-0.5" />
+          <Bed className="w-5 h-5 text-accent shrink-0 mt-0.5" />
           <p className="text-black font-bold text-sm sm:text-base">{roomDescription}</p>
         </div>
 
         <div className="flex items-start gap-2">
-          <Wine className="w-5 h-5 text-gray-600 shrink-0 mt-0.5" />
+          <Wine className="w-5 h-5 text-accent shrink-0 mt-0.5" />
           <p className="text-black text-sm sm:text-base">
             <span className="font-bold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
             Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
@@ -105,7 +105,7 @@ export function BookingCard({
           This offer is getting a lot of attention.<br />
           Viewed 181 times in the past hour!
         </p>
-        <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-gold-400 shrink-0" />
+        <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0" />
       </div>
     </aside>
   );

@@ -59,7 +59,7 @@ export function Amenities() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {featuredAmenities.map((item, index) => (
                 <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
-                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" />
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0" />
                   <span className="text-white text-sm sm:text-base">{item.text}</span>
                 </div>
               ))}
@@ -73,7 +73,7 @@ export function Amenities() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {nearbyAttractions.map((item, index) => (
                 <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
-                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white shrink-0" />
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0" />
                   <span className="text-white text-sm sm:text-base">{item.text}</span>
                 </div>
               ))}

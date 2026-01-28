@@ -13,7 +13,7 @@ export function Button({
   className = '',
   onClick
 }: ButtonProps) {
-  const baseStyles = 'bg-gold-700 text-white text-center font-bold uppercase tracking-wide cursor-pointer transition-all hover:bg-gold-800 active:scale-[0.98] touch-manipulation shadow-lg hover:shadow-xl';
+  const baseStyles = 'bg-primary text-white text-center font-bold uppercase tracking-wide cursor-pointer transition-all hover:bg-primary-dark active:scale-[0.98] touch-manipulation shadow-lg hover:shadow-xl';
 
   const variantStyles = {
     primary: 'rounded-3xl py-3 sm:py-3.5 px-8 sm:px-16 text-sm sm:text-base min-h-[48px]',

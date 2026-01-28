@@ -1062,11 +1062,6 @@ video {
   background-color: rgb(244 216 171 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gold-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 154 40 / var(--tw-bg-opacity, 1));
-}
-
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
@@ -1075,6 +1070,11 @@ video {
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(117 53 173 / var(--tw-bg-opacity, 1));
 }
 
 .bg-slate-800 {
@@ -1109,8 +1109,8 @@ video {
   background-position: center;
 }
 
-.fill-gold-500 {
-  fill: #eec686;
+.fill-accent {
+  fill: #E29A28;
 }
 
 .fill-red-500 {
@@ -1332,6 +1332,11 @@ video {
   letter-spacing: 0.025em;
 }
 
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(226 154 40 / var(--tw-text-opacity, 1));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -1347,34 +1352,9 @@ video {
   color: rgb(42 52 60 / var(--tw-text-opacity, 1));
 }
 
-.text-gold-400 {
-  --tw-text-opacity: 1;
-  color: rgb(244 216 171 / var(--tw-text-opacity, 1));
-}
-
-.text-gold-500 {
-  --tw-text-opacity: 1;
-  color: rgb(238 198 134 / var(--tw-text-opacity, 1));
-}
-
-.text-gold-600 {
-  --tw-text-opacity: 1;
-  color: rgb(233 178 90 / var(--tw-text-opacity, 1));
-}
-
-.text-gold-700 {
-  --tw-text-opacity: 1;
-  color: rgb(226 154 40 / var(--tw-text-opacity, 1));
-}
-
 .text-gold-800 {
   --tw-text-opacity: 1;
   color: rgb(129 86 18 / var(--tw-text-opacity, 1));
-}
-
-.text-gold-900 {
-  --tw-text-opacity: 1;
-  color: rgb(66 44 9 / var(--tw-text-opacity, 1));
 }
 
 .text-gold-950 {
@@ -1400,6 +1380,11 @@ video {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(117 53 173 / var(--tw-text-opacity, 1));
 }
 
 .text-red-500 {
@@ -1488,14 +1473,14 @@ video {
   background-color: rgb(0 0 0 / 0.5);
 }
 
-.hover\:bg-gold-800:hover {
+.hover\:bg-primary-dark:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(129 86 18 / var(--tw-bg-opacity, 1));
+  background-color: rgb(95 42 143 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:text-gold-700:hover {
+.hover\:text-primary:hover {
   --tw-text-opacity: 1;
-  color: rgb(226 154 40 / var(--tw-text-opacity, 1));
+  color: rgb(117 53 173 / var(--tw-text-opacity, 1));
 }
 
 .hover\:shadow-xl:hover {

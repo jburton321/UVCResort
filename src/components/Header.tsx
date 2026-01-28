@@ -33,8 +33,8 @@ export function Header() {
                     href="#"
                     className={`text-sm font-normal uppercase tracking-wide transition-colors py-2 ${
                       link.active
-                        ? 'text-gold-700 font-semibold'
-                        : 'text-brand-700 hover:text-gold-700'
+                        ? 'text-primary font-semibold'
+                        : 'text-brand-700 hover:text-primary'
                     }`}
                   >
                     {link.label}
@@ -63,7 +63,7 @@ export function Header() {
                   <a
                     href="#"
                     className={`block py-4 px-2 text-base font-normal uppercase tracking-wide min-h-[48px] flex items-center touch-manipulation active:bg-gray-100 ${
-                      link.active ? 'text-gold-700 font-semibold' : 'text-brand-700'
+                      link.active ? 'text-primary font-semibold' : 'text-brand-700'
                     }`}
                   >
                     {link.label}

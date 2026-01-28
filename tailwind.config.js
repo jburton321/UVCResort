@@ -6,6 +6,10 @@ module.exports = {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
+        primary: '#7535AD',
+        'primary-dark': '#5f2a8f',
+        accent: '#E29A28',
+        'accent-dark': '#815612',
         gold: {
           50: '#fffdfc',
           100: '#fdf9f2',

@@ -62,7 +62,7 @@ function ReviewCard({ review }: { review: Review }) {
 
       <div className="flex gap-0.5 sm:gap-1 mb-3 sm:mb-4">
         {Array.from({ length: review.rating }).map((_, i) => (
-          <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-gold-500 text-gold-500" />
+          <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-accent text-accent" />
         ))}
       </div>
 

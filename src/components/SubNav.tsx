@@ -14,7 +14,7 @@ export function SubNav() {
           <li key={item}>
             <a
               href="#"
-              className="text-brand-700 text-xs sm:text-sm font-normal uppercase tracking-wide hover:text-gold-700 transition-colors py-2 px-1 block min-h-[44px] flex items-center touch-manipulation"
+              className="text-brand-700 text-xs sm:text-sm font-normal uppercase tracking-wide hover:text-primary transition-colors py-2 px-1 block min-h-[44px] flex items-center touch-manipulation"
             >
               {item}
             </a>
