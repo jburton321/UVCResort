@@ -1,6 +1,7 @@
 import { Tv, Coffee, Wine, Shirt, Lock } from 'lucide-react';
 import { Gallery } from '../components/Gallery';
 import { Button } from '../components/Button';
+import { MapSection } from '../components/MapSection';
 
 const roomFeatures = [
   { icon: Tv, label: '55" flat-screen HDTV' },
@@ -205,6 +206,8 @@ export function AccommodationsPage() {
           </div>
         </div>
       </section>
+
+      <MapSection />
 
       <img
         className="w-full h-auto"

@@ -17,3 +17,4 @@ export { CarouselButton } from './CarouselButton';
 export { ImageCard } from './ImageCard';
 export { ContentSection } from './ContentSection';
 export { FeaturedList } from './FeaturedList';
+export { MapSection } from './MapSection';
