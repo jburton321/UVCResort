@@ -61,11 +61,13 @@ function createLocationMarker(location: typeof locations[0]) {
     : `${location.distance} | ${location.time}`;
 
   const nameContent = isMain
-    ? `<img src="/image-30.png" alt="${location.name}" style="height: 28px; width: auto; margin-bottom: 4px;" />`
+    ? `<img src="/image-30.png" alt="${location.name}" style="height: 56px; width: auto; margin-bottom: 6px;" />`
     : `<h3 style="font-weight: bold; color: rgb(17, 24, 39); font-size: 16px; line-height: 1.2; margin: 0 0 4px 0;">${location.name}</h3>`;
 
+  const zIndex = isMain ? 'z-index: 9999;' : '';
+
   const html = `
-    <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content;">
+    <div style="display: flex; align-items: center; gap: 12px; transform: translate(-16px, -20px); width: max-content; ${zIndex}">
       <div style="flex-shrink: 0;">
         <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
           <path d="M16 0C7.164 0 0 7.164 0 16c0 12 16 24 16 24s16-12 16-24c0-8.836-7.164-16-16-16zm0 22c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/>
@@ -81,8 +83,8 @@ function createLocationMarker(location: typeof locations[0]) {
 
   return divIcon({
     html,
-    className: 'custom-location-marker',
-    iconSize: [400, 80],
+    className: isMain ? 'custom-location-marker main-marker' : 'custom-location-marker',
+    iconSize: isMain ? [500, 120] : [400, 80],
     iconAnchor: [16, 20],
   });
 }
@@ -123,6 +125,7 @@ export function MapSection() {
                 key={location.id}
                 position={[location.lat, location.lng]}
                 icon={createLocationMarker(location)}
+                zIndexOffset={location.isMain ? 1000 : 0}
               />
             ))}
           </MapContainer>

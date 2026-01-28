@@ -24,4 +24,8 @@
   background: transparent;
   border: none;
 }
+
+.custom-location-marker.main-marker {
+  z-index: 9999 !important;
+}
       
