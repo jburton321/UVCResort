@@ -25,6 +25,9 @@ const locationGalleryImages = [
   { src: 'resort-photo-10.png', label: 'Puerto Morelos' },
   { src: 'resort-photo-20.png', label: 'Downtown Playa del Carmen' },
   { src: 'resort-photo-30.png', label: 'El Camaleón Golf Course' },
+  { src: 'resort-photo-40.png', label: 'Xcaret Park' },
+  { src: 'resort-photo-50.png', label: 'Tulum Ruins' },
+  { src: 'link-dialog-open-lightbox5.png', label: 'Cenote Azul' },
 ];
 
 export function HomePage() {
