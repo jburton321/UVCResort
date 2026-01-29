@@ -107,10 +107,14 @@ img.hero-couple-element {
 .price-badge-ribbon-wrapper {
   position: absolute;
   filter:
-    drop-shadow(2px 2px 0 white)
-    drop-shadow(-2px -2px 0 white)
-    drop-shadow(2px -2px 0 white)
-    drop-shadow(-2px 2px 0 white);
+    drop-shadow(1px 0 0 white)
+    drop-shadow(-1px 0 0 white)
+    drop-shadow(0 1px 0 white)
+    drop-shadow(0 -1px 0 white)
+    drop-shadow(1px 1px 0 white)
+    drop-shadow(-1px -1px 0 white)
+    drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px 1px 0 white);
 }
 
 .price-badge-tag-wrapper {
