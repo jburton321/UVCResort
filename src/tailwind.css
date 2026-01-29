@@ -3130,8 +3130,8 @@ img.hero-couple-element {
     height: 280px;
   }
 
-  .lg\:min-h-\[700px\] {
-    min-height: 700px;
+  .lg\:min-h-\[800px\] {
+    min-height: 800px;
   }
 
   .lg\:w-1\/2 {
@@ -3286,10 +3286,6 @@ img.hero-couple-element {
 
   .xl\:h-\[300px\] {
     height: 300px;
-  }
-
-  .xl\:min-h-\[800px\] {
-    min-height: 800px;
   }
 
   .xl\:w-7 {
