@@ -51,14 +51,16 @@ export function BookingCard({
         </h3>
       </div>
 
-      <div className="bg-gray-100 py-3 sm:py-4 pr-3 sm:pr-4">
+      <div className="bg-gray-100 py-3 sm:py-4 px-3 sm:px-4">
         <div className="flex items-center gap-2 sm:gap-4">
-          <div className="bg-primary text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg animate-bounce-subtle">
+          <div className="bg-primary text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center leading-tight shadow-lg animate-bounce-subtle">
             <div>84%</div>
             <div>OFF!</div>
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-gray-600 line-through text-xs sm:text-sm">Normal Rate: {normalRate}</p>
+            <p className="text-gray-600 text-xs sm:text-sm">
+              Normal Rate: <span className="line-through font-bold text-red-600">{normalRate}</span>
+            </p>
             <p className="text-slate-800 font-bold text-3xl sm:text-5xl">{salePrice}</p>
           </div>
           <div className="text-slate-800 font-bold text-right shrink-0">
@@ -66,7 +68,7 @@ export function BookingCard({
             <span className="block text-[10px] sm:text-xs">PER COUPLE</span>
           </div>
         </div>
-        <p className="text-slate-800 font-bold text-[0.8rem] text-center mt-2">
+        <p className="text-slate-800 font-bold text-[0.8rem] text-center mt-3">
           *Pay $600 at the time of booking for all 5-days/4-nights
         </p>
       </div>
@@ -90,10 +92,10 @@ export function BookingCard({
         <Button className="w-full min-h-[48px] touch-manipulation">Reserve Now</Button>
       </div>
 
-      <div className="flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-2">
-        <img src="trust.png" alt="Secure Transaction Badge" className="flex-1 max-h-16 sm:max-h-20 object-contain transition-transform duration-300 hover:scale-110" />
-        <img src="vector0.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20 transition-transform duration-300 hover:scale-110" />
-        <img src="vector31.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20 transition-transform duration-300 hover:scale-110" />
+      <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 px-4">
+        <img src="trust.png" alt="Secure Transaction Badge" className="h-12 sm:h-16 w-auto object-contain transition-transform duration-300 hover:scale-110" />
+        <img src="vector0.svg" alt="Trust badge" className="h-10 sm:h-14 w-auto transition-transform duration-300 hover:scale-110" />
+        <img src="vector31.svg" alt="Trust badge" className="h-10 sm:h-14 w-auto transition-transform duration-300 hover:scale-110" />
       </div>
 
       <div className="bg-brand-900 px-3 sm:px-4 py-2 flex items-center justify-between gap-2">
