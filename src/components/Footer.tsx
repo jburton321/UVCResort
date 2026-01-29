@@ -5,14 +5,14 @@ export function Footer() {
         <img
           src="layer-20.svg"
           alt="VacationVIP"
-          className="h-4 sm:h-5 mx-auto mb-4 sm:mb-5"
+          className="h-4 sm:h-5 mx-auto mb-4 sm:mb-5 transition-transform duration-300 hover:scale-105"
         />
 
         <p className="text-white text-xs sm:text-sm md:text-base mb-4 sm:mb-5 max-w-3xl mx-auto px-2 leading-relaxed">
           THIS ADVERTISING MATERIAL IS BEING USED FOR THE PURPOSE OF SOLICITING SALES OF TIMESHARE INTERESTS OR PLANS
         </p>
 
-        <div className="bg-white rounded-lg inline-flex items-center gap-2 px-2 sm:px-3 py-1 mb-4 sm:mb-5">
+        <div className="bg-white rounded-lg inline-flex items-center gap-2 px-2 sm:px-3 py-1 mb-4 sm:mb-5 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer">
           <img
             src="group6.svg"
             alt="BBB Accredited"

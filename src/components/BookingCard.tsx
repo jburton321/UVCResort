@@ -1,36 +1,41 @@
 import { Zap, Bed, Wine, Eye } from 'lucide-react';
 import { Button } from './Button';
+import { useCountdown } from '../hooks/useCountdown';
 
 interface BookingCardProps {
   normalRate?: string;
   salePrice?: string;
-  discount?: string;
   roomDescription?: string;
 }
 
 export function BookingCard({
   normalRate = '$5,600',
   salePrice = '$299*',
-  discount = '84% OFF!',
   roomDescription = 'Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya',
 }: BookingCardProps) {
+  const { hours, minutes, seconds, isExpired } = useCountdown(45);
+
   return (
-    <aside className="bg-white rounded-2xl shadow-xl w-full max-w-[340px] sm:max-w-sm overflow-hidden backdrop-blur-sm">
+    <aside className="bg-white rounded-2xl shadow-xl w-full max-w-[340px] sm:max-w-sm overflow-hidden backdrop-blur-sm hover:shadow-2xl transition-shadow duration-500">
       <div className="bg-[#FFD174] px-2 sm:px-3 py-2.5 flex items-center justify-center gap-2">
-        <Zap className="w-4 h-5 text-red-600" />
-        <span className="text-slate-900 font-bold text-sm sm:text-base uppercase">Offer expires:</span>
-        <div className="flex items-center gap-0.5 font-bold text-red-600 text-lg sm:text-xl">
-          <span>00</span>
-          <span>:</span>
-          <span>44</span>
-          <span>:</span>
-          <span>54</span>
-        </div>
+        <Zap className="w-4 h-5 text-red-600 animate-pulse" />
+        <span className="text-slate-900 font-bold text-sm sm:text-base uppercase">
+          {isExpired ? 'Offer expired' : 'Offer expires:'}
+        </span>
+        {!isExpired && (
+          <div className="flex items-center gap-0.5 font-bold text-red-600 text-lg sm:text-xl tabular-nums">
+            <span className="min-w-[28px] text-center">{hours}</span>
+            <span className="animate-pulse">:</span>
+            <span className="min-w-[28px] text-center">{minutes}</span>
+            <span className="animate-pulse">:</span>
+            <span className="min-w-[28px] text-center">{seconds}</span>
+          </div>
+        )}
       </div>
 
       <div className="p-4 sm:p-6 flex flex-col gap-3 sm:gap-4">
         <img
-          className="h-10 sm:h-14 w-auto mx-auto"
+          className="h-10 sm:h-14 w-auto mx-auto transition-transform duration-300 hover:scale-105"
           src="image-30.png"
           alt="Hyatt Zilara"
         />
@@ -48,7 +53,7 @@ export function BookingCard({
 
       <div className="bg-gray-100 py-3 sm:py-4 pr-3 sm:pr-4">
         <div className="flex items-center gap-2 sm:gap-4">
-          <div className="bg-primary text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg">
+          <div className="bg-primary text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg animate-bounce-subtle">
             <div>84%</div>
             <div>OFF!</div>
           </div>
@@ -86,9 +91,9 @@ export function BookingCard({
       </div>
 
       <div className="flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-2">
-        <img src="trust.png" alt="Secure Transaction Badge" className="h-14 sm:h-20 w-14 sm:w-20 object-contain" />
-        <img src="vector0.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20" />
-        <img src="vector31.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20" />
+        <img src="trust.png" alt="Secure Transaction Badge" className="h-14 sm:h-20 w-14 sm:w-20 object-contain transition-transform duration-300 hover:scale-110" />
+        <img src="vector0.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20 transition-transform duration-300 hover:scale-110" />
+        <img src="vector31.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20 transition-transform duration-300 hover:scale-110" />
       </div>
 
       <div className="bg-brand-900 px-3 sm:px-4 py-2 flex items-center justify-between gap-2">
@@ -96,7 +101,7 @@ export function BookingCard({
           This offer is getting a lot of attention.<br />
           Viewed 181 times in the past hour!
         </p>
-        <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0" />
+        <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0 animate-pulse" />
       </div>
     </aside>
   );

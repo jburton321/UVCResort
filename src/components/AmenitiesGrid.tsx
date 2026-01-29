@@ -14,7 +14,7 @@ export function AmenitiesGrid() {
     <section className="pt-0 pb-10 sm:pb-12 md:pb-16 px-4 sm:px-6">
       <div className="max-w-content mx-auto text-center">
         <img
-          className="h-10 sm:h-12 md:h-14 mx-auto mb-6 sm:mb-8"
+          className="h-10 sm:h-12 md:h-14 mx-auto mb-6 sm:mb-8 transition-transform duration-300 hover:scale-105"
           src="image-30.png"
           alt="Hyatt Zilara"
         />
@@ -30,13 +30,22 @@ export function AmenitiesGrid() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {amenities.map((amenity, index) => (
-            <div key={index} className="flex flex-col items-center gap-2 sm:gap-3">
-              <img
-                src={amenity.image}
-                alt={amenity.label}
-                className="w-full h-28 sm:h-36 md:h-44 object-cover rounded-lg"
-              />
-              <span className="text-black text-xs sm:text-sm font-medium uppercase text-center leading-tight">
+            <div
+              key={index}
+              className="flex flex-col items-center gap-2 sm:gap-3 group cursor-pointer"
+            >
+              <div className="relative w-full overflow-hidden rounded-lg sm:rounded-xl">
+                <img
+                  src={amenity.image}
+                  alt={amenity.label}
+                  className="w-full h-28 sm:h-36 md:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 border-3 border-white/40 rounded-lg sm:rounded-xl" />
+                </div>
+              </div>
+              <span className="text-black text-xs sm:text-sm font-medium uppercase text-center leading-tight transition-colors duration-300 group-hover:text-primary">
                 {amenity.label}
               </span>
             </div>

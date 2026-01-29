@@ -26,7 +26,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <button
             onClick={() => navigateTo('home')}
-            className="p-1 sm:p-2"
+            className="p-1 sm:p-2 transition-transform duration-300 hover:scale-105"
             aria-label="Go to home"
           >
             <img
@@ -42,13 +42,16 @@ export function Header() {
                 <li key={link.label}>
                   <button
                     onClick={() => handleNavClick(link.page)}
-                    className={`text-sm font-normal uppercase tracking-wide transition-colors py-2 ${
+                    className={`relative text-sm font-normal uppercase tracking-wide transition-colors duration-300 py-2 group ${
                       currentPage === link.page
                         ? 'text-primary font-semibold'
                         : 'text-brand-700 hover:text-primary'
                     }`}
                   >
                     {link.label}
+                    <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ${
+                      currentPage === link.page ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    }`} />
                   </button>
                 </li>
               ))}
@@ -57,7 +60,7 @@ export function Header() {
           </nav>
 
           <button
-            className="lg:hidden p-3 -mr-2 min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation"
+            className="lg:hidden p-3 -mr-2 min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation transition-transform duration-200 active:scale-90"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
@@ -66,14 +69,14 @@ export function Header() {
           </button>
         </div>
 
-        {mobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <nav className="mt-4 pb-4 border-t pt-4">
             <ul className="flex flex-col">
-              {navLinks.map((link) => (
-                <li key={link.label}>
+              {navLinks.map((link, index) => (
+                <li key={link.label} style={{ transitionDelay: `${index * 50}ms` }} className={`transform transition-all duration-300 ${mobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}>
                   <button
                     onClick={() => handleNavClick(link.page)}
-                    className={`w-full text-left py-4 px-2 text-base font-normal uppercase tracking-wide min-h-[48px] flex items-center touch-manipulation active:bg-gray-100 ${
+                    className={`w-full text-left py-4 px-2 text-base font-normal uppercase tracking-wide min-h-[48px] flex items-center touch-manipulation transition-colors duration-200 active:bg-gray-100 ${
                       currentPage === link.page ? 'text-primary font-semibold' : 'text-brand-700'
                     }`}
                   >
@@ -86,7 +89,7 @@ export function Header() {
               <Button variant="small" className="w-full min-h-[48px]">reserve now</Button>
             </div>
           </nav>
-        )}
+        </div>
       </div>
     </header>
   );

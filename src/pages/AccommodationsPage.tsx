@@ -2,6 +2,7 @@ import { Tv, Coffee, Wine, Shirt, Lock } from 'lucide-react';
 import { Gallery } from '../components/Gallery';
 import { Button } from '../components/Button';
 import { MapSection } from '../components/MapSection';
+import { useCountdown } from '../hooks/useCountdown';
 
 const roomFeatures = [
   { icon: Tv, label: '55" flat-screen HDTV' },
@@ -32,6 +33,8 @@ function HairDryerIcon({ className }: { className?: string }) {
 }
 
 export function AccommodationsPage() {
+  const { hours, minutes, seconds, isExpired } = useCountdown(45);
+
   return (
     <>
       <section
@@ -57,20 +60,20 @@ export function AccommodationsPage() {
                 <Button className="self-start">RESERVE NOW</Button>
               </div>
 
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="bg-[#7535ad] py-4 px-6">
                   <h3 className="text-white text-xl md:text-2xl font-bold">Room Features:</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-3">
                     {roomFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-3">
+                      <li key={index} className="flex items-center gap-3 group">
                         {feature.icon === 'hairdryer' ? (
-                          <HairDryerIcon className="w-6 h-6 text-gray-700 flex-shrink-0" />
+                          <HairDryerIcon className="w-6 h-6 text-gray-700 flex-shrink-0 transition-colors duration-300 group-hover:text-primary" />
                         ) : (
-                          <feature.icon className="w-6 h-6 text-gray-700 flex-shrink-0" />
+                          <feature.icon className="w-6 h-6 text-gray-700 flex-shrink-0 transition-colors duration-300 group-hover:text-primary" />
                         )}
-                        <span className="text-gray-800">{feature.label}</span>
+                        <span className="text-gray-800 transition-colors duration-300 group-hover:text-gray-900">{feature.label}</span>
                       </li>
                     ))}
                   </ul>
@@ -81,11 +84,11 @@ export function AccommodationsPage() {
             <div className="mt-8 lg:mt-12 bg-gray-100 rounded-2xl p-6 md:p-8">
               <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
                 <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#00c0d5] flex items-center justify-center">
+                  <div className="relative group">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#00c0d5] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                       <span className="text-white text-3xl sm:text-4xl font-black">84%</span>
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-[#ffd174] rounded-full flex items-center justify-center">
+                    <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-[#ffd174] rounded-full flex items-center justify-center animate-bounce-subtle">
                       <span className="text-xs font-bold">OFF</span>
                     </div>
                   </div>
@@ -108,24 +111,28 @@ export function AccommodationsPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#ffd174] rounded-xl py-5 px-8 text-center min-w-[200px]">
-                  <div className="text-sm font-bold uppercase text-gray-800 mb-2">Offer expires:</div>
-                  <div className="flex items-center justify-center gap-1 text-gray-900">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold">00</div>
-                      <div className="text-xs uppercase text-gray-600">hr</div>
-                    </div>
-                    <span className="text-2xl font-bold">:</span>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold">44</div>
-                      <div className="text-xs uppercase text-gray-600">min</div>
-                    </div>
-                    <span className="text-2xl font-bold">:</span>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold">58</div>
-                      <div className="text-xs uppercase text-gray-600">sec</div>
-                    </div>
+                <div className="bg-[#ffd174] rounded-xl py-5 px-8 text-center min-w-[200px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-sm font-bold uppercase text-gray-800 mb-2">
+                    {isExpired ? 'Offer expired' : 'Offer expires:'}
                   </div>
+                  {!isExpired && (
+                    <div className="flex items-center justify-center gap-1 text-gray-900 tabular-nums">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold min-w-[32px]">{hours}</div>
+                        <div className="text-xs uppercase text-gray-600">hr</div>
+                      </div>
+                      <span className="text-2xl font-bold animate-pulse">:</span>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold min-w-[32px]">{minutes}</div>
+                        <div className="text-xs uppercase text-gray-600">min</div>
+                      </div>
+                      <span className="text-2xl font-bold animate-pulse">:</span>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold min-w-[32px]">{seconds}</div>
+                        <div className="text-xs uppercase text-gray-600">sec</div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -138,11 +145,11 @@ export function AccommodationsPage() {
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-content mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
                 src="accommodations/resort-photo-11.png"
                 alt="Finely Appointed Luxury Room"
-                className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-[4/3]"
+                className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="w-full lg:w-1/2">
@@ -162,11 +169,11 @@ export function AccommodationsPage() {
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-content mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
                 src="accommodations/resort-photo-21.png"
                 alt="Ultimate Convenience Amenities"
-                className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-[4/3]"
+                className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="w-full lg:w-1/2">
@@ -186,11 +193,11 @@ export function AccommodationsPage() {
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-content mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
                 src="accommodations/resort-photo-31.png"
                 alt="Suite with Private Balcony"
-                className="w-full h-auto rounded-2xl shadow-lg object-cover aspect-[4/3]"
+                className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="w-full lg:w-1/2">

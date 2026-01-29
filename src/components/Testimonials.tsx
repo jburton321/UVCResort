@@ -45,14 +45,17 @@ const galleryImages = [
   'link-dialog-open-lightbox15.png',
 ];
 
-function ReviewCard({ review }: { review: Review }) {
+function ReviewCard({ review, index }: { review: Review; index: number }) {
   return (
-    <article className="bg-gray-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col h-full w-full sm:max-w-xs">
+    <article
+      className="bg-gray-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col h-full w-full sm:max-w-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-50 group"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
       <div className="flex items-start gap-3 mb-4 sm:mb-6">
         <img
           src={review.avatar}
           alt={review.name}
-          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0 ring-2 ring-transparent group-hover:ring-accent transition-all duration-300"
         />
         <div className="min-w-0">
           <h4 className="font-bold text-sm text-gray-900 truncate">{review.name}</h4>
@@ -62,7 +65,11 @@ function ReviewCard({ review }: { review: Review }) {
 
       <div className="flex gap-0.5 sm:gap-1 mb-3 sm:mb-4">
         {Array.from({ length: review.rating }).map((_, i) => (
-          <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-accent text-accent" />
+          <Star
+            key={i}
+            className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-accent text-accent transition-transform duration-300 group-hover:scale-110"
+            style={{ transitionDelay: `${i * 50}ms` }}
+          />
         ))}
       </div>
 
@@ -74,7 +81,7 @@ function ReviewCard({ review }: { review: Review }) {
         <img
           src="_67-d-0924777-f-9-fd-4-ea-51-ba-47-f-tripadvisor-svg0.svg"
           alt="TripAdvisor"
-          className="h-4 sm:h-5"
+          className="h-4 sm:h-5 transition-transform duration-300 group-hover:scale-105"
         />
       </div>
     </article>
@@ -93,7 +100,7 @@ export function Testimonials() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {reviews.map((review, index) => (
-            <ReviewCard key={index} review={review} />
+            <ReviewCard key={index} review={review} index={index} />
           ))}
         </div>
 

@@ -13,7 +13,16 @@ export function Button({
   className = '',
   onClick
 }: ButtonProps) {
-  const baseStyles = 'bg-primary text-white text-center font-bold uppercase tracking-wide cursor-pointer transition-all hover:bg-primary-dark active:scale-[0.98] touch-manipulation shadow-lg hover:shadow-xl';
+  const baseStyles = `
+    relative overflow-hidden
+    bg-primary text-white text-center font-bold uppercase tracking-wide cursor-pointer
+    transition-all duration-300 ease-out
+    hover:bg-primary-dark hover:shadow-xl hover:-translate-y-0.5
+    active:scale-[0.98] active:translate-y-0
+    touch-manipulation shadow-lg
+    before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+    before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-700
+  `;
 
   const variantStyles = {
     primary: 'rounded-3xl py-3 sm:py-3.5 px-8 sm:px-16 text-sm sm:text-base min-h-[48px]',
@@ -25,7 +34,7 @@ export function Button({
       className={`${baseStyles} ${variantStyles[variant]} ${className}`}
       onClick={onClick}
     >
-      {children}
+      <span className="relative z-10">{children}</span>
     </button>
   );
 }
