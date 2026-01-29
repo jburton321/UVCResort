@@ -54,6 +54,8 @@ img.hero-couple-element {
   justify-content: center;
   width: 500px;
   font-family: 'Arial Black', Gadget, sans-serif;
+  transform: scale(0.85);
+  transform-origin: center;
 }
 
 .price-badge-circle {
@@ -179,7 +181,7 @@ img.hero-couple-element {
 
 @media (max-width: 640px) {
   .price-badge-wrapper {
-    transform: scale(0.65);
+    transform: scale(0.55);
     transform-origin: center;
   }
 }
