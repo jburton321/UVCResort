@@ -872,6 +872,10 @@ video {
   max-height: 0px;
 }
 
+.max-h-16 {
+  max-height: 4rem;
+}
+
 .max-h-\[500px\] {
   max-height: 500px;
 }
@@ -2406,6 +2410,10 @@ img.hero-couple-element {
     height: 240px;
   }
 
+  .sm\:max-h-20 {
+    max-height: 5rem;
+  }
+
   .sm\:min-h-\[600px\] {
     min-height: 600px;
   }
@@ -2472,10 +2480,6 @@ img.hero-couple-element {
 
   .sm\:max-w-sm {
     max-width: 24rem;
-  }
-
-  .sm\:max-w-xs {
-    max-width: 20rem;
   }
 
   .sm\:grid-cols-2 {

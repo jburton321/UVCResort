@@ -48,7 +48,7 @@ const galleryImages = [
 function ReviewCard({ review, index }: { review: Review; index: number }) {
   return (
     <article
-      className="bg-gray-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col h-full w-full sm:max-w-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-50 group"
+      className="bg-gray-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-50 group"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       <div className="flex items-start gap-3 mb-4 sm:mb-6">
@@ -104,8 +104,8 @@ export function Testimonials() {
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-12 md:mt-16 flex justify-center px-2">
-          <Button className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[400px] lg:max-w-3xl">Reserve Now</Button>
+        <div className="mt-10 sm:mt-12 md:mt-16">
+          <Button className="w-full">Reserve Now</Button>
         </div>
       </div>
     </section>
