@@ -32,4 +32,8 @@
 .leaflet-container {
   isolation: isolate;
 }
+
+.leaflet-marker-pane {
+  overflow: visible !important;
+}
       

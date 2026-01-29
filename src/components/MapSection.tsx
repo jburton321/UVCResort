@@ -67,8 +67,8 @@ function createLocationMarker(location: typeof locations[0]) {
 
   const html = isMain
     ? `
-    <div style="display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -100%); ${zIndex}">
-      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; text-align: center; margin-bottom: 8px; min-width: 280px;">
+    <div style="display: flex; flex-direction: column; align-items: center; ${zIndex}">
+      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 20px; text-align: center; margin-bottom: 8px; width: 320px;">
         ${nameContent}
         <p style="color: rgb(75, 85, 99); font-size: 13px; margin: 0; line-height: 1.4;">${distanceText}</p>
       </div>
@@ -98,8 +98,8 @@ function createLocationMarker(location: typeof locations[0]) {
   return divIcon({
     html,
     className: isMain ? 'custom-location-marker main-marker' : 'custom-location-marker',
-    iconSize: isMain ? [300, 160] : [400, 80],
-    iconAnchor: isMain ? [150, 160] : [16, 20],
+    iconSize: isMain ? [320, 180] : [400, 80],
+    iconAnchor: isMain ? [160, 180] : [16, 20],
   });
 }
 
@@ -126,7 +126,7 @@ export function MapSection({ children }: MapSectionProps) {
           </div>
 
           <div className="px-6">
-            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl">
               <MapContainer
                 center={center}
                 zoom={11}

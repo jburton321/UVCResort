@@ -1738,6 +1738,10 @@ video {
   isolation: isolate;
 }
 
+.leaflet-marker-pane {
+  overflow: visible !important;
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
