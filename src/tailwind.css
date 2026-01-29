@@ -1727,7 +1727,8 @@ video {
 img.hero-couple-element {
   width: 48em;
   height: auto;
-  margin: 0 0 -49px 0;
+  display: block;
+  margin: 0;
 }
 
 .hover\:scale-110:hover {
