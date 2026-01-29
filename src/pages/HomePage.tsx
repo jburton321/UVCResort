@@ -37,7 +37,7 @@ export function HomePage() {
           alt="Save Now Travel Later banner"
         />
         <img
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[40%] max-w-md"
           src="tag.png"
           alt="Special offer tag"
         />

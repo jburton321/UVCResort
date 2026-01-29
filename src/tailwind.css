@@ -871,6 +871,10 @@ video {
   width: 280px;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .w-auto {
   width: auto;
 }
