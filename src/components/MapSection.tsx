@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { divIcon } from 'leaflet';
-import { Navigation, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 
 const locations = [
@@ -149,15 +149,6 @@ export function MapSection({ children }: MapSectionProps) {
                 ))}
               </MapContainer>
 
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-[1000]">
-                <div className="flex items-center gap-2 mb-2">
-                  <Navigation className="w-5 h-5 text-blue-600" />
-                  <h3 className="text-sm font-bold text-gray-900">Riviera Maya</h3>
-                </div>
-                <p className="text-xs text-gray-600">
-                  All destinations within 30 minutes of your resort
-                </p>
-              </div>
             </div>
           </div>
 
