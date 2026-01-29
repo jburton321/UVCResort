@@ -17,11 +17,11 @@ export function PriceBadge({
 }: PriceBadgeProps) {
   return (
     <div className={`price-badge-wrapper ${className}`}>
-      <div className="price-badge-tag-left">
+      <div className="price-badge-shape price-badge-tag-left">
         <span>ONLY</span>
       </div>
 
-      <div className="price-badge-ribbon-right">
+      <div className="price-badge-shape price-badge-ribbon-right">
         <div className="price-badge-save-content">
           <div className="price-badge-save-title">SAVE</div>
           <div className="price-badge-save-value">{savePercent}%</div>
@@ -29,7 +29,7 @@ export function PriceBadge({
       </div>
 
       <div className="price-badge-circle">
-        <div className="price-badge-days">{days}</div>
+        <div className="price-badge-days price-badge-italic">{days}</div>
         <div className="price-badge-price">
           <span className="price-badge-currency">$</span>
           {price}
