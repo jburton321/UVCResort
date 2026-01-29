@@ -8,21 +8,16 @@ export function Hero() {
       backgroundImage="section0.png"
       overlay
       overlayOpacity={30}
-      className="min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex flex-col"
+      className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex flex-col overflow-visible"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 w-full flex-1 flex flex-col">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 flex-1">
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1 flex-1 justify-end">
-            <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl mb-[-1px]">
+          <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
+            <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
               <img
                 className="w-full h-auto"
                 src="mexico-10.png"
                 alt="Mexico destination"
-              />
-              <img
-                className="w-full h-auto block"
-                src="layer-0-10.png"
-                alt="Resort view"
               />
               <button className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-full py-2 sm:py-2.5 px-4 sm:px-5 flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow min-h-[44px] touch-manipulation active:scale-95">
                 <Play className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
@@ -35,6 +30,11 @@ export function Hero() {
           </div>
         </div>
       </div>
+      <img
+        className="absolute bottom-0 left-4 sm:left-8 lg:left-16 w-[280px] sm:w-[350px] md:w-[420px] lg:w-[500px] h-auto pointer-events-none"
+        src="layer-0-10.png"
+        alt="Couple enjoying resort"
+      />
     </BackgroundSection>
   );
 }
