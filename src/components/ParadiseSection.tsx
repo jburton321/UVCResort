@@ -15,21 +15,12 @@ export function ParadiseSection() {
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-          <div className="bg-white px-3 sm:px-4 py-2 rounded shadow order-2 sm:order-1">
-            <span className="font-bold text-xs sm:text-sm">ONLY</span>
-          </div>
-          <div className="bg-primary rounded-full w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 flex flex-col items-center justify-center border-4 border-white shadow-lg order-1 sm:order-2">
-            <span className="text-white text-sm sm:text-base md:text-lg">5-DAYS</span>
-            <span className="text-white text-3xl sm:text-4xl md:text-5xl font-black">$299</span>
-            <span className="text-white text-[10px] sm:text-xs">PER PACKAGE</span>
-            <span className="text-white text-[10px] sm:text-xs">(All 4-Nights)</span>
-          </div>
-          <div className="bg-white px-3 sm:px-4 py-2 rounded shadow order-3">
-            <span className="font-bold text-xs sm:text-sm">SAVE</span>
-            <br />
-            <span className="font-black text-xl sm:text-2xl">84%</span>
-          </div>
+        <div className="mb-6 sm:mb-8">
+          <img
+            src="price-badge.png"
+            alt="5-Days $299 Per Package - Save 84%"
+            className="mx-auto w-full max-w-xl h-auto"
+          />
         </div>
       </div>
 
