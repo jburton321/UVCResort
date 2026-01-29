@@ -24,7 +24,7 @@ export function ParadiseSection() {
         </div>
       </div>
 
-      <div className="bg-brand-800 py-10 sm:py-12 md:py-16 px-4 sm:px-6 mt-6 sm:mt-8">
+      <div className="bg-[#2b353d] py-10 sm:py-12 md:py-16 px-4 sm:px-6 mt-6 sm:mt-8">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-accent text-xl sm:text-2xl font-extrabold uppercase mb-6 sm:mb-8 md:mb-10">
             Ultimate Adults-Only Paradise
