@@ -17,14 +17,14 @@ export function Hero() {
       >
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 w-full flex-1 flex flex-col">
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 flex-1">
-            <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
+            <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-1">
               <img
                 className="hero-sticker-element"
                 src="mexico-10.png"
                 alt="Mexico destination"
               />
             </div>
-            <div className="w-full sm:w-auto flex justify-center lg:justify-end order-1 lg:order-2 px-2 sm:px-0">
+            <div className="w-full lg:w-auto flex justify-center lg:justify-end order-2 px-0 lg:px-0">
               <BookingCard />
             </div>
           </div>
