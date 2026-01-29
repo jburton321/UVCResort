@@ -993,6 +993,10 @@ input,
   width: 470px;
 }
 
+.w-\[calc\(100\%\+2rem\)\] {
+  width: calc(100% + 2rem);
+}
+
 .w-auto {
   width: auto;
 }
@@ -2855,6 +2859,10 @@ img.hero-couple-element {
     width: 340px;
   }
 
+  .md\:w-\[calc\(100\%\+3rem\)\] {
+    width: calc(100% + 3rem);
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -3194,10 +3202,6 @@ img.hero-couple-element {
     justify-content: flex-start;
   }
 
-  .lg\:justify-end {
-    justify-content: flex-end;
-  }
-
   .lg\:justify-between {
     justify-content: space-between;
   }
@@ -3220,11 +3224,6 @@ img.hero-couple-element {
 
   .lg\:p-8 {
     padding: 2rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:px-10 {
