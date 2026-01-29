@@ -11,7 +11,6 @@ export { Location } from './Location';
 export { Footer } from './Footer';
 export { Button } from './Button';
 export { BookingCard } from './BookingCard';
-export { PriceBadge } from './PriceBadge';
 export { MobileStickyCTA } from './MobileStickyCTA';
 export { BackgroundSection } from './BackgroundSection';
 export { CarouselButton } from './CarouselButton';
