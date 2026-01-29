@@ -8,7 +8,7 @@ export function Hero() {
       backgroundImage="section0.png"
       overlay
       overlayOpacity={30}
-      className="min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] py-6 sm:py-8 md:py-12"
+      className="min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] pt-6 sm:pt-8 md:pt-12 pb-0"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 md:gap-8">
@@ -20,7 +20,7 @@ export function Hero() {
                 alt="Mexico destination"
               />
               <img
-                className="w-full h-auto"
+                className="w-full h-auto block"
                 src="layer-0-10.png"
                 alt="Resort view"
               />
