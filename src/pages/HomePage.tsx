@@ -30,11 +30,18 @@ export function HomePage() {
       <AboutPackage />
       <ParadiseSection />
       <Amenities />
-      <img
-        className="w-full h-auto hidden sm:block"
-        src="banner.png"
-        alt="Save Now Travel Later banner"
-      />
+      <div className="relative hidden sm:block">
+        <img
+          className="w-full h-auto"
+          src="banner.png"
+          alt="Save Now Travel Later banner"
+        />
+        <img
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
+          src="tag.png"
+          alt="Special offer tag"
+        />
+      </div>
       <AmenitiesGrid />
       <Testimonials />
       <MapSection />
