@@ -31,7 +31,7 @@ export function Hero() {
         </div>
       </div>
       <img
-        className="absolute bottom-0 left-4 sm:left-8 lg:left-16 w-[280px] sm:w-[350px] md:w-[420px] lg:w-[500px] h-auto pointer-events-none"
+        className="absolute bottom-0 left-4 sm:left-8 lg:left-16 w-[280px] sm:w-[350px] md:w-[500px] lg:w-[800px] h-auto pointer-events-none"
         src="layer-0-10.png"
         alt="Couple enjoying resort"
       />

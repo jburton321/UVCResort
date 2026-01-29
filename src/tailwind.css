@@ -2223,8 +2223,8 @@ video {
     width: 24rem;
   }
 
-  .md\:w-\[420px\] {
-    width: 420px;
+  .md\:w-\[500px\] {
+    width: 500px;
   }
 
   .md\:min-w-\[400px\] {
@@ -2373,8 +2373,8 @@ video {
     width: 50%;
   }
 
-  .lg\:w-\[500px\] {
-    width: 500px;
+  .lg\:w-\[800px\] {
+    width: 800px;
   }
 
   .lg\:max-w-3xl {
