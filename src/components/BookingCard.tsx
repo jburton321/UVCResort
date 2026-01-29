@@ -1,6 +1,7 @@
 import { Zap, Bed, Wine, Eye } from 'lucide-react';
 import { Button } from './Button';
 import { useCountdown } from '../hooks/useCountdown';
+import { PriceBadge } from './PriceBadge';
 
 interface BookingCardProps {
   normalRate?: string;
@@ -51,24 +52,9 @@ export function BookingCard({
         </h3>
       </div>
 
-      <div className="bg-gray-100 py-3 sm:py-4 pr-3 sm:pr-4">
-        <div className="flex items-center gap-2 sm:gap-4">
-          <div className="bg-primary text-white font-bold text-lg sm:text-2xl py-3 sm:py-4 px-2 sm:px-4 rounded-r-xl text-center leading-tight shadow-lg animate-bounce-subtle">
-            <div>84%</div>
-            <div>OFF!</div>
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="text-gray-600 text-xs sm:text-sm">
-              Normal Rate: <span className="line-through font-bold text-red-600">{normalRate}</span>
-            </p>
-            <p className="text-slate-800 font-bold text-3xl sm:text-5xl">{salePrice}</p>
-          </div>
-          <div className="text-slate-800 font-bold text-right shrink-0">
-            <span className="text-base sm:text-xl">TODAY!</span>
-            <span className="block text-[10px] sm:text-xs">PER COUPLE</span>
-          </div>
-        </div>
-        <p className="text-slate-800 font-bold text-[0.8rem] text-center mt-3">
+      <div className="bg-gray-100 py-4 sm:py-6 overflow-hidden">
+        <PriceBadge />
+        <p className="text-slate-800 font-bold text-[0.8rem] text-center mt-4 px-4">
           *Pay $600 at the time of booking for all 5-days/4-nights
         </p>
       </div>
