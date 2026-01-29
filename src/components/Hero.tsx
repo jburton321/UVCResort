@@ -1,4 +1,3 @@
-import { Play } from 'lucide-react';
 import { BookingCard } from './BookingCard';
 import { BackgroundSection } from './BackgroundSection';
 
@@ -18,10 +17,6 @@ export function Hero() {
               src="mexico-10.png"
               alt="Mexico destination"
             />
-            <button className="hero-play-button-element">
-              <Play className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
-              <span className="text-gray-900 font-medium text-sm sm:text-base">Play video</span>
-            </button>
           </div>
           <div className="w-full sm:w-auto flex justify-center lg:justify-end order-1 lg:order-2 px-2 sm:px-0">
             <BookingCard />
@@ -34,10 +29,6 @@ export function Hero() {
           src="layer-0-10.png"
           alt="Couple enjoying resort"
         />
-        <button className="hero-play-button-element">
-          <Play className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800 fill-gray-800" />
-          <span className="text-gray-900 font-medium text-sm sm:text-base">Play video</span>
-        </button>
       </div>
     </BackgroundSection>
   );
