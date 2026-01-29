@@ -17,14 +17,18 @@ export function PriceBadge({
 }: PriceBadgeProps) {
   return (
     <div className={`price-badge-wrapper ${className}`}>
-      <div className="price-badge-shape price-badge-tag-left">
-        <span>ONLY</span>
+      <div className="price-badge-tag-wrapper">
+        <div className="price-badge-tag-left">
+          <span>ONLY</span>
+        </div>
       </div>
 
-      <div className="price-badge-shape price-badge-ribbon-right">
-        <div className="price-badge-save-content">
-          <div className="price-badge-save-title">SAVE</div>
-          <div className="price-badge-save-value">{savePercent}%</div>
+      <div className="price-badge-ribbon-wrapper">
+        <div className="price-badge-ribbon-right">
+          <div className="price-badge-save-content">
+            <div className="price-badge-save-title">SAVE</div>
+            <div className="price-badge-save-value">{savePercent}%</div>
+          </div>
         </div>
       </div>
 

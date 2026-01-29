@@ -56,14 +56,6 @@ img.hero-couple-element {
   font-family: 'Arial Black', Gadget, sans-serif;
 }
 
-.price-badge-shape {
-  filter:
-    drop-shadow(2px 2px 0 white)
-    drop-shadow(-2px -2px 0 white)
-    drop-shadow(2px -2px 0 white)
-    drop-shadow(-2px 2px 0 white);
-}
-
 .price-badge-circle {
   position: relative;
   z-index: 10;
@@ -111,20 +103,38 @@ img.hero-couple-element {
   font-style: italic;
 }
 
+.price-badge-tag-wrapper,
+.price-badge-ribbon-wrapper {
+  position: absolute;
+  filter:
+    drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white)
+    drop-shadow(2px -2px 0 white)
+    drop-shadow(-2px 2px 0 white);
+}
+
+.price-badge-tag-wrapper {
+  left: 10px;
+  top: 130px;
+  z-index: 11;
+}
+
+.price-badge-ribbon-wrapper {
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
 .price-badge-tag-left,
 .price-badge-ribbon-right {
-  position: absolute;
-  isolation: isolate;
   background: var(--yellow);
   color: black;
 }
 
 .price-badge-tag-left {
-  left: 10px;
   width: 120px;
   height: 55px;
-  z-index: 11;
-  top: 130px;
   clip-path: polygon(20% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
   display: flex;
   align-items: center;
@@ -134,10 +144,8 @@ img.hero-couple-element {
 }
 
 .price-badge-ribbon-right {
-  right: -80px;
   width: 280px;
   height: 110px;
-  z-index: 1;
   clip-path: polygon(0% 0%, 100% 0%, 88% 50%, 100% 100%, 0% 100%);
   display: flex;
   align-items: center;
