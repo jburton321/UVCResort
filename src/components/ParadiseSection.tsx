@@ -4,7 +4,7 @@ export function ParadiseSection() {
   return (
     <BackgroundSection
       backgroundImage="section-wrapper0.png"
-      className="py-10 sm:py-12 md:py-16"
+      className="pt-10 sm:pt-12 md:pt-16"
     >
       <div className="max-w-content mx-auto px-4 sm:px-6 text-center">
         <div className="mb-6 sm:mb-8">
