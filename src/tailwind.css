@@ -1822,8 +1822,8 @@ video {
     left: 0.75rem;
   }
 
-  .sm\:left-8 {
-    left: 2rem;
+  .sm\:left-6 {
+    left: 1.5rem;
   }
 
   .sm\:right-1 {
@@ -2500,8 +2500,8 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:left-\[calc\(50\%-640px\+48px\)\] {
-    left: calc(50% - 640px + 48px);
+  .lg\:left-\[calc\(50\%-615px\+32px\)\] {
+    left: calc(50% - 615px + 32px);
   }
 
   .lg\:order-1 {
@@ -2629,10 +2629,6 @@ video {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
-  }
-
-  .lg\:pl-12 {
-    padding-left: 3rem;
   }
 
   .lg\:text-left {
