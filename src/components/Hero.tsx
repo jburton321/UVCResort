@@ -40,7 +40,7 @@ export function Hero() {
                 </button>
               </div>
             </div>
-            <div className="w-full lg:w-auto flex justify-center lg:justify-end order-2 px-0 lg:px-0">
+            <div className="w-full lg:w-auto flex justify-center lg:justify-end order-2 -mx-4 sm:-mx-6 lg:mx-0 lg:px-0">
               <BookingCard />
             </div>
           </div>
