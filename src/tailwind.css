@@ -591,6 +591,10 @@ video {
   bottom: 0.75rem;
 }
 
+.bottom-\[15\%\] {
+  bottom: 15%;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -1291,6 +1295,10 @@ video {
 
 .fill-accent {
   fill: #E29A28;
+}
+
+.fill-gray-800 {
+  fill: #1f2937;
 }
 
 .fill-red-500 {
