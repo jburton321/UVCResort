@@ -81,9 +81,9 @@ export function AccommodationsPage() {
               </div>
             </div>
 
-            <div className="mt-8 lg:mt-12 bg-gray-100 rounded-2xl p-6 md:p-8">
-              <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
-                <div className="flex items-center gap-4">
+            <div className="mt-8 lg:mt-12 bg-gray-100 rounded-2xl p-5 sm:p-6 lg:p-8">
+              <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
+                <div className="flex-shrink-0">
                   <div className="relative group">
                     <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#00c0d5] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                       <span className="text-white text-3xl sm:text-4xl font-black">84%</span>
@@ -93,17 +93,17 @@ export function AccommodationsPage() {
                     </div>
                   </div>
                 </div>
-                <div className="flex-1 text-center lg:text-left">
-                  <h4 className="text-xl sm:text-2xl font-black text-gray-900 mb-2">
-                    Luxury All-Inclusive<br className="hidden sm:block" /> Riviera Cancun Vacation
+                <div className="flex-1 text-center lg:text-left min-w-0">
+                  <h4 className="text-xl sm:text-2xl font-black text-gray-900 mb-3">
+                    Luxury All-Inclusive Riviera Cancun Vacation
                   </h4>
-                  <div className="space-y-1 text-sm text-gray-800">
-                    <div className="flex items-start gap-2 justify-center lg:justify-start">
+                  <div className="space-y-2 text-sm text-gray-800">
+                    <div className="flex items-start gap-3 justify-center lg:justify-start">
                       <img src="bed0.svg" alt="" className="w-5 h-5 flex-shrink-0 mt-0.5" />
                       <span className="font-bold">Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya</span>
                     </div>
-                    <div className="flex items-start gap-2 justify-center lg:justify-start">
-                      <img src="local-bar0.svg" alt="" className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 justify-center lg:justify-start">
+                      <img src="local-bar0.svg" alt="" className="w-5 h-5 flex-shrink-0 mt-0.5" />
                       <span>
                         <span className="font-semibold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
                         Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
@@ -111,25 +111,25 @@ export function AccommodationsPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#ffd174] rounded-xl py-5 px-8 text-center min-w-[200px] shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-sm font-bold uppercase text-gray-800 mb-2">
+                <div className="flex-shrink-0 bg-[#ffd174] rounded-xl py-4 px-6 text-center min-w-[180px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-xs font-bold uppercase text-gray-800 mb-1.5 tracking-wide">
                     {isExpired ? 'Offer expired' : 'Offer expires:'}
                   </div>
                   {!isExpired && (
-                    <div className="flex items-center justify-center gap-1 text-gray-900 tabular-nums">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold min-w-[32px]">{hours}</div>
-                        <div className="text-xs uppercase text-gray-600">hr</div>
+                    <div className="flex items-center justify-center gap-0.5 text-gray-900 tabular-nums">
+                      <div className="text-center px-1">
+                        <div className="text-xl font-bold">{hours}</div>
+                        <div className="text-[10px] uppercase text-gray-600">hr</div>
                       </div>
-                      <span className="text-2xl font-bold animate-pulse">:</span>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold min-w-[32px]">{minutes}</div>
-                        <div className="text-xs uppercase text-gray-600">min</div>
+                      <span className="text-xl font-bold animate-pulse">:</span>
+                      <div className="text-center px-1">
+                        <div className="text-xl font-bold">{minutes}</div>
+                        <div className="text-[10px] uppercase text-gray-600">min</div>
                       </div>
-                      <span className="text-2xl font-bold animate-pulse">:</span>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold min-w-[32px]">{seconds}</div>
-                        <div className="text-xs uppercase text-gray-600">sec</div>
+                      <span className="text-xl font-bold animate-pulse">:</span>
+                      <div className="text-center px-1">
+                        <div className="text-xl font-bold">{seconds}</div>
+                        <div className="text-[10px] uppercase text-gray-600">sec</div>
                       </div>
                     </div>
                   )}
