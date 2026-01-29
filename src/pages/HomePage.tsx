@@ -25,8 +25,6 @@ const locationGalleryImages = [
   { src: 'resort-photo-10.png', label: 'Puerto Morelos' },
   { src: 'resort-photo-20.png', label: 'Downtown Playa del Carmen' },
   { src: 'resort-photo-30.png', label: 'El Camaleón Golf Course' },
-  { src: 'resort-photo-40.png', label: 'Xcaret Park' },
-  { src: 'resort-photo-50.png', label: 'Tulum Ruins' },
 ];
 
 export function HomePage() {
@@ -52,8 +50,9 @@ export function HomePage() {
       </div>
       <AmenitiesGrid />
       <Testimonials />
-      <MapSection />
-      <Gallery images={locationGalleryImages} />
+      <MapSection>
+        <Gallery images={locationGalleryImages} className="bg-transparent" />
+      </MapSection>
       <img
         className="w-full h-32 sm:h-40 md:h-56 object-cover"
         src="frame-19840779511.png"

@@ -103,56 +103,69 @@ function createLocationMarker(location: typeof locations[0]) {
   });
 }
 
-export function MapSection() {
+interface MapSectionProps {
+  children?: React.ReactNode;
+}
+
+export function MapSection({ children }: MapSectionProps) {
   const center: [number, number] = [20.7, -87.0];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-100">
       <div className="max-w-content mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Discover Adult-Only Luxury in the <Heart className="inline w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-red-500 fill-red-500" />
-            <br />
-            of the Mayan Coast Riviera Cancun.
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Carretera Federal 387, Km 299 Solidaridad, Riviera Maya, QR, 77710, Mexico
-          </p>
-        </div>
-
-        <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
-          <MapContainer
-            center={center}
-            zoom={11}
-            scrollWheelZoom={true}
-            className="w-full h-full"
-            zoomControl={true}
-          >
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-
-            {locations.map((location) => (
-              <Marker
-                key={location.id}
-                position={[location.lat, location.lng]}
-                icon={createLocationMarker(location)}
-                zIndexOffset={location.isMain ? 1000 : 0}
-              />
-            ))}
-          </MapContainer>
-
-          
-          <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-[1000]">
-            <div className="flex items-center gap-2 mb-2">
-              <Navigation className="w-5 h-5 text-blue-600" />
-              <h3 className="text-sm font-bold text-gray-900">Riviera Maya</h3>
-            </div>
-            <p className="text-xs text-gray-600">
-              All destinations within 30 minutes of your resort
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="text-center pt-10 pb-8 px-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Discover Adult-Only Luxury in the <Heart className="inline w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-red-500 fill-red-500" />
+              <br />
+              of the Mayan Coast Riviera Cancun.
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Carretera Federal 387, Km 299 Solidaridad, Riviera Maya, QR, 77710, Mexico
             </p>
           </div>
+
+          <div className="px-6">
+            <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
+              <MapContainer
+                center={center}
+                zoom={11}
+                scrollWheelZoom={true}
+                className="w-full h-full"
+                zoomControl={true}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+
+                {locations.map((location) => (
+                  <Marker
+                    key={location.id}
+                    position={[location.lat, location.lng]}
+                    icon={createLocationMarker(location)}
+                    zIndexOffset={location.isMain ? 1000 : 0}
+                  />
+                ))}
+              </MapContainer>
+
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 z-[1000]">
+                <div className="flex items-center gap-2 mb-2">
+                  <Navigation className="w-5 h-5 text-blue-600" />
+                  <h3 className="text-sm font-bold text-gray-900">Riviera Maya</h3>
+                </div>
+                <p className="text-xs text-gray-600">
+                  All destinations within 30 minutes of your resort
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {children && (
+            <div className="py-8">
+              {children}
+            </div>
+          )}
         </div>
       </div>
     </section>
