@@ -1,4 +1,5 @@
 import { BackgroundSection } from './BackgroundSection';
+import { PriceBadge } from './PriceBadge';
 
 export function ParadiseSection() {
   return (
@@ -15,11 +16,13 @@ export function ParadiseSection() {
           />
         </div>
 
-        <div className="mb-6 sm:mb-8">
-          <img
-            src="price-badge.png"
-            alt="5-Days $299 Per Package - Save 84%"
-            className="mx-auto w-full max-w-[22rem] h-auto"
+        <div className="mb-6 sm:mb-8 flex justify-center">
+          <PriceBadge
+            days="5-DAYS"
+            price={299}
+            packageText="PER PACKAGE"
+            subText="(All 4-Nights)"
+            savePercent={84}
           />
         </div>
       </div>

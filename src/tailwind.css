@@ -1009,10 +1009,6 @@ video {
   max-width: 72rem;
 }
 
-.max-w-\[22rem\] {
-  max-width: 22rem;
-}
-
 .max-w-\[340px\] {
   max-width: 340px;
 }
@@ -1881,6 +1877,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .ring-2 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1893,6 +1893,10 @@ video {
 
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1992,6 +1996,173 @@ img.hero-couple-element {
   height: auto;
   display: block;
   margin: 0;
+}
+
+.price-badge-wrapper {
+  --badge-purple: #7c3aad;
+  --badge-yellow: #f2d03b;
+  --badge-white: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 220px;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.price-badge-circle {
+  position: relative;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  background: var(--badge-purple);
+  border: 5px solid var(--badge-white);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.price-badge-days {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: -2px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.price-badge-price {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.price-badge-currency {
+  font-size: 2rem;
+  margin-top: 8px;
+  margin-right: 2px;
+}
+
+.price-badge-terms {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.price-badge-terms small {
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+.price-badge-tag-left,
+.price-badge-ribbon-right {
+  position: absolute;
+  background: var(--badge-yellow);
+  color: black;
+  filter: url(#price-badge-outline);
+}
+
+.price-badge-tag-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 46px;
+  z-index: 11;
+  -webkit-clip-path: polygon(18% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(18% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 16px;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.price-badge-ribbon-right {
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  height: 90px;
+  z-index: 1;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 88% 50%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 88% 50%, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 36px;
+}
+
+.price-badge-save-content {
+  text-align: center;
+  font-style: italic;
+  transform: skewX(-5deg);
+}
+
+.price-badge-save-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+.price-badge-save-value {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .price-badge-wrapper {
+    width: 320px;
+    height: 170px;
+    transform: scale(0.85);
+  }
+
+  .price-badge-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .price-badge-days {
+    font-size: 1.1rem;
+  }
+
+  .price-badge-price {
+    font-size: 3.5rem;
+  }
+
+  .price-badge-currency {
+    font-size: 1.5rem;
+    margin-top: 6px;
+  }
+
+  .price-badge-tag-left {
+    width: 80px;
+    height: 38px;
+    font-size: 0.75rem;
+  }
+
+  .price-badge-ribbon-right {
+    width: 180px;
+    height: 72px;
+    padding-right: 28px;
+  }
+
+  .price-badge-save-title {
+    font-size: 1.1rem;
+  }
+
+  .price-badge-save-value {
+    font-size: 2.4rem;
+  }
 }
 
 .before\:absolute::before {
