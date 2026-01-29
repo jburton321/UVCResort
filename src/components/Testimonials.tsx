@@ -90,14 +90,16 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-24 px-4 sm:px-6">
-      <div className="max-w-content mx-auto">
+    <section className="bg-white py-12 sm:py-16 md:py-24">
+      <div className="max-w-content mx-auto px-4 sm:px-6">
         <h2 className="text-gray-800 text-2xl sm:text-3xl font-bold text-center uppercase mb-8 sm:mb-12 md:mb-16">
           Guest Reviews
         </h2>
+      </div>
 
-        <Gallery images={galleryImages} className="mb-8 sm:mb-10 md:mb-12" />
+      <Gallery images={galleryImages} className="mb-8 sm:mb-10 md:mb-12" />
 
+      <div className="max-w-content mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} index={index} />
