@@ -14,11 +14,11 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 flex-1">
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
             <img
-              className="hero-sticker-element w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] h-auto"
+              className="hero-sticker-element"
               src="mexico-10.png"
               alt="Mexico destination"
             />
-            <button className="hero-play-button-element hidden lg:flex mt-4 sm:mt-6 bg-white rounded-full py-2.5 sm:py-3 px-5 sm:px-6 items-center gap-2.5 shadow-lg hover:shadow-xl transition-shadow min-h-[44px] touch-manipulation active:scale-95">
+            <button className="hero-play-button-element">
               <Play className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
               <span className="text-gray-900 font-medium text-sm sm:text-base">Play video</span>
             </button>
@@ -30,11 +30,11 @@ export function Hero() {
       </div>
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-[calc(25%-200px)] lg:translate-x-0 w-[280px] sm:w-[350px] md:w-[500px] lg:w-[800px]">
         <img
-          className="hero-couple-element w-full h-auto pointer-events-none"
+          className="hero-couple-element"
           src="layer-0-10.png"
           alt="Couple enjoying resort"
         />
-        <button className="hero-play-button-element lg:hidden absolute bottom-[15%] left-1/2 -translate-x-1/2 bg-white rounded-full py-2.5 sm:py-3 px-5 sm:px-6 flex items-center gap-2.5 shadow-lg hover:shadow-xl transition-shadow min-h-[44px] touch-manipulation active:scale-95">
+        <button className="hero-play-button-element">
           <Play className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800 fill-gray-800" />
           <span className="text-gray-900 font-medium text-sm sm:text-base">Play video</span>
         </button>
