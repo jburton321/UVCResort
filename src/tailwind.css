@@ -1002,6 +1002,10 @@ video {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1351,10 +1355,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.pb-0 {
-  padding-bottom: 0px;
 }
 
 .pb-20 {
@@ -2313,14 +2313,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:order-1 {
-    order: 1;
-  }
-
-  .lg\:order-2 {
-    order: 2;
-  }
-
   .lg\:mt-12 {
     margin-top: 3rem;
   }
@@ -2367,10 +2359,6 @@ video {
 
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
-  }
-
-  .lg\:items-start {
-    align-items: flex-start;
   }
 
   .lg\:justify-start {
@@ -2434,10 +2422,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-auto {
-    width: auto;
-  }
-
   .xl\:gap-6 {
     gap: 1.5rem;
   }

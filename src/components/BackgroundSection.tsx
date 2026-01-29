@@ -26,7 +26,7 @@ export function BackgroundSection({
           style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity / 100})` }}
         />
       )}
-      <div className="relative">{children}</div>
+      <div className="relative flex-1 flex flex-col">{children}</div>
     </section>
   );
 }
