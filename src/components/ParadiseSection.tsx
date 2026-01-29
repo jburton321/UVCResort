@@ -32,6 +32,11 @@ export function ParadiseSection() {
           <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed">
             Discover true beachfront bliss on a pristine white-sand beach, creating the perfect backdrop for romance and relaxation. The Premium All-Inclusive experience offers specialty gourmet à la carte dining nightly; no reservations needed, for a world-class culinary adventure. Enjoy seamless service from the moment you arrive with a private Amstar transfer, 24-hour room service, and an award-winning staff ensuring you are pampered at every turn.
           </p>
+          <img
+            src="divider.png"
+            alt=""
+            className="mx-auto mt-8 sm:mt-10 md:mt-12"
+          />
         </div>
       </div>
     </BackgroundSection>
