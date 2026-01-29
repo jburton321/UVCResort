@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { divIcon } from 'leaflet';
 import { Heart } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
+import { Button } from './Button';
 
 const locations = [
   {
@@ -157,6 +158,10 @@ export function MapSection({ children }: MapSectionProps) {
               {children}
             </div>
           )}
+
+          <div className="px-6 pb-10">
+            <Button className="w-full">Reserve Now</Button>
+          </div>
         </div>
       </div>
     </section>

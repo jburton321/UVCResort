@@ -57,7 +57,7 @@ export function AccommodationsPage() {
                   <span className="font-semibold">Your VIP package includes 5 Days and 4 Nights in a luxurious, finely appointed Deluxe Room.</span>{' '}
                   This isn't just a hotel room, it's your private sanctuary designed just for you to decompress, disconnect, and recharge. Experience the absolute best in adults-only luxury, crafted for couples and complete relaxation.
                 </p>
-                <Button className="self-start">RESERVE NOW</Button>
+                <Button className="w-full">RESERVE NOW</Button>
               </div>
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -160,7 +160,7 @@ export function AccommodationsPage() {
                 <span className="font-semibold">This 474-square-foot Deluxe Room opens to mangrove views from a furnished balcony.</span>{' '}
                 Inside, a king-size bed with premium bedding anchors the space, paired with a clean, modern layout that feels open and comfortable. The marble bathroom features double vanities and a spacious rain shower, finished with high-quality bath amenities. Thoughtful design and calm surroundings make this room feel private and inviting.
               </p>
-              <Button>RESERVE NOW</Button>
+              <Button className="w-full">RESERVE NOW</Button>
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ export function AccommodationsPage() {
                 <span className="font-semibold">Your room is set up to make everything feel easy.</span>{' '}
                 Premium amenities and dedicated butler service support a smooth stay, while fine dining, the spa, and the beach are all close by. Inside, the space includes individual climate control, blackout curtains, complimentary high-speed Wi-Fi, an iron and ironing board, and 24-hour room service. Everything you need is here in place.
               </p>
-              <Button>RESERVE NOW</Button>
+              <Button className="w-full">RESERVE NOW</Button>
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ export function AccommodationsPage() {
                 <span className="font-semibold">Suites include a private furnished balcony or patio and comfortable living space that lets you move freely between restful and social areas.</span>{' '}
                 In select suites, special touches like butler service and private plunge pools are included. With prime positioning near the beach and dining venues, you're perfectly placed to enjoy every part of your resort experience.
               </p>
-              <Button>RESERVE NOW</Button>
+              <Button className="w-full">RESERVE NOW</Button>
             </div>
           </div>
         </div>

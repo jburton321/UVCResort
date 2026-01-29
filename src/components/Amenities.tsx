@@ -81,8 +81,8 @@ export function Amenities() {
           </article>
         </div>
 
-        <div className="mt-10 sm:mt-12 md:mt-16 flex justify-center px-2">
-          <Button className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[400px] lg:max-w-3xl">Reserve Now</Button>
+        <div className="mt-10 sm:mt-12 md:mt-16">
+          <Button className="w-full">Reserve Now</Button>
         </div>
       </div>
     </section>
