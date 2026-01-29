@@ -28,4 +28,8 @@
 .custom-location-marker.main-marker {
   z-index: 9999 !important;
 }
+
+.leaflet-container {
+  isolation: isolate;
+}
       

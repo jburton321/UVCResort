@@ -68,7 +68,7 @@ function createLocationMarker(location: typeof locations[0]) {
   const html = isMain
     ? `
     <div style="display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -100%); ${zIndex}">
-      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; text-align: center; margin-bottom: 8px; max-width: 200px;">
+      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; text-align: center; margin-bottom: 8px; min-width: 280px;">
         ${nameContent}
         <p style="color: rgb(75, 85, 99); font-size: 13px; margin: 0; line-height: 1.4;">${distanceText}</p>
       </div>
@@ -98,8 +98,8 @@ function createLocationMarker(location: typeof locations[0]) {
   return divIcon({
     html,
     className: isMain ? 'custom-location-marker main-marker' : 'custom-location-marker',
-    iconSize: isMain ? [200, 160] : [400, 80],
-    iconAnchor: isMain ? [100, 160] : [16, 20],
+    iconSize: isMain ? [300, 160] : [400, 80],
+    iconAnchor: isMain ? [150, 160] : [16, 20],
   });
 }
 
@@ -108,10 +108,10 @@ interface MapSectionProps {
 }
 
 export function MapSection({ children }: MapSectionProps) {
-  const center: [number, number] = [20.7, -87.0];
+  const center: [number, number] = [20.6976, -87.0198];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-100">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-100 relative z-0">
       <div className="max-w-content mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
           <div className="text-center pt-10 pb-8 px-6">
