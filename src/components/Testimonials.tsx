@@ -48,40 +48,41 @@ const galleryImages = [
 function ReviewCard({ review, index }: { review: Review; index: number }) {
   return (
     <article
-      className="bg-gray-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-50 group"
+      className="bg-gray-100 rounded-xl md:rounded-2xl p-4 md:p-6 flex flex-col h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-gray-50 group"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className="flex items-start gap-3 mb-4 sm:mb-6">
+      <div className="flex items-start gap-3 mb-4 md:mb-6">
         <img
           src={review.avatar}
           alt={review.name}
-          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shrink-0 ring-2 ring-transparent group-hover:ring-accent transition-all duration-300"
+          className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover shrink-0 ring-2 ring-transparent group-hover:ring-accent transition-all duration-300"
+          loading="lazy"
         />
         <div className="min-w-0">
-          <h4 className="font-bold text-sm text-gray-900 truncate">{review.name}</h4>
-          <p className="text-gray-500 text-xs">{review.date}</p>
+          <h4 className="font-bold text-fluid-sm text-gray-900 truncate">{review.name}</h4>
+          <p className="text-gray-500 text-fluid-xs">{review.date}</p>
         </div>
       </div>
 
-      <div className="flex gap-0.5 sm:gap-1 mb-3 sm:mb-4">
+      <div className="flex gap-0.5 md:gap-1 mb-3 md:mb-4">
         {Array.from({ length: review.rating }).map((_, i) => (
           <Star
             key={i}
-            className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-accent text-accent transition-transform duration-300 group-hover:scale-110"
+            className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent transition-transform duration-300 group-hover:scale-110"
             style={{ transitionDelay: `${i * 50}ms` }}
           />
         ))}
       </div>
 
-      <p className="text-gray-800 text-xs sm:text-sm leading-relaxed flex-1">
+      <p className="text-gray-800 text-fluid-xs md:text-fluid-sm leading-relaxed flex-1">
         {review.text}
       </p>
 
-      <div className="mt-4 sm:mt-6">
+      <div className="mt-4 md:mt-6">
         <img
           src="_67-d-0924777-f-9-fd-4-ea-51-ba-47-f-tripadvisor-svg0.svg"
           alt="TripAdvisor"
-          className="h-4 sm:h-5 transition-transform duration-300 group-hover:scale-105"
+          className="h-4 md:h-5 w-auto transition-transform duration-300 group-hover:scale-105"
         />
       </div>
     </article>
@@ -90,23 +91,23 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-24">
-      <div className="max-w-content mx-auto px-4 sm:px-6">
-        <h2 className="text-gray-800 text-2xl sm:text-3xl font-bold text-center uppercase mb-8 sm:mb-12 md:mb-16">
+    <section className="bg-white py-fluid-8">
+      <div className="max-w-content mx-auto px-4 md:px-6">
+        <h2 className="text-gray-800 text-fluid-2xl md:text-fluid-3xl font-bold text-center uppercase mb-fluid-6">
           Guest Reviews
         </h2>
       </div>
 
-      <Gallery images={galleryImages} className="mb-8 sm:mb-10 md:mb-12" />
+      <Gallery images={galleryImages} className="mb-fluid-6" />
 
-      <div className="max-w-content mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div className="max-w-content mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} index={index} />
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-12 md:mt-16">
+        <div className="mt-fluid-8">
           <Button className="w-full">Reserve Now</Button>
         </div>
       </div>

@@ -25,8 +25,8 @@ export function Button({
   `;
 
   const variantStyles = {
-    primary: 'rounded-3xl py-3 sm:py-3.5 px-8 sm:px-16 text-sm sm:text-base min-h-[48px]',
-    small: 'rounded-3xl py-2 px-4 text-xs min-h-[44px] min-w-[100px] sm:min-w-[120px]'
+    primary: 'rounded-3xl py-3 md:py-3.5 px-8 md:px-16 text-fluid-sm min-h-touch',
+    small: 'rounded-3xl py-2 px-4 text-fluid-xs min-h-touch min-w-[100px] md:min-w-[120px]'
   };
 
   return (

@@ -77,7 +77,7 @@ export function Lightbox({
 
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white/80 hover:text-white transition-all duration-300 p-2 hover:bg-white/10 rounded-full z-20"
+        className="absolute top-4 right-4 text-white/80 hover:text-white transition-all duration-300 p-2 hover:bg-white/10 rounded-full z-20 min-w-touch min-h-touch flex items-center justify-center touch-manipulation"
         aria-label="Close lightbox"
       >
         <X className="w-8 h-8" />
@@ -95,8 +95,8 @@ export function Lightbox({
             </div>
 
             {currentImage?.label && (
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-                <p className="text-white text-lg md:text-xl font-semibold text-center">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 md:p-6 rounded-b-lg">
+                <p className="text-white text-fluid-base md:text-fluid-lg lg:text-fluid-xl font-semibold text-center">
                   {currentImage.label}
                 </p>
               </div>
@@ -106,7 +106,7 @@ export function Lightbox({
           {canGoBack && (
             <button
               onClick={goToPrev}
-              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
+              className="absolute left-2 md:left-4 lg:left-8 top-1/2 -translate-y-1/2 min-w-touch min-h-touch w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20 touch-manipulation"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6 md:w-8 md:h-8 text-white" />
@@ -116,7 +116,7 @@ export function Lightbox({
           {canGoForward && (
             <button
               onClick={goToNext}
-              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
+              className="absolute right-2 md:right-4 lg:right-8 top-1/2 -translate-y-1/2 min-w-touch min-h-touch w-12 h-12 md:w-14 md:h-14 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20 touch-manipulation"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6 md:w-8 md:h-8 text-white" />
@@ -128,7 +128,7 @@ export function Lightbox({
               <button
                 key={idx}
                 onClick={() => onNavigate?.(idx)}
-                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 ${
+                className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-300 touch-manipulation ${
                   idx === currentIndex
                     ? 'bg-white scale-125'
                     : 'bg-white/40 hover:bg-white/60'
@@ -138,7 +138,7 @@ export function Lightbox({
             ))}
           </div>
 
-          <div className="absolute top-4 left-4 text-white/80 text-sm md:text-base z-20">
+          <div className="absolute top-4 left-4 text-white/80 text-fluid-sm z-20">
             {currentIndex + 1} / {images.length}
           </div>
         </>
@@ -154,7 +154,7 @@ export function Lightbox({
                 title={title || 'Video'}
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-white text-lg">
+              <div className="w-full h-full flex items-center justify-center text-white text-fluid-lg">
                 Video content will appear here
               </div>
             )}

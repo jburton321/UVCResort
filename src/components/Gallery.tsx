@@ -58,17 +58,18 @@ export function Gallery({ images, className = '' }: GalleryProps) {
           onScroll={checkScrollability}
           className="overflow-x-auto py-4 md:py-6 scrollbar-hide scroll-smooth"
         >
-          <div className="flex gap-3 sm:gap-4 md:gap-5 px-4 sm:px-6 md:px-8">
+          <div className="flex gap-3 md:gap-4 lg:gap-5 px-4 md:px-6 lg:px-8">
             {normalizedImages.map((image, index) => (
               <button
                 key={index}
                 onClick={() => openLightbox(index)}
-                className="rounded-xl sm:rounded-2xl overflow-hidden shrink-0 relative group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="rounded-xl md:rounded-2xl overflow-hidden shrink-0 relative group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 min-h-touch"
               >
                 <img
                   src={image.src}
                   alt={image.label || `Resort photo ${index + 1}`}
-                  className="w-[280px] h-[200px] sm:w-[320px] sm:h-[240px] md:w-[380px] md:h-[280px] lg:w-[420px] lg:h-[300px] object-cover transition-all duration-500 group-hover:scale-110"
+                  className="w-[280px] h-[200px] md:w-[340px] md:h-[240px] lg:w-[400px] lg:h-[280px] xl:w-[420px] xl:h-[300px] object-cover transition-all duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
 
@@ -79,14 +80,14 @@ export function Gallery({ images, className = '' }: GalleryProps) {
                 </div>
 
                 {image.label && (
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-4 sm:pb-5 px-4 transition-opacity duration-300">
-                    <p className="text-white text-sm sm:text-base md:text-lg font-semibold text-center drop-shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-4 md:pb-5 px-4 transition-opacity duration-300">
+                    <p className="text-white text-fluid-sm md:text-fluid-base lg:text-fluid-lg font-semibold text-center drop-shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
                       {image.label}
                     </p>
                   </div>
                 )}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="absolute inset-0 border-4 border-white/30 rounded-xl sm:rounded-2xl" />
+                  <div className="absolute inset-0 border-4 border-white/30 rounded-xl md:rounded-2xl" />
                 </div>
               </button>
             ))}
@@ -96,20 +97,20 @@ export function Gallery({ images, className = '' }: GalleryProps) {
         {canScrollLeft && (
           <button
             onClick={() => scroll('left')}
-            className="absolute left-2 sm:left-3 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 touch-manipulation z-10"
+            className="absolute left-2 md:left-3 lg:left-4 top-1/2 -translate-y-1/2 min-w-touch min-h-touch w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 touch-manipulation z-10"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
           </button>
         )}
 
         {canScrollRight && (
           <button
             onClick={() => scroll('right')}
-            className="absolute right-2 sm:right-3 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 touch-manipulation z-10"
+            className="absolute right-2 md:right-3 lg:right-4 top-1/2 -translate-y-1/2 min-w-touch min-h-touch w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl active:scale-95 touch-manipulation z-10"
             aria-label="Next"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
           </button>
         )}
       </section>

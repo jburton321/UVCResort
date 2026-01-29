@@ -38,27 +38,28 @@ export function Location() {
   };
 
   return (
-    <section className="bg-gray-100 py-10 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6">
+    <section className="bg-gray-100 py-fluid-8 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <article className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg">
-          <div className="text-center mb-6 sm:mb-8 md:mb-10">
-            <h2 className="text-black text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold leading-tight px-2">
+        <article className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 xl:p-10 shadow-lg">
+          <div className="text-center mb-fluid-6">
+            <h2 className="text-black text-fluid-xl md:text-fluid-2xl lg:text-fluid-3xl xl:text-fluid-4xl font-extrabold leading-tight px-2">
               Discover Adult-Only Luxury in the{' '}
-              <Heart className="inline w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-red-500 fill-red-500 align-baseline" />
+              <Heart className="inline w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-red-500 fill-red-500 align-baseline" />
               <br className="hidden md:block" />
               <span className="md:hidden"> </span>
               of the Mayan Coast Riviera Cancun.
             </h2>
-            <p className="text-gray-600 text-xs sm:text-sm md:text-base lg:text-lg mt-3 sm:mt-4 px-2 max-w-2xl mx-auto">
+            <p className="text-gray-600 text-fluid-xs md:text-fluid-sm lg:text-fluid-base mt-3 md:mt-4 px-2 max-w-2xl mx-auto">
               Carretera Federal 387, Km 299 Solidaridad, Riviera Maya, QR, 77710, Mexico
             </p>
           </div>
 
-          <div className="mb-6 sm:mb-8 md:mb-10">
+          <div className="mb-fluid-6">
             <img
               src="image8.png"
               alt="Resort Map"
-              className="w-full h-auto rounded-lg sm:rounded-xl md:rounded-2xl object-cover"
+              className="w-full h-auto rounded-lg md:rounded-xl lg:rounded-2xl object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -66,9 +67,9 @@ export function Location() {
             <div
               ref={scrollRef}
               onScroll={checkScrollability}
-              className="overflow-x-auto py-2 sm:py-3 scrollbar-hide scroll-smooth"
+              className="overflow-x-auto py-2 md:py-3 scrollbar-hide scroll-smooth"
             >
-              <div className="flex gap-3 sm:gap-4 md:gap-5 px-1 md:justify-center">
+              <div className="flex gap-3 md:gap-4 lg:gap-5 px-1 md:justify-center">
                 {nearbyPlaces.map((place, index) => (
                   <ImageCard
                     key={index}
@@ -77,7 +78,7 @@ export function Location() {
                     label={place.label}
                     overlay
                     className="shrink-0"
-                    imageClassName="w-[200px] h-[140px] sm:w-[240px] sm:h-[170px] md:w-[280px] md:h-[200px] lg:w-[220px] lg:h-[160px] xl:w-[250px] xl:h-[180px]"
+                    imageClassName="w-[200px] h-[140px] md:w-[260px] md:h-[180px] lg:w-[220px] lg:h-[160px] xl:w-[250px] xl:h-[180px]"
                   />
                 ))}
               </div>
@@ -86,27 +87,27 @@ export function Location() {
             {canScrollLeft && (
               <button
                 onClick={() => scroll('left')}
-                className="absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation z-10"
+                className="absolute left-0 md:left-1 top-1/2 -translate-y-1/2 min-w-touch min-h-touch w-9 h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation z-10"
                 aria-label="Previous"
               >
-                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800" />
+                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-800" />
               </button>
             )}
 
             {canScrollRight && (
               <button
                 onClick={() => scroll('right')}
-                className="absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation z-10"
+                className="absolute right-0 md:right-1 top-1/2 -translate-y-1/2 min-w-touch min-h-touch w-9 h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation z-10"
                 aria-label="Next"
               >
-                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800" />
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-gray-800" />
               </button>
             )}
           </div>
         </article>
 
-        <div className="mt-6 sm:mt-8 md:mt-10 flex justify-center px-2">
-          <Button className="w-full sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:min-w-[400px]">
+        <div className="mt-fluid-6 flex justify-center px-2">
+          <Button className="w-full md:w-auto md:min-w-[280px] lg:min-w-[320px] xl:min-w-[400px]">
             Reserve Now
           </Button>
         </div>

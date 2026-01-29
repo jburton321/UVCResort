@@ -49,39 +49,39 @@ const nearbyAttractions = [
 
 export function Amenities() {
   return (
-    <section className="bg-[#2b353d] py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-10">
+    <section className="bg-[#2b353d] py-fluid-8 px-4 md:px-6 lg:px-10">
       <div className="max-w-content mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-fluid-8">
           <article>
-            <h3 className="text-white text-xl sm:text-2xl font-bold mb-5 sm:mb-6 md:mb-8">
+            <h3 className="text-white text-fluid-xl md:text-fluid-2xl font-bold mb-fluid-4">
               Featured Amenities
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               {featuredAmenities.map((item, index) => (
-                <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
-                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0" />
-                  <span className="text-white text-sm sm:text-base">{item.text}</span>
+                <div key={index} className="flex items-center gap-2 md:gap-3 py-1">
+                  <item.icon className="w-5 h-5 md:w-6 md:h-6 text-accent shrink-0" />
+                  <span className="text-white text-fluid-sm">{item.text}</span>
                 </div>
               ))}
             </div>
           </article>
 
           <article>
-            <h3 className="text-white text-xl sm:text-2xl font-bold mb-5 sm:mb-6 md:mb-8">
+            <h3 className="text-white text-fluid-xl md:text-fluid-2xl font-bold mb-fluid-4">
               Nearby Attractions
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               {nearbyAttractions.map((item, index) => (
-                <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
-                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent shrink-0" />
-                  <span className="text-white text-sm sm:text-base">{item.text}</span>
+                <div key={index} className="flex items-center gap-2 md:gap-3 py-1">
+                  <item.icon className="w-5 h-5 md:w-6 md:h-6 text-accent shrink-0" />
+                  <span className="text-white text-fluid-sm">{item.text}</span>
                 </div>
               ))}
             </div>
           </article>
         </div>
 
-        <div className="mt-10 sm:mt-12 md:mt-16">
+        <div className="mt-fluid-8">
           <Button className="w-full">Reserve Now</Button>
         </div>
       </div>

@@ -13,34 +13,36 @@ export function Hero() {
         backgroundImage="section0.png"
         overlay
         overlayOpacity={30}
-        className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex flex-col overflow-visible"
+        className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex flex-col overflow-visible"
       >
-        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 w-full flex-1 flex flex-col">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 flex-1">
+        <div className="max-w-content mx-auto px-4 md:px-6 lg:px-8 pt-fluid-3 w-full flex-1 flex flex-col">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-fluid-4 flex-1">
             <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-1">
               <img
-                className="hero-sticker-element"
+                className="hero-sticker-element w-auto h-auto max-w-[200px] md:max-w-[280px] lg:max-w-none"
                 src="mexico-10.png"
                 alt="Mexico destination"
+                loading="eager"
               />
-              <div className="relative w-[280px] sm:w-[350px] md:w-[500px] lg:w-[800px] mt-4">
+              <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[500px] lg:max-w-[800px] mt-4">
                 <img
-                  className="hero-couple-element w-full"
+                  className="hero-couple-element w-full h-auto"
                   src="layer-0-10.png"
                   alt="Couple enjoying resort"
+                  loading="eager"
                 />
                 <button
                   onClick={() => setIsLightboxOpen(true)}
-                  className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 bg-white/95 backdrop-blur-sm px-4 py-2.5 sm:px-5 sm:py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group"
+                  className="absolute bottom-[8%] sm:bottom-[10%] md:bottom-[12%] left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 sm:gap-3 bg-white/95 backdrop-blur-sm px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group min-h-touch touch-manipulation"
                 >
-                  <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
-                    <Play className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-white ml-0.5" />
+                  <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
+                    <Play className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white fill-white ml-0.5" />
                   </span>
-                  <span className="text-gray-900 font-semibold text-base sm:text-lg pr-1">Play video</span>
+                  <span className="text-gray-900 font-semibold text-sm sm:text-base md:text-lg pr-1">Play video</span>
                 </button>
               </div>
             </div>
-            <div className="w-full lg:w-auto flex justify-center lg:justify-end order-2 -mx-4 sm:-mx-6 lg:mx-0 lg:px-0">
+            <div className="w-full lg:w-auto flex justify-center lg:justify-end order-2 -mx-4 md:-mx-6 lg:mx-0 lg:px-0">
               <BookingCard />
             </div>
           </div>
