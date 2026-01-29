@@ -95,7 +95,7 @@ export function BookingCard({
       </div>
 
       <div className="flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-2">
-        <img src="trust.png" alt="Secure Transaction Badge" className="w-14 h-14 sm:w-20 sm:h-20" />
+        <img src="trust.png" alt="Secure Transaction Badge" className="h-14 sm:h-20 w-auto object-contain" />
         <img src="vector0.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20" />
         <img src="vector31.svg" alt="Trust badge" className="w-14 h-14 sm:w-20 sm:h-20" />
       </div>
