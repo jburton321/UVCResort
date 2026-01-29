@@ -1728,6 +1728,12 @@ video {
   overflow: visible !important;
 }
 
+img.hero-couple-element {
+  width: 48em;
+  height: auto;
+  margin: 0 0 -49px 0;
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
