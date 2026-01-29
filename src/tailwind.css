@@ -655,6 +655,10 @@ video {
   margin-right: -0.5rem;
 }
 
+.-mt-\[50px\] {
+  margin-top: -50px;
+}
+
 .-mt-\[97px\] {
   margin-top: -97px;
 }
@@ -701,10 +705,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -1775,10 +1775,6 @@ video {
 
   .sm\:mt-6 {
     margin-top: 1.5rem;
-  }
-
-  .sm\:mt-8 {
-    margin-top: 2rem;
   }
 
   .sm\:block {
