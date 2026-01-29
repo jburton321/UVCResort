@@ -1287,11 +1287,6 @@ video {
   border-bottom-left-radius: 0.5rem;
 }
 
-.rounded-r-xl {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-}
-
 .border-2 {
   border-width: 2px;
 }
@@ -1619,10 +1614,6 @@ video {
 
 .pr-1 {
   padding-right: 0.25rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
 }
 
 .pt-0 {
@@ -2592,10 +2583,6 @@ img.hero-couple-element {
 
   .sm\:pb-5 {
     padding-bottom: 1.25rem;
-  }
-
-  .sm\:pr-4 {
-    padding-right: 1rem;
   }
 
   .sm\:pt-12 {
