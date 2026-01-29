@@ -879,6 +879,10 @@ video {
   width: 40%;
 }
 
+.w-\[470px\] {
+  width: 470px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -934,6 +938,10 @@ video {
 
 .max-w-content {
   max-width: 1230px;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .max-w-md {

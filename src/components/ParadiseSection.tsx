@@ -35,7 +35,7 @@ export function ParadiseSection() {
           <img
             src="divider.png"
             alt=""
-            className="mx-auto mt-8 sm:mt-10 md:mt-12"
+            className="mx-auto mt-8 sm:mt-10 md:mt-12 w-[470px] max-w-full h-auto"
           />
         </div>
       </div>
