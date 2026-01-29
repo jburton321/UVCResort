@@ -17,14 +17,14 @@ export function Hero() {
       >
         <div className="max-w-content mx-auto px-4 md:px-6 lg:px-8 pt-fluid-3 w-full flex-1 flex flex-col">
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-fluid-4 flex-1">
-            <div className="flex flex-col items-center lg:items-start order-1 flex-1 relative">
+            <div className="flex flex-col items-center lg:items-start order-1">
               <img
                 className="hero-sticker-element"
                 src="mexico-10.png"
                 alt="Mexico destination"
                 loading="eager"
               />
-              <div className="relative mt-4 lg:absolute lg:bottom-0 lg:left-0 lg:mt-0">
+              <div className="relative mt-4 lg:hidden">
                 <img
                   className="hero-couple-element"
                   src="layer-0-10.png"
@@ -46,6 +46,23 @@ export function Hero() {
               <BookingCard />
             </div>
           </div>
+        </div>
+        <div className="hidden lg:block absolute bottom-0 left-[calc(50%-720px+2rem)] z-10">
+          <img
+            className="hero-couple-element"
+            src="layer-0-10.png"
+            alt="Couple enjoying resort"
+            loading="eager"
+          />
+          <button
+            onClick={() => setIsLightboxOpen(true)}
+            className="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group"
+          >
+            <span className="flex items-center justify-center w-12 h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
+              <Play className="w-6 h-6 text-white fill-white ml-0.5" />
+            </span>
+            <span className="text-gray-900 font-semibold text-lg pr-1">Play video</span>
+          </button>
         </div>
       </BackgroundSection>
 

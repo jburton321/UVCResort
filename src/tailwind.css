@@ -651,6 +651,10 @@ input,
   left: 1rem;
 }
 
+.left-\[calc\(50\%-720px\+2rem\)\] {
+  left: calc(50% - 720px + 2rem);
+}
+
 .right-0 {
   right: 0px;
 }
@@ -3031,18 +3035,6 @@ img.hero-couple-element {
 }
 
 @media (min-width: 1024px) {
-  .lg\:absolute {
-    position: absolute;
-  }
-
-  .lg\:bottom-0 {
-    bottom: 0px;
-  }
-
-  .lg\:left-0 {
-    left: 0px;
-  }
-
   .lg\:left-4 {
     left: 1rem;
   }
@@ -3064,12 +3056,12 @@ img.hero-couple-element {
     margin-right: 0px;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
   .lg\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .lg\:block {
+    display: block;
   }
 
   .lg\:flex {
