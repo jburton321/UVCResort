@@ -8,20 +8,11 @@ export function ParadiseSection() {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <div className="mb-6 sm:mb-8">
-          <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase tracking-wide">
-            5-Day/4-Night
-          </span>
-          <h2 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium mt-2 sm:mt-4">
-            BEACHFRONT
-          </h2>
-          <div className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight mt-1 sm:mt-2">
-            <span className="text-blue-900">RIVIERA CANCUN</span>
-            <br />
-            <span className="text-accent">VACATION</span>
-          </div>
-          <p className="text-gray-800 text-base sm:text-lg md:text-xl lg:text-2xl mt-4 sm:mt-6 md:mt-8 max-w-3xl mx-auto leading-relaxed px-2">
-            Zilara Riviera Maya is Just $299 Today for Two Adults - Your 5-Day All-Inclusive Luxury Escape to Hyatt
-          </p>
+          <img
+            src="offer-badge.png"
+            alt="5-Day/4-Night Riviera Cancun Vacation - $299 for Two Adults"
+            className="mx-auto w-full max-w-3xl h-auto"
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
