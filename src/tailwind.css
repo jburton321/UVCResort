@@ -928,16 +928,16 @@ video {
   max-width: 80rem;
 }
 
+.max-w-\[22rem\] {
+  max-width: 22rem;
+}
+
 .max-w-\[340px\] {
   max-width: 340px;
 }
 
 .max-w-md {
   max-width: 28rem;
-}
-
-.max-w-xl {
-  max-width: 36rem;
 }
 
 .flex-1 {

@@ -19,7 +19,7 @@ export function ParadiseSection() {
           <img
             src="price-badge.png"
             alt="5-Days $299 Per Package - Save 84%"
-            className="mx-auto w-full max-w-xl h-auto"
+            className="mx-auto w-full max-w-[22rem] h-auto"
           />
         </div>
       </div>
