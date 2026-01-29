@@ -12,7 +12,7 @@ export function Hero() {
     >
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 w-full flex-1 flex flex-col">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 flex-1">
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
+          <div className="flex flex-col items-center w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
             <img
               className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] h-auto"
               src="mexico-10.png"
@@ -29,7 +29,7 @@ export function Hero() {
         </div>
       </div>
       <img
-        className="absolute bottom-0 left-4 sm:left-6 lg:left-[calc(50%-615px+32px)] w-[280px] sm:w-[350px] md:w-[500px] lg:w-[800px] h-auto pointer-events-none"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[calc(25%-200px)] w-[280px] sm:w-[350px] md:w-[500px] lg:w-[800px] h-auto pointer-events-none"
         src="layer-0-10.png"
         alt="Couple enjoying resort"
       />
