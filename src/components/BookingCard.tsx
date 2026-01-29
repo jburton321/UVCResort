@@ -16,24 +16,15 @@ export function BookingCard({
 }: BookingCardProps) {
   return (
     <aside className="bg-white rounded-2xl shadow-xl w-full max-w-[340px] sm:max-w-sm overflow-hidden backdrop-blur-sm">
-      <div className="bg-gold-400 px-2 sm:px-3 py-2 flex flex-wrap items-center justify-center gap-1 sm:gap-2">
-        <Zap className="w-4 h-5 text-accent" />
-        <span className="text-gold-950 font-bold text-sm sm:text-lg uppercase">Offer expires:</span>
-        <div className="flex items-center gap-1 text-gold-800 font-bold">
-          <div className="text-center">
-            <span className="text-base sm:text-lg">00</span>
-            <span className="text-[10px] sm:text-xs text-gold-950 uppercase block">hr</span>
-          </div>
+      <div className="bg-[#FFD174] px-2 sm:px-3 py-2.5 flex items-center justify-center gap-2">
+        <Zap className="w-4 h-5 text-red-600" />
+        <span className="text-slate-900 font-bold text-sm sm:text-base uppercase">Offer expires:</span>
+        <div className="flex items-center gap-0.5 font-bold text-red-600 text-lg sm:text-xl">
+          <span>00</span>
           <span>:</span>
-          <div className="text-center">
-            <span className="text-base sm:text-lg">44</span>
-            <span className="text-[10px] sm:text-xs text-gold-950 uppercase block">min</span>
-          </div>
+          <span>44</span>
           <span>:</span>
-          <div className="text-center">
-            <span className="text-base sm:text-lg">54</span>
-            <span className="text-[10px] sm:text-xs text-gold-950 uppercase block">sec</span>
-          </div>
+          <span>54</span>
         </div>
       </div>
 
