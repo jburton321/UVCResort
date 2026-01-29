@@ -3066,10 +3066,6 @@ img.hero-couple-element {
 }
 
 @media (min-width: 1024px) {
-  .lg\:left-\[calc\(25\%-200px\)\] {
-    left: calc(25% - 200px);
-  }
-
   .lg\:mt-12 {
     margin-top: 3rem;
   }
@@ -3128,11 +3124,6 @@ img.hero-couple-element {
 
   .lg\:max-w-sm {
     max-width: 24rem;
-  }
-
-  .lg\:translate-x-0 {
-    --tw-translate-x: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:grid-cols-2 {
