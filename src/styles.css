@@ -106,7 +106,11 @@ img.hero-couple-element {
   isolation: isolate;
   background: var(--badge-yellow);
   color: black;
-  filter: url(#price-badge-outline);
+  filter:
+    drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white)
+    drop-shadow(2px -2px 0 white)
+    drop-shadow(-2px 2px 0 white);
 }
 
 .price-badge-tag-left {

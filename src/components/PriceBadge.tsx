@@ -17,20 +17,6 @@ export function PriceBadge({
 }: PriceBadgeProps) {
   return (
     <div className={`price-badge-wrapper ${className}`}>
-      <svg width="0" height="0" style={{ position: 'absolute' }}>
-        <defs>
-          <filter id="price-badge-outline" colorInterpolationFilters="sRGB">
-            <feMorphology in="SourceAlpha" result="expanded" operator="dilate" radius="2" />
-            <feFlood floodColor="white" result="white" />
-            <feComposite in="white" in2="expanded" operator="in" result="outline" />
-            <feMerge>
-              <feMergeNode in="outline" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-      </svg>
-
       <div className="price-badge-tag-left">
         <span>ONLY</span>
       </div>
