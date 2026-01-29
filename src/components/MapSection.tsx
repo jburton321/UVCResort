@@ -67,10 +67,10 @@ function createLocationMarker(location: typeof locations[0]) {
 
   const html = isMain
     ? `
-    <div style="display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -100%); width: max-content; ${zIndex}">
-      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; text-align: center; margin-bottom: 8px;">
+    <div style="display: flex; flex-direction: column; align-items: center; transform: translate(-50%, -100%); ${zIndex}">
+      <div style="background: white; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); padding: 12px 16px; text-align: center; margin-bottom: 8px; max-width: 200px;">
         ${nameContent}
-        <p style="color: rgb(75, 85, 99); font-size: 14px; margin: 0;">${distanceText}</p>
+        <p style="color: rgb(75, 85, 99); font-size: 13px; margin: 0; line-height: 1.4;">${distanceText}</p>
       </div>
       <div style="flex-shrink: 0;">
         <svg width="32" height="40" viewBox="0 0 32 40" fill="${color}">
@@ -98,8 +98,8 @@ function createLocationMarker(location: typeof locations[0]) {
   return divIcon({
     html,
     className: isMain ? 'custom-location-marker main-marker' : 'custom-location-marker',
-    iconSize: isMain ? [300, 150] : [400, 80],
-    iconAnchor: isMain ? [150, 150] : [16, 20],
+    iconSize: isMain ? [200, 160] : [400, 80],
+    iconAnchor: isMain ? [100, 160] : [16, 20],
   });
 }
 
