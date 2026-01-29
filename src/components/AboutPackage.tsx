@@ -24,7 +24,7 @@ const whyYouGetIt = `The only thing you need to do to unlock this Incredible pri
 export function AboutPackage() {
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-10">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-content mx-auto">
         <div className="text-center mb-8 sm:mb-10 md:mb-14">
           <h2 className="text-slate-800 text-2xl sm:text-3xl font-bold uppercase tracking-tight">
             About This Package

@@ -43,7 +43,7 @@ export function AccommodationsPage() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="relative max-w-content mx-auto px-4 sm:px-6">
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <div className="flex flex-col justify-center">
@@ -136,7 +136,7 @@ export function AccommodationsPage() {
       <Gallery images={accommodationsGallery} />
 
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-content mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2">
               <img
@@ -160,7 +160,7 @@ export function AccommodationsPage() {
       </section>
 
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-content mx-auto">
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2">
               <img
@@ -184,7 +184,7 @@ export function AccommodationsPage() {
       </section>
 
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-content mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2">
               <img

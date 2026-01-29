@@ -84,7 +84,7 @@ function ReviewCard({ review }: { review: Review }) {
 export function Testimonials() {
   return (
     <section className="bg-white py-12 sm:py-16 md:py-24 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-content mx-auto">
         <h2 className="text-gray-800 text-2xl sm:text-3xl font-bold text-center uppercase mb-8 sm:mb-12 md:mb-16">
           Guest Reviews
         </h2>

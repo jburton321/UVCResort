@@ -108,7 +108,7 @@ export function MapSection() {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-content mx-auto px-4 sm:px-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Discover Adult-Only Luxury in the <Heart className="inline w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-red-500 fill-red-500" />

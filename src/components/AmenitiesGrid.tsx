@@ -12,7 +12,7 @@ const amenities = [
 export function AmenitiesGrid() {
   return (
     <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-content mx-auto text-center">
         <img
           className="h-10 sm:h-12 md:h-14 mx-auto mb-6 sm:mb-8"
           src="image-30.png"

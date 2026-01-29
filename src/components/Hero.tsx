@@ -10,7 +10,7 @@ export function Hero() {
       overlayOpacity={30}
       className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex flex-col overflow-visible"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 w-full flex-1 flex flex-col">
+      <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 w-full flex-1 flex flex-col">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 flex-1">
           <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 xl:w-auto order-2 lg:order-1">
             <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">

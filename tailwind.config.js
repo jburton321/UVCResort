@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/**/*.{html,vue,svelte,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      maxWidth: {
+        'content': '1230px',
+      },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
