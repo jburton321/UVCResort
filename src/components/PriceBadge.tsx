@@ -17,7 +17,7 @@ export function PriceBadge({
 }: PriceBadgeProps) {
   return (
     <div className={`price-badge-wrapper ${className}`}>
-      <svg width="0" height="0" className="absolute">
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
           <filter id="price-badge-outline" colorInterpolationFilters="sRGB">
             <feMorphology in="SourceAlpha" result="expanded" operator="dilate" radius="2" />
@@ -49,9 +49,8 @@ export function PriceBadge({
           {price}
         </div>
         <div className="price-badge-terms">
-          {packageText}
-          <br />
-          <small>{subText}</small>
+          {packageText}<br />
+          <span style={{ fontWeight: 'normal' }}>{subText}</span>
         </div>
       </div>
     </div>
