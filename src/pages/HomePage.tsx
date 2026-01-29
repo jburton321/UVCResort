@@ -32,8 +32,8 @@ export function HomePage() {
       <Amenities />
       <img
         className="w-full h-auto hidden sm:block"
-        src="frame-19840779510.svg"
-        alt="Decorative divider"
+        src="banner.png"
+        alt="Save Now Travel Later banner"
       />
       <AmenitiesGrid />
       <Testimonials />
