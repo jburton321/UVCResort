@@ -49,7 +49,7 @@ const nearbyAttractions = [
 
 export function Amenities() {
   return (
-    <section className="bg-gray-800 py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-10">
+    <section className="bg-[#2b353d] py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-10">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16">
           <article>
