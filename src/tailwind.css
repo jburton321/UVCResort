@@ -881,6 +881,10 @@ input,
   height: 200px;
 }
 
+.h-\[220px\] {
+  height: 220px;
+}
+
 .h-\[280px\] {
   height: 280px;
 }
@@ -1044,6 +1048,10 @@ input,
 
 .max-w-\[1200px\] {
   max-width: 1200px;
+}
+
+.max-w-\[1560px\] {
+  max-width: 1560px;
 }
 
 .max-w-content {
@@ -1239,6 +1247,10 @@ input,
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-2 {
@@ -1459,10 +1471,6 @@ input,
   background-color: rgb(117 53 173 / var(--tw-bg-opacity, 1));
 }
 
-.bg-primary\/10 {
-  background-color: rgb(117 53 173 / 0.1);
-}
-
 .bg-purple-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(126 34 206 / var(--tw-bg-opacity, 1));
@@ -1512,12 +1520,6 @@ input,
 
 .from-black\/20 {
   --tw-gradient-from: rgb(0 0 0 / 0.2) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-black\/30 {
-  --tw-gradient-from: rgb(0 0 0 / 0.3) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -1639,6 +1641,11 @@ input,
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -1882,6 +1889,11 @@ input,
 .text-\[\#1a365d\] {
   --tw-text-opacity: 1;
   color: rgb(26 54 93 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#262626\] {
+  --tw-text-opacity: 1;
+  color: rgb(38 38 38 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#333\] {
@@ -2624,6 +2636,10 @@ img.hero-couple-element {
     height: 1.5rem;
   }
 
+  .sm\:h-\[280px\] {
+    height: 280px;
+  }
+
   .sm\:h-\[340px\] {
     height: 340px;
   }
@@ -2638,10 +2654,6 @@ img.hero-couple-element {
 
   .sm\:w-6 {
     width: 1.5rem;
-  }
-
-  .sm\:w-auto {
-    width: auto;
   }
 
   .sm\:grid-cols-2 {
@@ -2975,6 +2987,10 @@ img.hero-couple-element {
     gap: 3rem;
   }
 
+  .md\:gap-20 {
+    gap: 5rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -3030,6 +3046,11 @@ img.hero-couple-element {
     padding-right: 4rem;
   }
 
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -3058,6 +3079,11 @@ img.hero-couple-element {
   .md\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .md\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .md\:py-3 {
@@ -3228,6 +3254,10 @@ img.hero-couple-element {
 
   .lg\:h-\[280px\] {
     height: 280px;
+  }
+
+  .lg\:h-\[340px\] {
+    height: 340px;
   }
 
   .lg\:h-\[396px\] {
