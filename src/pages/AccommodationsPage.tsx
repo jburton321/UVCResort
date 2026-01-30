@@ -15,14 +15,14 @@ const roomFeatures = [
 ];
 
 const accommodationsGallery = [
-  'accommodations/resort-photo-10.png',
-  'accommodations/resort-photo-20.png',
-  'accommodations/resort-photo-30.png',
-  'accommodations/resort-photo-40.png',
-  'accommodations/resort-photo-50.png',
-  'accommodations/link-dialog-open-lightbox4.png',
-  'accommodations/link-dialog-open-lightbox5.png',
-  'accommodations/link-dialog-open-lightbox6.png',
+  'accommodations/scrolling-gall/1.png',
+  'accommodations/scrolling-gall/2.png',
+  'accommodations/scrolling-gall/3.png',
+  'accommodations/scrolling-gall/4.png',
+  'accommodations/scrolling-gall/5.png',
+  'accommodations/scrolling-gall/6.png',
+  'accommodations/scrolling-gall/7.png',
+  'accommodations/scrolling-gall/8.png',
 ];
 
 function HairDryerIcon({ className }: { className?: string }) {
