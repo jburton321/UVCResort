@@ -122,22 +122,23 @@ img.hero-sticker-element {
 
 @media (max-width: 1023px) {
   img.hero-sticker-element {
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   img.hero-sticker-element {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    width: 70%;
+    max-width: 450px;
   }
 }
 
 @media (min-width: 1024px) {
   img.hero-sticker-element {
     width: auto;
+    max-width: 500px;
     padding-left: 0;
     padding-right: 0;
   }

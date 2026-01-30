@@ -42,14 +42,15 @@ export function Hero() {
                 </button>
               </div>
             </div>
-            <div className="w-[calc(100%+2rem)] md:w-[calc(100%+3rem)] lg:w-auto -mx-4 md:-mx-6 lg:mx-0 order-2">
+            <div className="w-full md:w-[calc(100%+3rem)] lg:w-auto md:-mx-6 lg:mx-0 order-2">
               <BookingCard />
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex absolute bottom-0 left-0 right-0 justify-center z-10 pointer-events-none">
-          <div className="max-w-content w-full flex justify-center px-8">
-            <div className="relative pointer-events-auto">
+        <div className="hidden lg:flex absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
+          <div className="max-w-content w-full mx-auto px-4 md:px-6 lg:px-8 flex">
+            <div className="relative pointer-events-auto flex-1 flex justify-center">
+              <div className="relative">
               <img
                 className="hero-couple-element"
                 src="layer-0-10.png"
@@ -65,7 +66,9 @@ export function Hero() {
                 </span>
                 <span className="text-gray-900 font-semibold text-lg pr-1">Play video</span>
               </button>
+              </div>
             </div>
+            <div className="flex-shrink-0" style={{width: 'calc(28rem + 2rem)'}}></div>
           </div>
         </div>
       </BackgroundSection>

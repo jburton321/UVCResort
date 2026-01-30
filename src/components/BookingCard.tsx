@@ -16,7 +16,7 @@ export function BookingCard({
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
 
   return (
-    <aside className="bg-white shadow-xl w-full max-w-none lg:max-w-sm overflow-hidden backdrop-blur-sm hover:shadow-2xl transition-shadow duration-500">
+    <aside className="bg-white shadow-xl w-full max-w-none lg:max-w-sm lg:rounded-xl overflow-hidden backdrop-blur-sm hover:shadow-2xl transition-shadow duration-500">
       <div className="bg-[#FFD174] px-2 md:px-3 py-2.5 flex items-center justify-center gap-2">
         <Zap className="w-4 h-5 text-red-600 animate-pulse" />
         <span className="text-slate-900 font-bold text-fluid-sm uppercase">

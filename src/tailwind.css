@@ -719,11 +719,6 @@ input,
   order: 2;
 }
 
-.-mx-4 {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -995,10 +990,6 @@ input,
 
 .w-\[470px\] {
   width: 470px;
-}
-
-.w-\[calc\(100\%\+2rem\)\] {
-  width: calc(100% + 2rem);
 }
 
 .w-auto {
@@ -2093,22 +2084,23 @@ img.hero-sticker-element {
 
 @media (max-width: 1023px) {
   img.hero-sticker-element {
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   img.hero-sticker-element {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    width: 70%;
+    max-width: 450px;
   }
 }
 
 @media (min-width: 1024px) {
   img.hero-sticker-element {
     width: auto;
+    max-width: 500px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -3233,6 +3225,10 @@ img.hero-couple-element {
 
   .lg\:rounded-2xl {
     border-radius: 1rem;
+  }
+
+  .lg\:rounded-xl {
+    border-radius: 0.75rem;
   }
 
   .lg\:p-8 {
