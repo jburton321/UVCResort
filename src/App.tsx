@@ -4,6 +4,7 @@ import { Header, Footer, MobileStickyCTA } from "./components";
 import { RouterProvider, useRouter } from "./context/RouterContext";
 import { HomePage } from "./pages/HomePage";
 import { AccommodationsPage } from "./pages/AccommodationsPage";
+import { DownloadImagesPage } from "./pages/DownloadImagesPage";
 
 function AppContent() {
   const { currentPage } = useRouter();
@@ -32,6 +33,7 @@ function AppContent() {
             <p className="text-gray-600 mt-4">Coming soon...</p>
           </div>
         )}
+        {currentPage === 'download' && <DownloadImagesPage />}
       </main>
       <Footer />
       <MobileStickyCTA />

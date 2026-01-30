@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Page = 'home' | 'accommodations' | 'amenities' | 'things-to-do' | 'all-inclusive';
+type Page = 'home' | 'accommodations' | 'amenities' | 'things-to-do' | 'all-inclusive' | 'download';
 
 interface RouterContextType {
   currentPage: Page;
@@ -10,10 +10,17 @@ interface RouterContextType {
 const RouterContext = createContext<RouterContextType | undefined>(undefined);
 
 export function RouterProvider({ children }: { children: ReactNode }) {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  const getInitialPage = (): Page => {
+    const hash = window.location.hash.replace('#', '');
+    const validPages: Page[] = ['home', 'accommodations', 'amenities', 'things-to-do', 'all-inclusive', 'download'];
+    return validPages.includes(hash as Page) ? (hash as Page) : 'home';
+  };
+
+  const [currentPage, setCurrentPage] = useState<Page>(getInitialPage);
 
   const navigateTo = (page: Page) => {
     setCurrentPage(page);
+    window.location.hash = page;
     window.scrollTo(0, 0);
   };
 
