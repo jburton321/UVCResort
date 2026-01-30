@@ -187,6 +187,10 @@ img.hero-couple-element {
   transform-origin: center;
 }
 
+.price-badge-wrapper.\!transform-none {
+  transform: none !important;
+}
+
 .price-badge-circle {
   position: relative;
   z-index: 10;

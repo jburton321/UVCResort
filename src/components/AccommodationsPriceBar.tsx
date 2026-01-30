@@ -7,47 +7,49 @@ export function AccommodationsPriceBar() {
 
   return (
     <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
-      <div className="flex items-center justify-between px-6 py-4 gap-6">
-        <div className="flex-shrink-0">
-          <PriceBadge scale={0.35} />
+      <div className="flex items-center px-4 py-3 gap-4">
+        <div className="flex-shrink-0 w-[100px] h-[85px] overflow-visible relative">
+          <div className="absolute top-1/2 left-0 -translate-y-1/2 origin-left" style={{ transform: 'translateY(-50%) scale(0.28)' }}>
+            <PriceBadge className="!transform-none" />
+          </div>
         </div>
 
         <div className="flex-1 min-w-0">
-          <h2 className="text-[#1a365d] text-xl font-bold leading-tight mb-2">
+          <h2 className="text-[#1a365d] text-base font-bold leading-tight mb-1">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation
           </h2>
-          <div className="space-y-1.5">
-            <div className="flex items-start gap-2">
-              <BedIcon className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#1a365d]" />
-              <span className="text-xs text-[#1a365d]">
+          <div className="space-y-1">
+            <div className="flex items-start gap-1.5">
+              <BedIcon className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-[#1a365d]" />
+              <span className="text-[11px] text-[#1a365d] leading-tight">
                 <span className="font-bold">Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya</span>
               </span>
             </div>
-            <div className="flex items-start gap-2">
-              <CocktailIcon className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#1a365d]" />
-              <span className="text-xs text-[#1a365d]">
-                <span className="font-bold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
-                Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
+            <div className="flex items-start gap-1.5">
+              <CocktailIcon className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-[#1a365d]" />
+              <span className="text-[11px] text-[#1a365d] leading-tight">
+                <span className="font-bold">Unlimited-Luxury:</span>{' '}
+                Unlimited Dining, Drinks, Wifi, Entertainment & Beach Amenities!
               </span>
             </div>
           </div>
         </div>
 
         <div className="flex-shrink-0">
-          <div className="bg-[#FFD174] rounded-lg px-5 py-3 flex items-center gap-3">
-            <Zap className="w-5 h-5 text-red-600 animate-pulse flex-shrink-0" />
+          <div className="bg-[#FFD174] rounded-lg px-3 py-2 flex items-center gap-2">
+            <Zap className="w-4 h-4 text-red-600 animate-pulse flex-shrink-0" />
             <div className="flex flex-col items-center">
-              <span className="text-slate-900 font-bold text-sm uppercase tracking-wide">
+              <span className="text-slate-900 font-bold text-xs uppercase tracking-wide">
                 {isExpired ? 'Offer expired' : 'Offer expires:'}
               </span>
               {!isExpired && (
-                <div className="flex items-center gap-0.5 font-bold text-red-600 text-2xl tabular-nums">
-                  <span className="min-w-[28px] text-center">{hours}</span>
+                <div className="flex items-center gap-0.5 font-bold text-red-600 text-xl tabular-nums">
+                  <span className="min-w-[24px] text-center">{hours}</span>
                   <span className="animate-pulse">:</span>
-                  <span className="min-w-[28px] text-center">{minutes}</span>
+                  <span className="min-w-[24px] text-center">{minutes}</span>
                   <span className="animate-pulse">:</span>
-                  <span className="min-w-[28px] text-center">{seconds}</span>
+                  <span className="min-w-[24px] text-center">{seconds}</span>
                 </div>
               )}
             </div>
