@@ -181,8 +181,7 @@ img.hero-couple-element {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(280px, 50vw, 500px);
-  max-width: 500px;
+  width: 500px;
   font-family: 'Arial Black', Gadget, sans-serif;
   transform: scale(clamp(0.55, 0.55 + 0.3 * ((100vw - 320px) / 1120), 0.85));
   transform-origin: center;
@@ -191,10 +190,10 @@ img.hero-couple-element {
 .price-badge-circle {
   position: relative;
   z-index: 10;
-  width: clamp(140px, 24vw, 240px);
-  height: clamp(140px, 24vw, 240px);
+  width: 240px;
+  height: 240px;
   background: var(--purple);
-  border: clamp(4px, 0.6vw, 6px) solid var(--white);
+  border: 6px solid var(--white);
   border-radius: 50%;
   color: white;
   display: flex;
@@ -206,13 +205,13 @@ img.hero-couple-element {
 }
 
 .price-badge-days {
-  font-size: clamp(1rem, 1.8vw, 1.8rem);
+  font-size: 1.8rem;
   line-height: 1;
   margin-bottom: -5px;
 }
 
 .price-badge-price {
-  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  font-size: 5.5rem;
   font-weight: 900;
   line-height: 1;
   display: flex;
@@ -220,13 +219,13 @@ img.hero-couple-element {
 }
 
 .price-badge-currency {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  margin-top: clamp(5px, 1vw, 10px);
+  font-size: 2.5rem;
+  margin-top: 10px;
   margin-right: 2px;
 }
 
 .price-badge-terms {
-  font-size: clamp(0.6rem, 0.85vw, 0.85rem);
+  font-size: 0.85rem;
   line-height: 1.1;
   font-weight: bold;
 }
@@ -250,13 +249,13 @@ img.hero-couple-element {
 }
 
 .price-badge-tag-wrapper {
-  left: clamp(5px, 1vw, 10px);
-  top: clamp(75px, 13vw, 130px);
+  left: 0;
+  top: 54%;
   z-index: 11;
 }
 
 .price-badge-ribbon-wrapper {
-  right: clamp(-50px, -8vw, -80px);
+  right: -16%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
@@ -269,26 +268,26 @@ img.hero-couple-element {
 }
 
 .price-badge-tag-left {
-  width: clamp(70px, 12vw, 120px);
-  height: clamp(32px, 5.5vw, 55px);
+  width: 120px;
+  height: 55px;
   -webkit-clip-path: polygon(20% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(20% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: clamp(12px, 2vw, 20px);
-  font-size: clamp(0.6rem, 1vw, 1rem);
-  margin-left: clamp(18px, 3.1vw, 31px);
+  padding-left: 20px;
+  font-size: 1rem;
+  margin-left: 31px;
 }
 
 .price-badge-ribbon-right {
-  width: clamp(160px, 28vw, 280px);
-  height: clamp(65px, 11vw, 110px);
+  width: 280px;
+  height: 110px;
   clip-path: polygon(0% 0%, 100% 0%, 88% 50%, 100% 100%, 0% 100%);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: clamp(25px, 4.5vw, 45px);
+  padding-right: 45px;
 }
 
 .price-badge-save-content {
@@ -298,13 +297,13 @@ img.hero-couple-element {
 }
 
 .price-badge-save-title {
-  font-size: clamp(1rem, 1.8vw, 1.8rem);
+  font-size: 1.8rem;
   font-weight: 900;
   line-height: 0.8;
 }
 
 .price-badge-save-value {
-  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-size: 4rem;
   font-weight: 900;
   line-height: 1;
 }
