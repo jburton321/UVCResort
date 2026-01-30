@@ -40,7 +40,7 @@ export function AccommodationsPage() {
       <section
         className="relative py-12 md:py-16 lg:py-20"
         style={{
-          backgroundImage: 'url(section0.png)',
+          backgroundImage: 'url(accommodations/accomodations-hero.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
