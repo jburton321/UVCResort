@@ -6,7 +6,7 @@ export function AccommodationsPriceBar() {
 
   return (
     <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
-      <div className="grid grid-cols-3 items-center px-6 py-4">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
         <div>
           <PriceBadge scale={0.4} />
         </div>
