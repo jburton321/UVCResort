@@ -5,25 +5,26 @@ export function AccommodationsPriceBar() {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
 
   return (
-    <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl relative">
-      <div className="absolute left-4 -top-14">
-        <PriceBadge scale={0.4} />
-      </div>
-      <div className="flex items-center justify-center px-6 py-3 gap-8">
-        <div className="flex-shrink-0 max-w-[480px] ml-[100px]">
+    <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
+      <div className="grid grid-cols-3 items-center px-6 py-4">
+        <div className="flex justify-center">
+          <PriceBadge scale={0.4} />
+        </div>
+
+        <div className="flex flex-col justify-center">
           <h2 className="text-[#1a365d] text-2xl font-bold leading-tight mb-3">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation
           </h2>
           <div className="space-y-2">
             <div className="flex items-start gap-2">
-              <BedIcon className="w-5 h-5 flex-shrink-0 mt-0.5 text-[#1a365d]" />
+              <BedIcon className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent" />
               <span className="text-sm text-[#1a365d]">
                 <span className="font-bold">Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya</span>
               </span>
             </div>
             <div className="flex items-start gap-2">
-              <CocktailIcon className="w-5 h-5 flex-shrink-0 mt-0.5 text-[#1a365d]" />
+              <CocktailIcon className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent" />
               <span className="text-sm text-[#1a365d]">
                 <span className="font-bold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
                 Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
@@ -32,7 +33,7 @@ export function AccommodationsPriceBar() {
           </div>
         </div>
 
-        <div className="flex-shrink-0">
+        <div className="flex justify-center">
           <div className="bg-[#d4a84b] rounded-lg px-6 py-4 text-center min-w-[200px]">
             <div className="text-[#1a365d] font-bold text-lg tracking-wide mb-2">
               OFFER EXPIRES:

@@ -611,10 +611,6 @@ input,
   right: 0px;
 }
 
-.-top-14 {
-  top: -3.5rem;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -767,10 +763,6 @@ input,
 
 .ml-0\.5 {
   margin-left: 0.125rem;
-}
-
-.ml-\[100px\] {
-  margin-left: 100px;
 }
 
 .mt-0\.5 {
@@ -1046,10 +1038,6 @@ input,
   max-width: 72rem;
 }
 
-.max-w-\[480px\] {
-  max-width: 480px;
-}
-
 .max-w-content {
   max-width: 1230px;
 }
@@ -1203,6 +1191,10 @@ input,
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
