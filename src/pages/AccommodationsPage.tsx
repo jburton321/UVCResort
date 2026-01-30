@@ -161,11 +161,13 @@ export function AccommodationsPage() {
 
       <SaveNowTravelLater />
 
-      <img
-        className="w-full h-auto"
-        src="frame-19840779511.png"
-        alt="Decorative divider"
-      />
+      <div style={{ backgroundColor: '#2b323b' }}>
+        <img
+          className="w-full h-auto"
+          src="frame-19840779511.png"
+          alt="Decorative divider"
+        />
+      </div>
     </>
   );
 }

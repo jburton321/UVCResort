@@ -56,11 +56,13 @@ export function HomePage() {
       <MapSection>
         <Gallery images={locationGalleryImages} className="bg-transparent" />
       </MapSection>
-      <img
-        className="w-full h-32 sm:h-40 md:h-56 object-cover"
-        src="frame-19840779511.png"
-        alt="Beach scene"
-      />
+      <div style={{ backgroundColor: '#F2F4F6' }}>
+        <img
+          className="w-full h-32 sm:h-40 md:h-56 object-cover"
+          src="frame-19840779511.png"
+          alt="Beach scene"
+        />
+      </div>
     </>
   );
 }
