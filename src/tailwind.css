@@ -581,6 +581,10 @@ input,
   pointer-events: none;
 }
 
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .fixed {
   position: fixed;
 }
@@ -649,10 +653,6 @@ input,
 
 .left-4 {
   left: 1rem;
-}
-
-.left-\[calc\(50\%-720px\+2rem\)\] {
-  left: calc(50% - 720px + 2rem);
 }
 
 .right-0 {
@@ -3117,10 +3117,6 @@ img.hero-couple-element {
 
   .lg\:mt-12 {
     margin-top: 3rem;
-  }
-
-  .lg\:block {
-    display: block;
   }
 
   .lg\:flex {
