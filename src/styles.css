@@ -182,6 +182,7 @@ img.hero-couple-element {
   align-items: center;
   justify-content: center;
   width: clamp(280px, 50vw, 500px);
+  max-width: 500px;
   font-family: 'Arial Black', Gadget, sans-serif;
   transform: scale(clamp(0.55, 0.55 + 0.3 * ((100vw - 320px) / 1120), 0.85));
   transform-origin: center;
