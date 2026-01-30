@@ -21,3 +21,4 @@ export { MapSection } from './MapSection';
 export { Lightbox } from './Lightbox';
 export { PriceBadge } from './PriceBadge';
 export { AccommodationsPriceBar } from './AccommodationsPriceBar';
+export { SaveNowTravelLater } from './SaveNowTravelLater';
