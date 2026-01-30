@@ -829,10 +829,6 @@ input,
   margin-top: 1rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1389,6 +1385,10 @@ input,
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -1617,6 +1617,11 @@ input,
 .bg-\[\#7535ad\] {
   --tw-bg-opacity: 1;
   background-color: rgb(117 53 173 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#7c3aed\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#FFD174\] {
@@ -2254,6 +2259,14 @@ input,
   line-height: 2rem;
 }
 
+.leading-\[1\.1\] {
+  line-height: 1.1;
+}
+
+.leading-\[1\.4\] {
+  line-height: 1.4;
+}
+
 .leading-\[10px\] {
   line-height: 10px;
 }
@@ -2322,14 +2335,28 @@ input,
   letter-spacing: 0.025em;
 }
 
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .text-\[\#000000\] {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#1a1a1a\] {
+  --tw-text-opacity: 1;
+  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#1a365d\] {
   --tw-text-opacity: 1;
   color: rgb(26 54 93 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#2d2d2d\] {
+  --tw-text-opacity: 1;
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#ffffff\] {
@@ -2869,6 +2896,11 @@ img.hero-couple-element {
 .hover\:bg-\[\#5f2a8f\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(95 42 143 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#6d28d9\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-black\/50:hover {
@@ -3719,10 +3751,6 @@ img.hero-couple-element {
     height: 160px;
   }
 
-  .lg\:h-\[275px\] {
-    height: 275px;
-  }
-
   .lg\:h-\[280px\] {
     height: 280px;
   }
@@ -3737,6 +3765,10 @@ img.hero-couple-element {
 
   .lg\:h-\[396px\] {
     height: 396px;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:min-h-\[800px\] {
@@ -3771,6 +3803,10 @@ img.hero-couple-element {
     width: 400px;
   }
 
+  .lg\:w-\[480px\] {
+    width: 480px;
+  }
+
   .lg\:w-\[509\.33px\] {
     width: 509.33px;
   }
@@ -3797,10 +3833,6 @@ img.hero-couple-element {
 
   .lg\:max-w-md {
     max-width: 28rem;
-  }
-
-  .lg\:flex-none {
-    flex: none;
   }
 
   .lg\:grid-cols-2 {

@@ -13,32 +13,28 @@ export function AmenitiesPage() {
           className="bg-color-white-solid rounded-[32px] p-4 sm:p-8 md:p-12 flex flex-col gap-12 items-start justify-start shrink-0 w-full max-w-width-1200 relative overflow-hidden"
           style={{ boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.30)" }}
         >
-          <div className="flex flex-col lg:flex-row gap-item-spacing-l items-start justify-start shrink-0 relative w-full">
-            <div className="flex flex-col items-start justify-between shrink-0 lg:h-[275px] relative flex-1 lg:flex-none lg:w-auto">
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="flex flex-col gap-8 items-start justify-start self-stretch shrink-0 relative">
-                  <div className="text-color-grey-20 text-left font-roboto text-[24px] md:text-[32px] leading-[35.2px] font-bold relative self-stretch flex items-center justify-start">
-                    All-Inclusive Amenities
-                  </div>
-                  <div className="text-color-black-solid text-left font-roboto text-[15px] md:text-[16px] leading-[22.4px] font-normal relative self-stretch">
-                    <span>
-                      <span className="font-semibold">
-                        Hyatt Zilara Riviera Maya is an all-inclusive, adults-only beachfront resort
-                      </span>
-                      <span>
-                        {" "}set across 70 acres of white sand shoreline and lush mangrove surroundings. The resort features 291 well-appointed rooms, including swim-up accommodations, designed for guests seeking comfort, privacy, and elevated service. Every stay includes access to the resort's Premium All-Inclusive experience, delivering thoughtful service, refined dining, and a seamless vacation experience centered on quality and attention to detail.
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                <ButtonStateDefault className="!w-full !shrink-0 mt-6" />
-              </div>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch w-full">
+            <div className="flex flex-col gap-6 flex-1">
+              <h2 className="text-[#2d2d2d] text-[24px] md:text-[32px] leading-[1.1] font-bold font-roboto">
+                All-Inclusive Amenities
+              </h2>
+              <p className="text-[#1a1a1a] text-[15px] md:text-[16px] leading-[1.4] font-roboto">
+                <span className="font-semibold">
+                  Hyatt Zilara Riviera Maya is an all-inclusive, adults-only beachfront resort
+                </span>
+                {" "}set across 70 acres of white sand shoreline and lush mangrove surroundings. The resort features 291 well-appointed rooms, including swim-up accommodations, designed for guests seeking comfort, privacy, and elevated service. Every stay includes access to the resort's Premium All-Inclusive experience, delivering thoughtful service, refined dining, and a seamless vacation experience centered on quality and attention to detail.
+              </p>
+              <button className="w-full bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-semibold text-[14px] tracking-wider uppercase py-4 rounded-full transition-colors">
+                Reserve Now
+              </button>
             </div>
-            <img
-              className="rounded-2xl shrink-0 w-full lg:w-[528px] h-[280px] sm:h-[340px] lg:h-[396px] max-w-width-1104 relative overflow-hidden object-cover"
-              src="amenities/image.png"
-              alt="All-Inclusive Amenities"
-            />
+            <div className="w-full lg:w-[480px] shrink-0">
+              <img
+                className="rounded-2xl w-full h-[280px] sm:h-[340px] lg:h-full object-cover"
+                src="/amenities/image.png"
+                alt="All-Inclusive Amenities"
+              />
+            </div>
           </div>
 
           <BannerProperty1Desktop text="84%" className="!shrink-0 !w-full" />
