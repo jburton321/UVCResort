@@ -3,6 +3,7 @@ import { Gallery } from '../components/Gallery';
 import { AccommodationsPriceBar } from '../components/AccommodationsPriceBar';
 import { InteriorMobilePriceBar } from '../components/InteriorMobilePriceBar';
 import { InteriorFooter } from '../components/InteriorFooter';
+import { InteriorHero } from '../components/InteriorHero';
 
 const amenitiesGallery = [
   'amenities/photo-description0.png',
@@ -16,45 +17,37 @@ const amenitiesGallery = [
 export function AmenitiesPage() {
   return (
     <>
-      <section
-        className="relative py-12 md:py-16 lg:py-20"
-        style={{
-          backgroundImage: 'url(amenities/image.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
-        <div className="relative max-w-content mx-auto px-4 sm:px-6">
-          <div className="bg-white/[0.76] backdrop-blur-xl rounded-[32px] overflow-hidden shadow-xl border border-white/50">
-            <div className="p-6 sm:p-8 md:p-12">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-                <div className="w-full lg:w-1/2">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    All-Inclusive Amenities
-                  </h1>
-                  <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
-                    <span className="font-semibold">
-                      Hyatt Zilara Riviera Maya is an all-inclusive, adults-only beachfront resort
-                    </span>{' '}
-                    set across 70 acres of white sand shoreline and lush mangrove surroundings. The resort features 291 well-appointed rooms, including swim-up accommodations, designed for guests seeking comfort, privacy, and elevated service.
-                  </p>
-                  <Button className="w-full">RESERVE NOW</Button>
-                </div>
-                <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
-                  <img
-                    src="amenities/image-copy.png"
-                    alt="All-Inclusive Amenities"
-                    className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
+      <InteriorHero
+        backgroundImage="amenities/image.png"
+        footer={
+          <>
             <AccommodationsPriceBar />
             <InteriorMobilePriceBar />
+          </>
+        }
+      >
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              All-Inclusive Amenities
+            </h1>
+            <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
+              <span className="font-semibold">
+                Hyatt Zilara Riviera Maya is an all-inclusive, adults-only beachfront resort
+              </span>{' '}
+              set across 70 acres of white sand shoreline and lush mangrove surroundings. The resort features 291 well-appointed rooms, including swim-up accommodations, designed for guests seeking comfort, privacy, and elevated service.
+            </p>
+            <Button className="w-full">RESERVE NOW</Button>
+          </div>
+          <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
+            <img
+              src="amenities/image-copy.png"
+              alt="All-Inclusive Amenities"
+              className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
         </div>
-      </section>
+      </InteriorHero>
 
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-content mx-auto">

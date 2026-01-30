@@ -2,49 +2,42 @@ import { Button } from '../components/Button';
 import { AccommodationsPriceBar } from '../components/AccommodationsPriceBar';
 import { InteriorMobilePriceBar } from '../components/InteriorMobilePriceBar';
 import { InteriorFooter } from '../components/InteriorFooter';
+import { InteriorHero } from '../components/InteriorHero';
 
 export function AllInclusivePage() {
   return (
     <>
-      <section
-        className="relative py-12 md:py-16 lg:py-20"
-        style={{
-          backgroundImage: 'url(things-to-do/things-to-do-photo-10.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
-        <div className="relative max-w-content mx-auto px-4 sm:px-6">
-          <div className="bg-white/[0.76] backdrop-blur-xl rounded-[32px] overflow-hidden shadow-xl border border-white/50">
-            <div className="p-6 sm:p-8 md:p-12">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-                <div className="w-full lg:w-1/2">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Your All-Inclusive Escape Awaits
-                  </h1>
-                  <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
-                    <span className="font-semibold">
-                      Hyatt Zilara Riviera Maya offers an adults-only, all-inclusive experience designed to keep everything simple and connected.
-                    </span>{' '}
-                    Dining, drinks, service, and resort access are all part of your stay, so plans stay flexible and time stays yours. It's a straightforward way to enjoy the setting, the amenities, and the pace of the resort without added steps.
-                  </p>
-                  <Button className="w-full">RESERVE NOW</Button>
-                </div>
-                <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
-                  <img
-                    src="things-to-do/things-to-do-photo-11.png"
-                    alt="All-Inclusive Escape"
-                    className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
+      <InteriorHero
+        backgroundImage="things-to-do/things-to-do-photo-10.png"
+        footer={
+          <>
             <AccommodationsPriceBar />
             <InteriorMobilePriceBar />
+          </>
+        }
+      >
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Your All-Inclusive Escape Awaits
+            </h1>
+            <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
+              <span className="font-semibold">
+                Hyatt Zilara Riviera Maya offers an adults-only, all-inclusive experience designed to keep everything simple and connected.
+              </span>{' '}
+              Dining, drinks, service, and resort access are all part of your stay, so plans stay flexible and time stays yours. It's a straightforward way to enjoy the setting, the amenities, and the pace of the resort without added steps.
+            </p>
+            <Button className="w-full">RESERVE NOW</Button>
+          </div>
+          <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
+            <img
+              src="things-to-do/things-to-do-photo-11.png"
+              alt="All-Inclusive Escape"
+              className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
         </div>
-      </section>
+      </InteriorHero>
 
       <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-content mx-auto">

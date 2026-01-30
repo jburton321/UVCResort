@@ -23,3 +23,4 @@ export { PriceBadge } from './PriceBadge';
 export { AccommodationsPriceBar } from './AccommodationsPriceBar';
 export { InteriorMobilePriceBar } from './InteriorMobilePriceBar';
 export { SaveNowTravelLater } from './SaveNowTravelLater';
+export { InteriorHero } from './InteriorHero';
