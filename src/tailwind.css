@@ -725,6 +725,10 @@ input,
   margin-right: -0.5rem;
 }
 
+.-mt-8 {
+  margin-top: -2rem;
+}
+
 .-mt-\[10px\] {
   margin-top: -10px;
 }
@@ -871,10 +875,6 @@ input,
 
 .h-9 {
   height: 2.25rem;
-}
-
-.h-\[110px\] {
-  height: 110px;
 }
 
 .h-\[140px\] {
