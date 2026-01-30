@@ -159,8 +159,6 @@ export function AccommodationsPage() {
         </div>
       </section>
 
-      <SaveNowTravelLater />
-
       <div style={{ backgroundColor: '#2b323b' }}>
         <img
           className="w-full h-auto"
@@ -168,6 +166,8 @@ export function AccommodationsPage() {
           alt="Decorative divider"
         />
       </div>
+
+      <SaveNowTravelLater />
     </>
   );
 }
