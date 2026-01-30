@@ -8,7 +8,7 @@ export function AccommodationsPriceBar() {
     <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
       <div className="grid grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
         <div className="flex-shrink-0">
-          <PriceBadge width={180} />
+          <PriceBadge width={280} />
         </div>
 
         <div className="flex flex-col justify-center">
@@ -34,29 +34,29 @@ export function AccommodationsPriceBar() {
         </div>
 
         <div className="flex justify-center">
-          <div className="bg-[#d4a84b] rounded-lg px-6 py-4 text-center min-w-[200px]">
-            <div className="text-[#1a365d] font-bold text-lg tracking-wide mb-2">
+          <div className="bg-[#FFD174] rounded-lg px-6 py-4 text-center min-w-[200px]">
+            <div className="text-slate-900 font-bold text-lg tracking-wide mb-2">
               OFFER EXPIRES:
             </div>
             {!isExpired ? (
               <div className="flex items-center justify-center gap-1">
                 <div className="text-center">
-                  <span className="text-[#1a365d] font-bold text-3xl tabular-nums">{hours}</span>
-                  <div className="text-[#1a365d] text-xs font-medium">HR</div>
+                  <span className="text-red-600 font-bold text-3xl tabular-nums">{hours}</span>
+                  <div className="text-slate-900 text-xs font-medium">HR</div>
                 </div>
-                <span className="text-[#1a365d] font-bold text-2xl mb-4">:</span>
+                <span className="text-red-600 font-bold text-2xl mb-4 animate-pulse">:</span>
                 <div className="text-center">
-                  <span className="text-[#1a365d] font-bold text-3xl tabular-nums">{minutes}</span>
-                  <div className="text-[#1a365d] text-xs font-medium">MIN</div>
+                  <span className="text-red-600 font-bold text-3xl tabular-nums">{minutes}</span>
+                  <div className="text-slate-900 text-xs font-medium">MIN</div>
                 </div>
-                <span className="text-[#1a365d] font-bold text-2xl mb-4">:</span>
+                <span className="text-red-600 font-bold text-2xl mb-4 animate-pulse">:</span>
                 <div className="text-center">
-                  <span className="text-[#1a365d] font-bold text-3xl tabular-nums">{seconds}</span>
-                  <div className="text-[#1a365d] text-xs font-medium">SEC</div>
+                  <span className="text-red-600 font-bold text-3xl tabular-nums">{seconds}</span>
+                  <div className="text-slate-900 text-xs font-medium">SEC</div>
                 </div>
               </div>
             ) : (
-              <div className="text-[#1a365d] font-bold text-xl">EXPIRED</div>
+              <div className="text-red-600 font-bold text-xl">EXPIRED</div>
             )}
           </div>
         </div>
