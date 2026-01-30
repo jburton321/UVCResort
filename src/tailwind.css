@@ -1017,6 +1017,10 @@ input,
   min-height: 44px;
 }
 
+.\!w-\[100\%\] {
+  width: 100% !important;
+}
+
 .\!w-full {
   width: 100% !important;
 }
@@ -1055,6 +1059,10 @@ input,
 
 .w-9 {
   width: 2.25rem;
+}
+
+.w-\[100\%\] {
+  width: 100%;
 }
 
 .w-\[100px\] {
@@ -1507,10 +1515,6 @@ input,
   white-space: nowrap;
 }
 
-.whitespace-pre-line {
-  white-space: pre-line;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1954,6 +1958,10 @@ input,
   padding-bottom: 13px;
 }
 
+.pb-\[47px\] {
+  padding-bottom: 47px;
+}
+
 .pb-\[60px\] {
   padding-bottom: 60px;
 }
@@ -2050,6 +2058,10 @@ input,
   padding-top: 13px;
 }
 
+.pt-\[47px\] {
+  padding-top: 47px;
+}
+
 .pt-\[60px\] {
   padding-top: 60px;
 }
@@ -2087,11 +2099,6 @@ input,
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-\[10px\] {
@@ -2275,6 +2282,10 @@ input,
   line-height: 23px;
 }
 
+.leading-\[24px\] {
+  line-height: 24px;
+}
+
 .leading-\[28px\] {
   line-height: 28px;
 }
@@ -2319,11 +2330,6 @@ input,
 .text-\[\#1a365d\] {
   --tw-text-opacity: 1;
   color: rgb(26 54 93 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#333\] {
-  --tw-text-opacity: 1;
-  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#ffffff\] {
@@ -3442,10 +3448,6 @@ img.hero-couple-element {
     gap: 0.25rem;
   }
 
-  .md\:gap-12 {
-    gap: 3rem;
-  }
-
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -3456,10 +3458,6 @@ img.hero-couple-element {
 
   .md\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
   }
 
   .md\:rounded-2xl {
@@ -3484,16 +3482,6 @@ img.hero-couple-element {
 
   .md\:p-6 {
     padding: 1.5rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 
   .md\:px-16 {
@@ -3556,10 +3544,6 @@ img.hero-couple-element {
     padding-bottom: 1.5rem;
   }
 
-  .md\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
   .md\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -3576,12 +3560,20 @@ img.hero-couple-element {
     padding-left: 2.5rem;
   }
 
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
   .md\:pl-20 {
     padding-left: 5rem;
   }
 
   .md\:pr-10 {
     padding-right: 2.5rem;
+  }
+
+  .md\:pr-12 {
+    padding-right: 3rem;
   }
 
   .md\:pr-20 {
@@ -3598,10 +3590,6 @@ img.hero-couple-element {
 
   .md\:pt-\[100px\] {
     padding-top: 100px;
-  }
-
-  .md\:text-left {
-    text-align: left;
   }
 
   .md\:text-2xl {
@@ -3624,11 +3612,6 @@ img.hero-couple-element {
     line-height: 1;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .md\:text-\[15\.625px\] {
     font-size: 15.625px;
   }
@@ -3643,11 +3626,6 @@ img.hero-couple-element {
 
   .md\:text-\[32px\] {
     font-size: 32px;
-  }
-
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:text-fluid-2xl {
@@ -3753,12 +3731,20 @@ img.hero-couple-element {
     height: 339.55px;
   }
 
+  .lg\:h-\[369px\] {
+    height: 369px;
+  }
+
   .lg\:h-\[396px\] {
     height: 396px;
   }
 
   .lg\:min-h-\[800px\] {
     min-height: 800px;
+  }
+
+  .lg\:\!w-\[1104px\] {
+    width: 1104px !important;
   }
 
   .lg\:w-1\/2 {
@@ -3886,15 +3872,6 @@ img.hero-couple-element {
 
   .lg\:pt-fluid-3 {
     padding-top: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
-  }
-
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .lg\:text-\[32px\] {
-    font-size: 32px;
   }
 
   .lg\:text-fluid-3xl {
