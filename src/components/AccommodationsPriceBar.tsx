@@ -1,3 +1,4 @@
+import { Zap } from 'lucide-react';
 import { useCountdown } from '../hooks/useCountdown';
 import { PriceBadge } from './PriceBadge';
 
@@ -9,8 +10,8 @@ export function AccommodationsPriceBar() {
       <div className="absolute left-4 -top-14">
         <PriceBadge scale={0.4} />
       </div>
-      <div className="flex items-center justify-center px-6 py-3 gap-8">
-        <div className="flex-shrink-0 max-w-[480px] ml-[100px]">
+      <div className="flex items-center px-6 py-4">
+        <div className="flex-1 pl-[120px]">
           <h2 className="text-[#1a365d] text-2xl font-bold leading-tight mb-3">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation
@@ -33,30 +34,22 @@ export function AccommodationsPriceBar() {
         </div>
 
         <div className="flex-shrink-0">
-          <div className="bg-[#d4a84b] rounded-lg px-6 py-4 text-center min-w-[200px]">
-            <div className="text-[#1a365d] font-bold text-lg tracking-wide mb-2">
-              OFFER EXPIRES:
+          <div className="bg-[#FFD174] rounded-lg px-6 py-3 flex items-center gap-3 min-w-[280px]">
+            <Zap className="w-5 h-5 text-red-600 animate-pulse flex-shrink-0" />
+            <div className="flex flex-col items-center">
+              <span className="text-slate-900 font-bold text-sm uppercase tracking-wide">
+                {isExpired ? 'Offer expired' : 'Offer expires:'}
+              </span>
+              {!isExpired && (
+                <div className="flex items-center gap-0.5 font-bold text-red-600 text-2xl tabular-nums">
+                  <span className="min-w-[32px] text-center">{hours}</span>
+                  <span className="animate-pulse">:</span>
+                  <span className="min-w-[32px] text-center">{minutes}</span>
+                  <span className="animate-pulse">:</span>
+                  <span className="min-w-[32px] text-center">{seconds}</span>
+                </div>
+              )}
             </div>
-            {!isExpired ? (
-              <div className="flex items-center justify-center gap-1">
-                <div className="text-center">
-                  <span className="text-[#1a365d] font-bold text-3xl tabular-nums">{hours}</span>
-                  <div className="text-[#1a365d] text-xs font-medium">HR</div>
-                </div>
-                <span className="text-[#1a365d] font-bold text-2xl mb-4">:</span>
-                <div className="text-center">
-                  <span className="text-[#1a365d] font-bold text-3xl tabular-nums">{minutes}</span>
-                  <div className="text-[#1a365d] text-xs font-medium">MIN</div>
-                </div>
-                <span className="text-[#1a365d] font-bold text-2xl mb-4">:</span>
-                <div className="text-center">
-                  <span className="text-[#1a365d] font-bold text-3xl tabular-nums">{seconds}</span>
-                  <div className="text-[#1a365d] text-xs font-medium">SEC</div>
-                </div>
-              </div>
-            ) : (
-              <div className="text-[#1a365d] font-bold text-xl">EXPIRED</div>
-            )}
           </div>
         </div>
       </div>
