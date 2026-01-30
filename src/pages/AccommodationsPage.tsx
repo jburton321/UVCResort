@@ -1,4 +1,4 @@
-import { Tv, Coffee, Shirt, Lock } from 'lucide-react';
+import { Tv, Coffee, Wine, Shirt, Lock } from 'lucide-react';
 import { Gallery } from '../components/Gallery';
 import { Button } from '../components/Button';
 import { AccommodationsPriceBar } from '../components/AccommodationsPriceBar';
