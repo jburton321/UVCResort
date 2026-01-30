@@ -2,6 +2,7 @@ import { Tv, Coffee, Wine, Shirt, Lock } from 'lucide-react';
 import { Gallery } from '../components/Gallery';
 import { Button } from '../components/Button';
 import { AccommodationsPriceBar } from '../components/AccommodationsPriceBar';
+import { InteriorMobilePriceBar } from '../components/InteriorMobilePriceBar';
 import { SaveNowTravelLater } from '../components/SaveNowTravelLater';
 
 const roomFeatures = [
@@ -81,6 +82,7 @@ export function AccommodationsPage() {
               </div>
             </div>
             <AccommodationsPriceBar />
+            <InteriorMobilePriceBar />
           </div>
         </div>
       </section>

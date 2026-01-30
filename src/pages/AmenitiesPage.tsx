@@ -1,6 +1,7 @@
 import { Button } from '../components/Button';
 import { Gallery } from '../components/Gallery';
-import { PriceBar } from '../components/PriceBar';
+import { AccommodationsPriceBar } from '../components/AccommodationsPriceBar';
+import { InteriorMobilePriceBar } from '../components/InteriorMobilePriceBar';
 import { InteriorFooter } from '../components/InteriorFooter';
 
 const amenitiesGallery = [
@@ -49,7 +50,8 @@ export function AmenitiesPage() {
                 </div>
               </div>
             </div>
-            <PriceBar />
+            <AccommodationsPriceBar />
+            <InteriorMobilePriceBar />
           </div>
         </div>
       </section>

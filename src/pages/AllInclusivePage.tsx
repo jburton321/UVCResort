@@ -1,5 +1,6 @@
 import { Button } from '../components/Button';
-import { PriceBar } from '../components/PriceBar';
+import { AccommodationsPriceBar } from '../components/AccommodationsPriceBar';
+import { InteriorMobilePriceBar } from '../components/InteriorMobilePriceBar';
 import { InteriorFooter } from '../components/InteriorFooter';
 
 export function AllInclusivePage() {
@@ -39,7 +40,8 @@ export function AllInclusivePage() {
                 </div>
               </div>
             </div>
-            <PriceBar />
+            <AccommodationsPriceBar />
+            <InteriorMobilePriceBar />
           </div>
         </div>
       </section>

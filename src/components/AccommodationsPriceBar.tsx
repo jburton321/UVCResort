@@ -5,7 +5,7 @@ export function AccommodationsPriceBar() {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
 
   return (
-    <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
+    <div className="hidden lg:block w-full bg-[#e8e8e8]/90 rounded-b-3xl">
       <div className="grid grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-4">
         <div className="flex-shrink-0">
           <PriceBadge width={280} />
