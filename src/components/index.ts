@@ -20,4 +20,3 @@ export { FeaturedList } from './FeaturedList';
 export { MapSection } from './MapSection';
 export { Lightbox } from './Lightbox';
 export { PriceBadge } from './PriceBadge';
-export { OfferCard } from './OfferCard';

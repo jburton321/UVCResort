@@ -1,5 +1,5 @@
 import { BackgroundSection } from './BackgroundSection';
-import { OfferCard } from './OfferCard';
+import { PriceBadge } from './PriceBadge';
 
 export function ParadiseSection() {
   return (
@@ -7,13 +7,22 @@ export function ParadiseSection() {
       backgroundImage="section-wrapper0.png"
       className="pt-10 sm:pt-12 md:pt-16"
     >
-      <div className="max-w-content mx-auto px-4 sm:px-6">
+      <div className="max-w-content mx-auto px-4 sm:px-6 text-center">
         <div className="mb-6 sm:mb-8">
-          <OfferCard
+          <img
+            src="offer-badge.png"
+            alt="5-Day/4-Night Riviera Cancun Vacation - $299 for Two Adults"
+            className="mx-auto w-full max-w-3xl h-auto"
+          />
+        </div>
+
+        <div className="mb-6 sm:mb-8 flex justify-center">
+          <PriceBadge
             days="5-DAYS"
             price={299}
+            packageText="PER PACKAGE"
+            subText="(All 4-Nights)"
             savePercent={84}
-            roomDescription="Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya"
           />
         </div>
       </div>
