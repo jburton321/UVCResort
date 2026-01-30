@@ -33,7 +33,7 @@ export function ThingsToDoPage() {
                 </div>
                 <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
                   <img
-                    src="things-to-do/things-to-do-photo-11.png"
+                    src="/things-to-do/todo.png"
                     alt="Explore Like a Local"
                     className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
                   />
