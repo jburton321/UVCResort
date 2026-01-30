@@ -1,11 +1,11 @@
 import { ButtonStateDefault } from '../components/amenities/ButtonStateDefault';
 import { BannerProperty1Desktop } from '../components/amenities/BannerProperty1Desktop';
+import { InteriorFooter } from '../components/InteriorFooter';
 
 export function AllInclusivePage() {
   return (
-    <div className="bg-[#f5f5f5] flex flex-col gap-0 items-start justify-start relative">
-
-      <div className="bg-color-grey-96 pt-12 pr-4 md:pr-10 pb-12 pl-4 md:pl-10 flex flex-col gap-0 items-center justify-center w-full shrink-0 max-w-width-1920 relative">
+    <>
+      <div className="bg-[#f5f5f5] pt-12 px-4 md:px-10 pb-12 flex flex-col gap-0 items-center justify-center w-full relative">
         <div
           className="bg-color-white-solid rounded-[32px] p-4 sm:p-8 md:p-12 flex flex-col gap-12 items-center justify-start shrink-0 w-full max-w-width-1200 relative overflow-hidden"
           style={{ boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.30)" }}
@@ -123,6 +123,8 @@ export function AllInclusivePage() {
           </div>
         </div>
       </div>
-    </div>
+
+      <InteriorFooter />
+    </>
   );
 }
