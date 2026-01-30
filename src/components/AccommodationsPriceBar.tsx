@@ -6,7 +6,7 @@ export function AccommodationsPriceBar() {
 
   return (
     <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl relative">
-      <div className="absolute left-4 -top-6">
+      <div className="absolute left-4 -top-14">
         <PriceBadge scale={0.4} />
       </div>
       <div className="flex items-center justify-center px-6 py-3 gap-8">
