@@ -42,7 +42,7 @@ export function Hero() {
                 </button>
               </div>
             </div>
-            <div className="w-full md:w-[calc(100%+3rem)] lg:w-auto md:-mx-6 lg:mx-0 order-2">
+            <div className="w-[calc(100%+2rem)] md:w-[calc(100%+3rem)] lg:w-auto -mx-4 md:-mx-6 lg:mx-0 order-2">
               <BookingCard />
             </div>
           </div>
