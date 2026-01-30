@@ -17,13 +17,7 @@ export function ParadiseSection() {
         </div>
 
         <div className="mb-6 sm:mb-8 flex justify-center">
-          <PriceBadge
-            days="5-DAYS"
-            price={299}
-            packageText="PER PACKAGE"
-            subText="(All 4-Nights)"
-            savePercent={84}
-          />
+          <PriceBadge width={400} className="max-w-full" />
         </div>
       </div>
 
