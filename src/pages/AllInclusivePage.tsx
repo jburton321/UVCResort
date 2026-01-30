@@ -1,128 +1,126 @@
-import { ButtonStateDefault } from '../components/amenities/ButtonStateDefault';
-import { BannerProperty1Desktop } from '../components/amenities/BannerProperty1Desktop';
+import { Button } from '../components/Button';
+import { PriceBar } from '../components/PriceBar';
 import { InteriorFooter } from '../components/InteriorFooter';
 
 export function AllInclusivePage() {
   return (
     <>
-      <div className="bg-[#f5f5f5] pt-12 px-4 md:px-10 pb-12 flex flex-col gap-0 items-center justify-center w-full relative">
-        <div
-          className="bg-color-white-solid rounded-[32px] p-4 sm:p-8 md:p-12 flex flex-col gap-12 items-center justify-start shrink-0 w-full max-w-width-1200 relative overflow-hidden"
-          style={{ boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.30)" }}
-        >
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-start self-stretch shrink-0 relative">
-            <div className="flex flex-col gap-8 items-start justify-start flex-1 relative">
-              <div className="flex flex-col gap-8 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-grey-20 text-left font-roboto text-[24px] md:text-[32px] leading-[35.2px] font-bold relative self-stretch flex items-center justify-start">
-                  Your All-Inclusive Escape Awaits
-                </div>
-                <div className="text-color-black-solid text-left font-roboto text-[15px] md:text-[16px] leading-[22.4px] font-normal relative self-stretch flex items-center justify-start">
-                  <span>
+      <section
+        className="relative py-12 md:py-16 lg:py-20"
+        style={{
+          backgroundImage: 'url(things-to-do/things-to-do-photo-10.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
+        <div className="relative max-w-content mx-auto px-4 sm:px-6">
+          <div className="bg-white/[0.76] backdrop-blur-xl rounded-[32px] overflow-hidden shadow-xl border border-white/50">
+            <div className="p-6 sm:p-8 md:p-12">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                <div className="w-full lg:w-1/2">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Your All-Inclusive Escape Awaits
+                  </h1>
+                  <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
                     <span className="font-semibold">
                       Hyatt Zilara Riviera Maya offers an adults-only, all-inclusive experience designed to keep everything simple and connected.
-                    </span>
-                    <span>
-                      {" "}Dining, drinks, service, and resort access are all part of your stay, so plans stay flexible and time stays yours. It's a straightforward way to enjoy the setting, the amenities, and the pace of the resort without added steps.
-                    </span>
-                  </span>
+                    </span>{' '}
+                    Dining, drinks, service, and resort access are all part of your stay, so plans stay flexible and time stays yours. It's a straightforward way to enjoy the setting, the amenities, and the pace of the resort without added steps.
+                  </p>
+                  <Button className="w-full">RESERVE NOW</Button>
+                </div>
+                <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
+                  <img
+                    src="things-to-do/things-to-do-photo-11.png"
+                    alt="All-Inclusive Escape"
+                    className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
               </div>
-              <ButtonStateDefault className="!w-full !shrink-0" />
             </div>
-            <img
-              className="rounded-2xl shrink-0 w-full lg:w-[528px] h-[280px] sm:h-[340px] lg:h-[396px] max-w-width-1104 relative overflow-hidden object-cover"
-              src="/things-to-do/things-to-do-photo-10.png"
-              alt="All-Inclusive Escape"
-            />
+            <PriceBar />
           </div>
+        </div>
+      </section>
 
-          <BannerProperty1Desktop text="84%" className="!shrink-0 !w-full" />
-
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-start self-stretch shrink-0 relative">
-            <img
-              className="rounded-2xl flex-1 w-full lg:w-auto h-[280px] sm:h-[340px] lg:h-[396px] max-w-width-1104 relative overflow-hidden object-cover"
-              src="/things-to-do/things-to-do-photo-11.png"
-              alt="Unlimited Dining"
-            />
-            <div className="flex flex-col gap-6 items-start justify-start flex-1 relative">
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-grey-20 text-left font-roboto text-[24px] md:text-[32px] leading-[35.2px] font-bold relative self-stretch flex items-center justify-start">
-                  Unlimited Dining and Drinks
-                </div>
-              </div>
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-black-solid text-left font-roboto text-[15px] md:text-[16px] leading-[22.4px] font-normal relative self-stretch flex items-center justify-start">
-                  <span>
-                    <span className="font-semibold">
-                      Every stay includes unlimited access to gourmet a la carte restaurants with no reservations required.
-                    </span>
-                    <span>
-                      {" "}Enjoy a variety of global flavors alongside premium cocktails and a full selection of domestic and international spirits. Cafe options and bars across the resort make it easy to grab coffee, desserts, or drinks throughout the day and evening.
-                    </span>
-                  </span>
-                </div>
-              </div>
-              <ButtonStateDefault className="!w-full !shrink-0" />
+      <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="max-w-content mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
+              <img
+                src="things-to-do/things-to-do-photo-12.png"
+                alt="Unlimited Dining and Drinks"
+                className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-start self-stretch shrink-0 relative">
-            <div className="flex flex-col gap-6 items-start justify-start shrink-0 flex-1 relative order-2 lg:order-1">
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-grey-20 text-left font-roboto text-[24px] md:text-[32px] leading-[35.2px] font-bold relative self-stretch flex items-center justify-start">
-                  Resort and Beach Access Included
-                </div>
-              </div>
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-black-solid text-left font-roboto text-[15px] md:text-[16px] leading-[22.4px] font-normal relative self-stretch flex items-center justify-start">
-                  <span>
-                    <span className="font-semibold">
-                      Guests enjoy full access to pools, swim-up bar, beachfront spaces, fitness center, tennis court, and non-motorized water sports.
-                    </span>
-                    <span>
-                      {" "}Daytime activities and evening entertainment are part of the experience, offering options to stay active or enjoy the resort atmosphere at your own pace.
-                    </span>
-                  </span>
-                </div>
-              </div>
-              <ButtonStateDefault className="!w-full !shrink-0" />
-            </div>
-            <img
-              className="rounded-2xl shrink-0 w-full lg:w-[528px] h-[280px] sm:h-[340px] lg:h-[396px] max-w-width-1104 relative overflow-hidden object-cover order-1 lg:order-2"
-              src="/things-to-do/things-to-do-photo-12.png"
-              alt="Resort and Beach Access"
-            />
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-start self-stretch shrink-0 relative">
-            <img
-              className="rounded-2xl shrink-0 w-full lg:w-[528px] h-[280px] sm:h-[340px] lg:h-[396px] max-w-width-1104 relative overflow-hidden object-cover"
-              src="/things-to-do/things-to-do-photo-13.png"
-              alt="Comfort and Service"
-            />
-            <div className="flex flex-col gap-6 items-start justify-start shrink-0 flex-1 relative">
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-grey-20 text-left font-roboto text-[24px] md:text-[32px] leading-[35.2px] font-bold relative self-stretch flex items-center justify-start">
-                  Comfort, Service, and Added Ease
-                </div>
-              </div>
-              <div className="flex flex-col gap-0 items-start justify-start self-stretch shrink-0 relative">
-                <div className="text-color-black-solid text-left font-roboto text-[15px] md:text-[16px] leading-[22.4px] font-normal relative self-stretch flex items-center justify-start">
-                  <span>
-                    <span className="font-semibold">
-                      Your stay includes 24-hour room service, complimentary Wi-Fi, and attentive service throughout the resort.
-                    </span>
-                    <span>
-                      {" "}Select room categories offer enhanced service options, and private airport transportation is available as part of select packages, helping the experience feel smooth right from arrival.
-                    </span>
-                  </span>
-                </div>
-              </div>
-              <ButtonStateDefault className="!w-full !shrink-0" />
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Unlimited Dining and Drinks
+              </h2>
+              <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
+                <span className="font-semibold">
+                  Every stay includes unlimited access to gourmet a la carte restaurants with no reservations required.
+                </span>{' '}
+                Enjoy a variety of global flavors alongside premium cocktails and a full selection of domestic and international spirits. Cafe options and bars across the resort make it easy to grab coffee, desserts, or drinks throughout the day and evening.
+              </p>
+              <Button className="w-full">RESERVE NOW</Button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50">
+        <div className="max-w-content mx-auto">
+          <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
+              <img
+                src="things-to-do/things-to-do-photo-13.png"
+                alt="Resort and Beach Access Included"
+                className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Resort and Beach Access Included
+              </h2>
+              <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
+                <span className="font-semibold">
+                  Guests enjoy full access to pools, swim-up bar, beachfront spaces, fitness center, tennis court, and non-motorized water sports.
+                </span>{' '}
+                Daytime activities and evening entertainment are part of the experience, offering options to stay active or enjoy the resort atmosphere at your own pace.
+              </p>
+              <Button className="w-full">RESERVE NOW</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="max-w-content mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
+              <img
+                src="things-to-do/things-to-do-photo-14.png"
+                alt="Comfort, Service, and Added Ease"
+                className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Comfort, Service, and Added Ease
+              </h2>
+              <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
+                <span className="font-semibold">
+                  Your stay includes 24-hour room service, complimentary Wi-Fi, and attentive service throughout the resort.
+                </span>{' '}
+                Select room categories offer enhanced service options, and private airport transportation is available as part of select packages, helping the experience feel smooth right from arrival.
+              </p>
+              <Button className="w-full">RESERVE NOW</Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <InteriorFooter />
     </>
