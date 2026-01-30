@@ -1442,6 +1442,10 @@ input,
   background-color: rgb(117 53 173 / var(--tw-bg-opacity, 1));
 }
 
+.bg-primary\/10 {
+  background-color: rgb(117 53 173 / 0.1);
+}
+
 .bg-purple-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(126 34 206 / var(--tw-bg-opacity, 1));
@@ -1491,6 +1495,12 @@ input,
 
 .from-black\/20 {
   --tw-gradient-from: rgb(0 0 0 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-black\/30 {
+  --tw-gradient-from: rgb(0 0 0 / 0.3) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -2593,6 +2603,10 @@ img.hero-couple-element {
 
   .sm\:w-6 {
     width: 1.5rem;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:grid-cols-2 {
