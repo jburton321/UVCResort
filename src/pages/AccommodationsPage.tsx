@@ -54,7 +54,7 @@ export function AccommodationsPage() {
                 </h1>
                 <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
                   <span className="font-semibold">Your VIP package includes 5 Days and 4 Nights in a luxurious, finely appointed Deluxe Room.</span>{' '}
-                  This isn't just a hotel room, it's your private sanctuary designed just for you to decompress, disconnect, and recharge. Experience the absolute best in adults-only luxury, crafted for couples and complete relaxation.
+                  This isn't just a hotel room, it\'s your private sanctuary designed just for you to decompress, disconnect, and recharge. Experience the absolute best in adults-only luxury, crafted for couples and complete relaxation.
                 </p>
                 <Button className="w-full">RESERVE NOW</Button>
               </div>
