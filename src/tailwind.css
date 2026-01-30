@@ -611,6 +611,10 @@ input,
   right: 0px;
 }
 
+.-top-6 {
+  top: -1.5rem;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -725,10 +729,6 @@ input,
   margin-right: -0.5rem;
 }
 
-.-mt-8 {
-  margin-top: -2rem;
-}
-
 .-mt-\[10px\] {
   margin-top: -10px;
 }
@@ -767,6 +767,10 @@ input,
 
 .ml-0\.5 {
   margin-left: 0.125rem;
+}
+
+.ml-\[100px\] {
+  margin-left: 100px;
 }
 
 .mt-0\.5 {

@@ -5,13 +5,12 @@ export function AccommodationsPriceBar() {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
 
   return (
-    <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
-      <div className="flex items-center justify-center px-6 py-3 gap-4">
-        <div className="flex-shrink-0 w-[200px] -mt-8">
-          <PriceBadge scale={0.4} />
-        </div>
-
-        <div className="flex-shrink-0 max-w-[480px]">
+    <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl relative">
+      <div className="absolute left-4 -top-6">
+        <PriceBadge scale={0.4} />
+      </div>
+      <div className="flex items-center justify-center px-6 py-3 gap-8">
+        <div className="flex-shrink-0 max-w-[480px] ml-[100px]">
           <h2 className="text-[#1a365d] text-2xl font-bold leading-tight mb-3">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation
