@@ -4,8 +4,8 @@ export function AccommodationsPriceBar() {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
 
   return (
-    <div className="w-full bg-[#e8e8e8]">
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-4 py-4 gap-4">
+    <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
+      <div className="flex items-center justify-between px-6 py-4 gap-4">
         <div className="flex-shrink-0">
           <PriceBadgeInline />
         </div>

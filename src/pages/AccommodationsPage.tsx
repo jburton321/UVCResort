@@ -34,8 +34,6 @@ function HairDryerIcon({ className }: { className?: string }) {
 export function AccommodationsPage() {
   return (
     <>
-      <AccommodationsPriceBar />
-
       <section
         className="relative py-12 md:py-16 lg:py-20"
         style={{
@@ -46,39 +44,42 @@ export function AccommodationsPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
         <div className="relative max-w-content mx-auto px-4 sm:px-6">
-          <div className="bg-white/30 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl border border-white/50">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-              <div className="flex flex-col justify-center">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Accommodations
-                </h1>
-                <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
-                  <span className="font-semibold">Your VIP package includes 5 Days and 4 Nights in a luxurious, finely appointed Deluxe Room.</span>{' '}
-                  This isn't just a hotel room, it\'s your private sanctuary designed just for you to decompress, disconnect, and recharge. Experience the absolute best in adults-only luxury, crafted for couples and complete relaxation.
-                </p>
-                <Button className="w-full">RESERVE NOW</Button>
-              </div>
-
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="bg-primary py-4 px-6">
-                  <h3 className="text-white text-xl md:text-2xl font-bold">Room Features:</h3>
+          <div className="bg-white/30 backdrop-blur-xl rounded-3xl overflow-hidden shadow-xl border border-white/50">
+            <div className="p-6 sm:p-8 md:p-12">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <div className="flex flex-col justify-center">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Accommodations
+                  </h1>
+                  <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-6">
+                    <span className="font-semibold">Your VIP package includes 5 Days and 4 Nights in a luxurious, finely appointed Deluxe Room.</span>{' '}
+                    This isn't just a hotel room, it's your private sanctuary designed just for you to decompress, disconnect, and recharge. Experience the absolute best in adults-only luxury, crafted for couples and complete relaxation.
+                  </p>
+                  <Button className="w-full">RESERVE NOW</Button>
                 </div>
-                <div className="p-6">
-                  <ul className="space-y-3">
-                    {roomFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-3 group">
-                        {feature.icon === 'hairdryer' ? (
-                          <HairDryerIcon className="w-6 h-6 text-accent flex-shrink-0 transition-colors duration-300 group-hover:text-accent-dark" />
-                        ) : (
-                          <feature.icon className="w-6 h-6 text-accent flex-shrink-0 transition-colors duration-300 group-hover:text-accent-dark" />
-                        )}
-                        <span className="text-gray-800 transition-colors duration-300 group-hover:text-gray-900">{feature.label}</span>
-                      </li>
-                    ))}
-                  </ul>
+
+                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-primary py-4 px-6">
+                    <h3 className="text-white text-xl md:text-2xl font-bold">Room Features:</h3>
+                  </div>
+                  <div className="p-6">
+                    <ul className="space-y-3">
+                      {roomFeatures.map((feature, index) => (
+                        <li key={index} className="flex items-center gap-3 group">
+                          {feature.icon === 'hairdryer' ? (
+                            <HairDryerIcon className="w-6 h-6 text-accent flex-shrink-0 transition-colors duration-300 group-hover:text-accent-dark" />
+                          ) : (
+                            <feature.icon className="w-6 h-6 text-accent flex-shrink-0 transition-colors duration-300 group-hover:text-accent-dark" />
+                          )}
+                          <span className="text-gray-800 transition-colors duration-300 group-hover:text-gray-900">{feature.label}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
+            <AccommodationsPriceBar />
           </div>
         </div>
       </section>

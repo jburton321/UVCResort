@@ -1058,10 +1058,6 @@ input,
   max-width: 72rem;
 }
 
-.max-w-\[1400px\] {
-  max-width: 1400px;
-}
-
 .max-w-content {
   max-width: 1230px;
 }
@@ -1343,6 +1339,11 @@ input,
   border-radius: 0.75rem;
 }
 
+.rounded-b-3xl {
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
 .rounded-b-lg {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -1411,9 +1412,8 @@ input,
   background-color: rgb(212 168 75 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#e8e8e8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 232 232 / var(--tw-bg-opacity, 1));
+.bg-\[\#e8e8e8\]\/90 {
+  background-color: rgb(232 232 232 / 0.9);
 }
 
 .bg-\[\#f2d03b\] {
