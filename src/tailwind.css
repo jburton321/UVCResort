@@ -1691,8 +1691,8 @@ input,
   padding-top: 1rem;
 }
 
-.pt-fluid-3 {
-  padding-top: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-left {
@@ -3020,6 +3020,10 @@ img.hero-couple-element {
     padding-bottom: 1.25rem;
   }
 
+  .md\:pt-12 {
+    padding-top: 3rem;
+  }
+
   .md\:pt-16 {
     padding-top: 4rem;
   }
@@ -3252,6 +3256,10 @@ img.hero-couple-element {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .lg\:pt-fluid-3 {
+    padding-top: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
   }
 
   .lg\:text-left {
