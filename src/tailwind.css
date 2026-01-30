@@ -716,11 +716,6 @@ input,
   margin-right: -1rem;
 }
 
-.mx-0\.5 {
-  margin-left: 0.125rem;
-  margin-right: 0.125rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1391,11 +1386,6 @@ input,
   background-color: rgb(43 53 61 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#F5F5F5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[\#FFD174\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 209 116 / var(--tw-bg-opacity, 1));
@@ -1885,26 +1875,6 @@ input,
 
 .tracking-wide {
   letter-spacing: 0.025em;
-}
-
-.text-\[\#1a1a1a\] {
-  --tw-text-opacity: 1;
-  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#333\] {
-  --tw-text-opacity: 1;
-  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#CC0000\] {
-  --tw-text-opacity: 1;
-  color: rgb(204 0 0 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#b8860b\] {
-  --tw-text-opacity: 1;
-  color: rgb(184 134 11 / var(--tw-text-opacity, 1));
 }
 
 .text-accent {
@@ -3007,10 +2977,6 @@ img.hero-couple-element {
     border-radius: 0.75rem;
   }
 
-  .sm\:p-5 {
-    padding: 1.25rem;
-  }
-
   .sm\:p-6 {
     padding: 1.5rem;
   }
@@ -3617,10 +3583,6 @@ img.hero-couple-element {
 
   .lg\:gap-5 {
     gap: 1.25rem;
-  }
-
-  .lg\:gap-6 {
-    gap: 1.5rem;
   }
 
   .lg\:gap-fluid-4 {
