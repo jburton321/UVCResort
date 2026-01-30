@@ -1,10 +1,9 @@
 import { ButtonStateDefault } from '../components/amenities/ButtonStateDefault';
 import { BannerProperty1Desktop } from '../components/amenities/BannerProperty1Desktop';
-import { Footer } from '../components/Footer';
 
 export function AllInclusivePage() {
   return (
-    <div className="bg-[#f5f5f5] flex flex-col gap-0 items-start justify-start min-h-screen relative">
+    <div className="bg-[#f5f5f5] flex flex-col gap-0 items-start justify-start relative">
 
       <div className="bg-color-grey-96 pt-12 pr-4 md:pr-10 pb-12 pl-4 md:pl-10 flex flex-col gap-0 items-center justify-center w-full shrink-0 max-w-width-1920 relative">
         <div
@@ -123,17 +122,6 @@ export function AllInclusivePage() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-col gap-0 items-center justify-start self-stretch shrink-0 relative overflow-hidden">
-        <div className="flex flex-col gap-0 items-center justify-center self-stretch shrink-0 relative">
-          <img
-            className="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 h-auto relative overflow-visible"
-            src="frame-19840779510.svg"
-            alt="Decorative wave"
-          />
-        </div>
-        <Footer />
       </div>
     </div>
   );

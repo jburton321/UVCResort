@@ -1,12 +1,9 @@
-import { SubNav } from '../components/SubNav';
 import { ButtonStateDefault } from '../components/amenities/ButtonStateDefault';
 import { BannerProperty1Desktop } from '../components/amenities/BannerProperty1Desktop';
-import { Footer } from '../components/Footer';
 
 export function AmenitiesPage() {
   return (
-    <div className="bg-color-white-solid flex flex-col gap-0 items-start justify-start min-h-screen relative">
-      <SubNav />
+    <div className="bg-color-white-solid flex flex-col gap-0 items-start justify-start relative">
 
       <div className="bg-color-grey-96 pt-12 pr-4 md:pr-10 pb-12 pl-4 md:pl-10 flex flex-col gap-0 items-center justify-center w-full shrink-0 max-w-width-1920 relative">
         <div
@@ -234,17 +231,6 @@ export function AmenitiesPage() {
           </div>
         </div>
         <ButtonStateDefault className="!w-full !max-w-[400px] !shrink-0" />
-      </div>
-
-      <div className="flex flex-col gap-0 items-center justify-start self-stretch shrink-0 relative overflow-hidden">
-        <div className="flex flex-col gap-0 items-center justify-center self-stretch shrink-0 relative">
-          <img
-            className="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 h-auto relative overflow-visible"
-            src="frame-19840779510.svg"
-            alt="Decorative wave"
-          />
-        </div>
-        <Footer />
       </div>
     </div>
   );

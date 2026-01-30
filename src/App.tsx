@@ -21,7 +21,7 @@ function AppContent() {
         {currentPage === 'things-to-do' && <ThingsToDoPage />}
         {currentPage === 'all-inclusive' && <AllInclusivePage />}
       </main>
-      {currentPage !== 'amenities' && currentPage !== 'all-inclusive' && <Footer />}
+      <Footer />
       <MobileStickyCTA />
     </div>
   );
