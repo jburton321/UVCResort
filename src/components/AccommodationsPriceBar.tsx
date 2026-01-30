@@ -1,4 +1,5 @@
 import { useCountdown } from '../hooks/useCountdown';
+import { PriceBadge } from './PriceBadge';
 
 export function AccommodationsPriceBar() {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
@@ -7,11 +8,10 @@ export function AccommodationsPriceBar() {
     <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
       <div className="flex items-center justify-between px-6 py-4 gap-4">
         <div className="flex-shrink-0">
-          <PriceBadgeInline />
+          <PriceBadge />
         </div>
 
         <div className="flex-1 min-w-0 px-4">
-          <div className="text-[#1a365d] text-xs tracking-wide mb-1">tv</div>
           <h2 className="text-[#1a365d] text-2xl font-bold leading-tight mb-3">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation
@@ -59,74 +59,6 @@ export function AccommodationsPriceBar() {
               <div className="text-[#1a365d] font-bold text-xl">EXPIRED</div>
             )}
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function PriceBadgeInline() {
-  return (
-    <div className="relative flex items-center" style={{ width: '320px', height: '140px' }}>
-      <div
-        className="absolute left-[52px] top-1/2 -translate-y-1/2 z-[1]"
-        style={{
-          filter: 'drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white) drop-shadow(0 1px 0 white) drop-shadow(0 -1px 0 white)',
-        }}
-      >
-        <div
-          className="bg-[#f2d03b] text-black font-black text-xs flex items-center justify-center"
-          style={{
-            width: '70px',
-            height: '32px',
-            clipPath: 'polygon(20% 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-            paddingLeft: '12px',
-          }}
-        >
-          ONLY
-        </div>
-      </div>
-
-      <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-[1]"
-        style={{
-          filter: 'drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white) drop-shadow(0 1px 0 white) drop-shadow(0 -1px 0 white)',
-        }}
-      >
-        <div
-          className="bg-[#f2d03b] text-black flex items-center justify-end pr-5"
-          style={{
-            width: '160px',
-            height: '64px',
-            clipPath: 'polygon(0% 0%, 100% 0%, 88% 50%, 100% 100%, 0% 100%)',
-          }}
-        >
-          <div className="text-center italic" style={{ transform: 'skewX(-5deg)' }}>
-            <div className="font-black text-base leading-none">SAVE</div>
-            <div className="font-black text-3xl leading-none">84%</div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="relative z-10 bg-[#6a2da1] rounded-full flex flex-col items-center justify-center text-white"
-        style={{
-          width: '140px',
-          height: '140px',
-          border: '4px solid white',
-          boxShadow: '0 6px 20px rgba(0,0,0,0.4)',
-          marginLeft: '55px',
-        }}
-      >
-        <div className="font-black text-base italic leading-none" style={{ marginBottom: '-2px' }}>
-          5-DAYS
-        </div>
-        <div className="font-black text-5xl leading-none flex items-start">
-          <span className="text-xl mt-1 mr-0.5">$</span>299
-        </div>
-        <div className="text-[10px] font-bold leading-tight text-center mt-0.5">
-          PER PACKAGE<br />
-          <span className="font-normal">(All 4-Nights)</span>
         </div>
       </div>
     </div>
