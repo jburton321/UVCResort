@@ -881,6 +881,10 @@ input,
   height: 200px;
 }
 
+.h-\[280px\] {
+  height: 280px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -1036,6 +1040,10 @@ input,
 
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
 }
 
 .max-w-content {
@@ -1299,6 +1307,10 @@ input,
   white-space: nowrap;
 }
 
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1393,6 +1405,11 @@ input,
 
 .bg-\[\#e8e8e8\]\/90 {
   background-color: rgb(232 232 232 / 0.9);
+}
+
+.bg-\[\#f5f5f5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
 }
 
 .bg-amber-500 {
@@ -1501,12 +1518,6 @@ input,
 
 .from-black\/30 {
   --tw-gradient-from: rgb(0 0 0 / 0.3) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-black\/40 {
-  --tw-gradient-from: rgb(0 0 0 / 0.4) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -1746,9 +1757,13 @@ input,
   line-height: 2.5rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
 }
 
 .text-base {
@@ -1867,6 +1882,11 @@ input,
 .text-\[\#1a365d\] {
   --tw-text-opacity: 1;
   color: rgb(26 54 93 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#333\] {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
 .text-accent {
@@ -2604,6 +2624,10 @@ img.hero-couple-element {
     height: 1.5rem;
   }
 
+  .sm\:h-\[340px\] {
+    height: 340px;
+  }
+
   .sm\:w-10 {
     width: 2.5rem;
   }
@@ -2947,6 +2971,10 @@ img.hero-couple-element {
     gap: 0.25rem;
   }
 
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -2985,6 +3013,16 @@ img.hero-couple-element {
 
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:px-16 {
@@ -3047,6 +3085,10 @@ img.hero-couple-element {
     padding-bottom: 1.5rem;
   }
 
+  .md\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
   .md\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -3061,6 +3103,10 @@ img.hero-couple-element {
 
   .md\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
   }
 
   .md\:text-2xl {
@@ -3083,9 +3129,14 @@ img.hero-couple-element {
     line-height: 1;
   }
 
-  .md\:text-7xl {
-    font-size: 4.5rem;
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-fluid-2xl {
@@ -3179,6 +3230,10 @@ img.hero-couple-element {
     height: 280px;
   }
 
+  .lg\:h-\[396px\] {
+    height: 396px;
+  }
+
   .lg\:min-h-\[800px\] {
     min-height: 800px;
   }
@@ -3205,6 +3260,10 @@ img.hero-couple-element {
 
   .lg\:w-\[400px\] {
     width: 400px;
+  }
+
+  .lg\:w-\[528px\] {
+    width: 528px;
   }
 
   .lg\:w-auto {
@@ -3290,9 +3349,13 @@ img.hero-couple-element {
     padding-top: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
   }
 
-  .lg\:text-8xl {
-    font-size: 6rem;
+  .lg\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[32px\] {
+    font-size: 32px;
   }
 
   .lg\:text-fluid-3xl {
