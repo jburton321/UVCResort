@@ -36,7 +36,7 @@ export function AmenitiesPage() {
             </div>
             <img
               className="rounded-2xl shrink-0 w-full lg:w-[528px] h-[280px] sm:h-[340px] lg:h-[396px] max-w-width-1104 relative overflow-hidden object-cover"
-              src="amenities/things-to-do-photo-10.png"
+              src="amenities/image.png"
               alt="All-Inclusive Amenities"
             />
           </div>
