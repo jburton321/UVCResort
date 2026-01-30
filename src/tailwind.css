@@ -1255,10 +1255,6 @@ input,
   gap: 1rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1273,12 +1269,6 @@ input,
 
 .gap-fluid-8 {
   gap: clamp(2rem, 1.6rem + 2vw, 4rem);
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -1584,10 +1574,6 @@ input,
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .p-6 {
@@ -2977,10 +2963,6 @@ img.hero-couple-element {
     border-radius: 0.75rem;
   }
 
-  .sm\:p-6 {
-    padding: 1.5rem;
-  }
-
   .sm\:p-8 {
     padding: 2rem;
   }
@@ -3565,16 +3547,8 @@ img.hero-couple-element {
     align-items: flex-start;
   }
 
-  .lg\:justify-start {
-    justify-content: flex-start;
-  }
-
   .lg\:justify-between {
     justify-content: space-between;
-  }
-
-  .lg\:gap-10 {
-    gap: 2.5rem;
   }
 
   .lg\:gap-12 {
@@ -3622,10 +3596,6 @@ img.hero-couple-element {
 
   .lg\:pt-fluid-3 {
     padding-top: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
-  }
-
-  .lg\:text-left {
-    text-align: left;
   }
 
   .lg\:text-fluid-3xl {
