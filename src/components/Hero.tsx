@@ -16,7 +16,7 @@ export function Hero() {
         className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[800px] flex flex-col overflow-visible"
       >
         <div className="max-w-content mx-auto px-4 md:px-6 lg:px-8 pt-fluid-3 w-full flex-1 flex flex-col">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-fluid-4 flex-1">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-0 lg:gap-fluid-4 flex-1">
             <div className="flex flex-col items-center lg:items-start order-1">
               <img
                 className="hero-sticker-element"
@@ -24,7 +24,7 @@ export function Hero() {
                 alt="Mexico destination"
                 loading="eager"
               />
-              <div className="relative mt-4 lg:hidden">
+              <div className="relative lg:hidden">
                 <img
                   className="hero-couple-element"
                   src="layer-0-10.png"

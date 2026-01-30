@@ -1237,6 +1237,10 @@ input,
   justify-content: space-between;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-0\.5 {
   gap: 0.125rem;
 }
@@ -3220,6 +3224,10 @@ img.hero-couple-element {
 
   .lg\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .lg\:gap-fluid-4 {
+    gap: clamp(1rem, 0.8rem + 1vw, 2rem);
   }
 
   .lg\:rounded-2xl {
