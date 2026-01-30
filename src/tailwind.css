@@ -873,8 +873,8 @@ input,
   height: 2.25rem;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-\[110px\] {
+  height: 110px;
 }
 
 .h-\[140px\] {
@@ -963,10 +963,6 @@ input,
 
 .w-9 {
   width: 2.25rem;
-}
-
-.w-\[130px\] {
-  width: 130px;
 }
 
 .w-\[200px\] {
@@ -1114,12 +1110,6 @@ input,
 .scale-125 {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-\[0\.65\] {
-  --tw-scale-x: 0.65;
-  --tw-scale-y: 0.65;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 

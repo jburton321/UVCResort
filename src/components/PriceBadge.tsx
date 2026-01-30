@@ -5,6 +5,7 @@ interface PriceBadgeProps {
   subText?: string;
   savePercent?: number;
   className?: string;
+  scale?: number;
 }
 
 export function PriceBadge({
@@ -14,9 +15,12 @@ export function PriceBadge({
   subText = "(All 4-Nights)",
   savePercent = 84,
   className = "",
+  scale,
 }: PriceBadgeProps) {
+  const scaleStyle = scale ? { transform: `scale(${scale})`, transformOrigin: 'left center' } : undefined;
+
   return (
-    <div className={`price-badge-wrapper ${className}`}>
+    <div className={`price-badge-wrapper ${className}`} style={scaleStyle}>
       <div className="price-badge-tag-wrapper">
         <div className="price-badge-tag-left">
           <span>ONLY</span>
