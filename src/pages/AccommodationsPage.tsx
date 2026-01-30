@@ -47,7 +47,7 @@ export function AccommodationsPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
         <div className="relative max-w-content mx-auto px-4 sm:px-6">
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl">
+          <div className="bg-white/70 backdrop-blur-[2px] rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <div className="flex flex-col justify-center">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
