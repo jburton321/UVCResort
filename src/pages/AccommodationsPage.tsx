@@ -160,7 +160,7 @@ export function AccommodationsPage() {
 
       <img
         className="w-full h-auto"
-        src="frame-19840779510.svg"
+        src="frame-19840779511.png"
         alt="Decorative divider"
       />
     </>
