@@ -1,3 +1,5 @@
+import { Footer } from './Footer';
+
 export function InteriorFooter() {
   return (
     <>
@@ -15,6 +17,8 @@ export function InteriorFooter() {
       >
         <img src="/tag.png" alt="Save Now Travel Later" className="w-[40%] max-w-md" />
       </section>
+
+      <Footer />
     </>
   );
 }
