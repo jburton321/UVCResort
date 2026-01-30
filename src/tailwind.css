@@ -2109,7 +2109,7 @@ img.hero-sticker-element {
 @media (min-width: 1024px) {
   img.hero-sticker-element {
     width: auto;
-    max-width: 500px;
+    max-width: 700px;
     padding-left: 0;
     padding-right: 0;
   }
