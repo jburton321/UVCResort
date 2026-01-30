@@ -181,7 +181,7 @@ img.hero-couple-element {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 493px;
+  width: 570px;
   height: auto;
   font-family: 'Arial Black', Gadget, sans-serif;
   transform: scale(clamp(0.55, 0.55 + 0.3 * ((100vw - 320px) / 1120), 0.85));
@@ -256,7 +256,7 @@ img.hero-couple-element {
 }
 
 .price-badge-ribbon-wrapper {
-  right: -16%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
