@@ -5,7 +5,7 @@ export function InteriorMobilePriceBar() {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
 
   return (
-    <div className="block lg:hidden w-full rounded-3xl overflow-hidden shadow-lg">
+    <div className="block lg:hidden w-full overflow-hidden">
       <div className="bg-[#E5C778] px-6 py-6">
         <div className="text-center">
           <div className="text-[#1a1a1a] font-bold text-[22px] tracking-wide mb-3">
