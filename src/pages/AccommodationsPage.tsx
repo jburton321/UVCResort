@@ -1,7 +1,6 @@
-import { Tv, Coffee, Wine, Shirt, Lock } from 'lucide-react';
+import { Tv, Coffee, Wine, Shirt, Lock, Zap } from 'lucide-react';
 import { Gallery } from '../components/Gallery';
 import { Button } from '../components/Button';
-import { MapSection } from '../components/MapSection';
 import { useCountdown } from '../hooks/useCountdown';
 
 const roomFeatures = [
@@ -61,7 +60,7 @@ export function AccommodationsPage() {
               </div>
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="bg-[#7535ad] py-4 px-6">
+                <div className="bg-primary py-4 px-6">
                   <h3 className="text-white text-xl md:text-2xl font-bold">Room Features:</h3>
                 </div>
                 <div className="p-6">
@@ -69,9 +68,9 @@ export function AccommodationsPage() {
                     {roomFeatures.map((feature, index) => (
                       <li key={index} className="flex items-center gap-3 group">
                         {feature.icon === 'hairdryer' ? (
-                          <HairDryerIcon className="w-6 h-6 text-gray-700 flex-shrink-0 transition-colors duration-300 group-hover:text-primary" />
+                          <HairDryerIcon className="w-6 h-6 text-accent flex-shrink-0 transition-colors duration-300 group-hover:text-accent-dark" />
                         ) : (
-                          <feature.icon className="w-6 h-6 text-gray-700 flex-shrink-0 transition-colors duration-300 group-hover:text-primary" />
+                          <feature.icon className="w-6 h-6 text-accent flex-shrink-0 transition-colors duration-300 group-hover:text-accent-dark" />
                         )}
                         <span className="text-gray-800 transition-colors duration-300 group-hover:text-gray-900">{feature.label}</span>
                       </li>
@@ -81,58 +80,50 @@ export function AccommodationsPage() {
               </div>
             </div>
 
-            <div className="mt-8 lg:mt-12 bg-gray-100 rounded-2xl p-5 sm:p-6 lg:p-8">
-              <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
-                <div className="flex-shrink-0">
-                  <div className="relative group">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#00c0d5] flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                      <span className="text-white text-3xl sm:text-4xl font-black">84%</span>
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-[#ffd174] rounded-full flex items-center justify-center animate-bounce-subtle">
-                      <span className="text-xs font-bold">OFF</span>
+            <div className="mt-8 lg:mt-12 bg-gray-100 rounded-2xl overflow-hidden">
+              <div className="bg-[#FFD174] px-4 py-3 flex items-center justify-center gap-2">
+                <Zap className="w-4 h-5 text-red-600 animate-pulse" />
+                <span className="text-slate-900 font-bold text-sm uppercase">
+                  {isExpired ? 'Offer expired' : 'Offer expires:'}
+                </span>
+                {!isExpired && (
+                  <div className="flex items-center gap-0.5 font-bold text-red-600 text-lg tabular-nums">
+                    <span className="min-w-[28px] text-center">{hours}</span>
+                    <span className="animate-pulse">:</span>
+                    <span className="min-w-[28px] text-center">{minutes}</span>
+                    <span className="animate-pulse">:</span>
+                    <span className="min-w-[28px] text-center">{seconds}</span>
+                  </div>
+                )}
+              </div>
+              <div className="p-5 sm:p-6 lg:p-8">
+                <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
+                  <div className="flex-shrink-0">
+                    <div className="bg-primary text-white font-bold text-2xl md:text-3xl py-4 px-5 rounded-xl text-center leading-tight shadow-lg animate-bounce-subtle">
+                      <div>84%</div>
+                      <div>OFF!</div>
                     </div>
                   </div>
-                </div>
-                <div className="flex-1 text-center lg:text-left min-w-0">
-                  <h4 className="text-xl sm:text-2xl font-black text-gray-900 mb-3">
-                    Luxury All-Inclusive Riviera Cancun Vacation
-                  </h4>
-                  <div className="space-y-2 text-sm text-gray-800">
-                    <div className="flex items-start gap-3 justify-center lg:justify-start">
-                      <img src="bed0.svg" alt="" className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                      <span className="font-bold">Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya</span>
-                    </div>
-                    <div className="flex items-start gap-3 justify-center lg:justify-start">
-                      <img src="local-bar0.svg" alt="" className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                      <span>
-                        <span className="font-semibold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
-                        Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
-                      </span>
+                  <div className="flex-1 text-center lg:text-left min-w-0">
+                    <h4 className="text-xl sm:text-2xl font-black text-gray-900 mb-3">
+                      Luxury All-Inclusive Riviera Cancun Vacation
+                    </h4>
+                    <div className="space-y-2 text-sm text-gray-800">
+                      <div className="flex items-start gap-3 justify-center lg:justify-start">
+                        <span className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent">
+                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3 1.34 3 3 3zm0-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM19 7h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4zm2 8h-8V9h6c1.1 0 2 .9 2 2v4z"/></svg>
+                        </span>
+                        <span className="font-bold">Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya</span>
+                      </div>
+                      <div className="flex items-start gap-3 justify-center lg:justify-start">
+                        <Wine className="w-5 h-5 flex-shrink-0 mt-0.5 text-accent" />
+                        <span>
+                          <span className="font-semibold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
+                          Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex-shrink-0 bg-[#ffd174] rounded-xl py-4 px-6 text-center min-w-[180px] shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-xs font-bold uppercase text-gray-800 mb-1.5 tracking-wide">
-                    {isExpired ? 'Offer expired' : 'Offer expires:'}
-                  </div>
-                  {!isExpired && (
-                    <div className="flex items-center justify-center gap-0.5 text-gray-900 tabular-nums">
-                      <div className="text-center px-1">
-                        <div className="text-xl font-bold">{hours}</div>
-                        <div className="text-[10px] uppercase text-gray-600">hr</div>
-                      </div>
-                      <span className="text-xl font-bold animate-pulse">:</span>
-                      <div className="text-center px-1">
-                        <div className="text-xl font-bold">{minutes}</div>
-                        <div className="text-[10px] uppercase text-gray-600">min</div>
-                      </div>
-                      <span className="text-xl font-bold animate-pulse">:</span>
-                      <div className="text-center px-1">
-                        <div className="text-xl font-bold">{seconds}</div>
-                        <div className="text-[10px] uppercase text-gray-600">sec</div>
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
@@ -213,8 +204,6 @@ export function AccommodationsPage() {
           </div>
         </div>
       </section>
-
-      <MapSection />
 
       <img
         className="w-full h-auto"
