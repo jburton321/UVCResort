@@ -11,7 +11,7 @@ export function AccommodationsPriceBar() {
           <PriceBadge />
         </div>
 
-        <div className="flex-1 min-w-0 px-4">
+        <div className="flex-1 min-w-0">
           <h2 className="text-[#1a365d] text-2xl font-bold leading-tight mb-3">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation
