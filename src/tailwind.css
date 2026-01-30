@@ -1892,11 +1892,6 @@ input,
   padding-bottom: 0.625rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2099,11 +2094,6 @@ input,
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-\[10px\] {
@@ -3716,6 +3706,14 @@ img.hero-couple-element {
 
   .lg\:right-8 {
     right: 2rem;
+  }
+
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
   }
 
   .lg\:mx-0 {
