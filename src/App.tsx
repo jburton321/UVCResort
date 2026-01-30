@@ -5,6 +5,7 @@ import { RouterProvider, useRouter } from "./context/RouterContext";
 import { HomePage } from "./pages/HomePage";
 import { AccommodationsPage } from "./pages/AccommodationsPage";
 import { AmenitiesPage } from "./pages/AmenitiesPage";
+import { ThingsToDoPage } from "./pages/ThingsToDoPage";
 
 function AppContent() {
   const { currentPage } = useRouter();
@@ -16,12 +17,7 @@ function AppContent() {
         {currentPage === 'home' && <HomePage />}
         {currentPage === 'accommodations' && <AccommodationsPage />}
         {currentPage === 'amenities' && <AmenitiesPage />}
-        {currentPage === 'things-to-do' && (
-          <div className="py-20 text-center">
-            <h1 className="text-4xl font-bold">Things To Do Page</h1>
-            <p className="text-gray-600 mt-4">Coming soon...</p>
-          </div>
-        )}
+        {currentPage === 'things-to-do' && <ThingsToDoPage />}
         {currentPage === 'all-inclusive' && (
           <div className="py-20 text-center">
             <h1 className="text-4xl font-bold">All-Inclusive Page</h1>
