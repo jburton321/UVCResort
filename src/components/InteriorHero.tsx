@@ -12,7 +12,7 @@ export function InteriorHero({ backgroundImage, children, footer }: InteriorHero
       <img
         src={backgroundImage}
         alt=""
-        className="w-full h-auto object-cover lg:hidden"
+        className="w-full aspect-[16/9] object-cover lg:hidden"
       />
 
       <section
