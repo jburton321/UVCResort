@@ -33,12 +33,12 @@ export function Hero() {
                 />
                 <button
                   onClick={() => setIsLightboxOpen(true)}
-                  className="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group"
+                  className="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 md:gap-3 bg-white/95 backdrop-blur-sm px-3 py-2 md:px-5 md:py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group"
                 >
-                  <span className="flex items-center justify-center w-12 h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
-                    <Play className="w-6 h-6 text-white fill-white ml-0.5" />
+                  <span className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
+                    <Play className="w-5 h-5 md:w-6 md:h-6 text-white fill-white ml-0.5" />
                   </span>
-                  <span className="text-gray-900 font-semibold text-lg pr-1">Play video</span>
+                  <span className="text-gray-900 font-semibold text-base md:text-lg pr-1">Play video</span>
                 </button>
               </div>
             </div>
