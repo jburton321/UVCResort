@@ -6,12 +6,14 @@ export function AccommodationsPriceBar() {
 
   return (
     <div className="w-full bg-[#e8e8e8]/90 rounded-b-3xl">
-      <div className="flex items-center justify-between px-6 py-4 gap-4">
-        <div className="flex-shrink-0 scale-[0.65] origin-left -my-6">
-          <PriceBadge />
+      <div className="flex items-center justify-center px-6 py-4 gap-6">
+        <div className="flex-shrink-0 w-[130px] h-[100px] relative">
+          <div className="absolute top-1/2 left-0 -translate-y-1/2 scale-[0.65] origin-left">
+            <PriceBadge />
+          </div>
         </div>
 
-        <div className="flex-1 min-w-0">
+        <div className="flex-shrink-0 max-w-[480px]">
           <h2 className="text-[#1a365d] text-2xl font-bold leading-tight mb-3">
             Luxury All-Inclusive<br />
             Riviera Cancun Vacation

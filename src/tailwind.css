@@ -716,11 +716,6 @@ input,
   margin-right: -1rem;
 }
 
-.-my-6 {
-  margin-top: -1.5rem;
-  margin-bottom: -1.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -878,6 +873,10 @@ input,
   height: 2.25rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[140px\] {
   height: 140px;
 }
@@ -966,6 +965,10 @@ input,
   width: 2.25rem;
 }
 
+.w-\[130px\] {
+  width: 130px;
+}
+
 .w-\[200px\] {
   width: 200px;
 }
@@ -1041,6 +1044,10 @@ input,
 
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.max-w-\[480px\] {
+  max-width: 480px;
 }
 
 .max-w-content {
