@@ -2082,11 +2082,61 @@ input,
   overflow: visible !important;
 }
 
+img.hero-sticker-element {
+  display: block;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  img.hero-sticker-element {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  img.hero-sticker-element {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  img.hero-sticker-element {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 img.hero-couple-element {
-  width: clamp(24rem, 48vw, 48rem);
   height: auto;
   display: block;
   margin: 0;
+}
+
+@media (max-width: 1023px) {
+  img.hero-couple-element {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  img.hero-couple-element {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  img.hero-couple-element {
+    width: clamp(24rem, 48vw, 48rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .price-badge-wrapper {
