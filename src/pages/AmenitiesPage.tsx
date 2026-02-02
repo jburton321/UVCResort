@@ -182,7 +182,16 @@ export function AmenitiesPage() {
         </div>
       </section>
 
-      <Gallery images={amenitiesGallery} />
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-100">
+        <div className="max-w-content mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <Gallery images={amenitiesGallery} className="bg-transparent" />
+            <div className="px-6 pb-10">
+              <Button className="w-full" onClick={() => navigateTo('thank-you')}>Reserve Now</Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <InteriorFooter />
     </>
