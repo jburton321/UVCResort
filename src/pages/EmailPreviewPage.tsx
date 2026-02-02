@@ -153,49 +153,20 @@ export function EmailPreviewPage() {
         </div>
       </div>
 
-      <div className="flex-1 p-4 sm:p-6 lg:p-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="bg-gray-50 border-b border-gray-200 px-4 py-3 flex items-center gap-2">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
-              </div>
-              <div className="flex-1 text-center">
-                <span className="text-sm text-gray-500 font-mono">email-template.html</span>
-              </div>
-            </div>
-
-            <div className="relative" style={{ minHeight: '800px' }}>
-              {emailHtml ? (
-                <iframe
-                  ref={iframeRef}
-                  srcDoc={getProcessedHtml(true)}
-                  className="w-full border-0"
-                  style={{ height: '1400px', minHeight: '800px' }}
-                  title="Email Preview"
-                />
-              ) : (
-                <div className="flex items-center justify-center h-96">
-                  <div className="text-gray-500">Loading email template...</div>
-                </div>
-              )}
-            </div>
+      <div className="flex-1">
+        {emailHtml ? (
+          <iframe
+            ref={iframeRef}
+            srcDoc={getProcessedHtml(true)}
+            className="w-full border-0"
+            style={{ height: 'calc(100vh - 64px)', minHeight: '800px' }}
+            title="Email Preview"
+          />
+        ) : (
+          <div className="flex items-center justify-center h-96">
+            <div className="text-gray-500">Loading email template...</div>
           </div>
-
-          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h3 className="text-sm font-semibold text-blue-900 mb-2">Email Compatibility Notes</h3>
-            <ul className="text-sm text-blue-800 space-y-1">
-              <li>- Table-based layout for maximum email client compatibility</li>
-              <li>- MSO conditional comments for Outlook support</li>
-              <li>- VML background images for Outlook</li>
-              <li>- Responsive design with mobile breakpoints</li>
-              <li>- No SVG icons (replaced with HTML entities)</li>
-              <li>- All styles inlined for email client support</li>
-            </ul>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
