@@ -8,12 +8,17 @@ import { AmenitiesPage } from "./pages/AmenitiesPage";
 import { ThingsToDoPage } from "./pages/ThingsToDoPage";
 import { AllInclusivePage } from "./pages/AllInclusivePage";
 import { ThankYouPage } from "./pages/ThankYouPage";
+import { EmailPreviewPage } from "./pages/EmailPreviewPage";
 
 function AppContent() {
   const { currentPage } = useRouter();
 
   if (currentPage === 'thank-you') {
     return <ThankYouPage />;
+  }
+
+  if (currentPage === 'email-preview') {
+    return <EmailPreviewPage />;
   }
 
   return (
