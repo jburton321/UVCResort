@@ -1,4 +1,5 @@
 import {
+  Header,
   Hero,
   SubNav,
   Gallery,
@@ -33,6 +34,7 @@ const locationGalleryImages = [
 export function HomePage() {
   return (
     <>
+      <Header />
       <Hero />
       <SubNav />
       <Gallery images={galleryImages} />
