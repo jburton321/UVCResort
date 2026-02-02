@@ -95,7 +95,7 @@ export function BookingCard({
       </div>
 
       <div className="flex items-center justify-center gap-3 md:gap-4 py-4 md:py-5 px-4">
-        <img src="trust.png" alt="Secure Transaction Badge" className="h-auto w-full max-w-[200px] object-contain transition-transform duration-300 hover:scale-110" />
+        <img src="trust.png" alt="Secure Transaction Badge" className="h-auto max-w-[200px] mx-auto object-contain transition-transform duration-300 hover:scale-110" />
         <img src="vector0.svg" alt="Trust badge" className="h-10 md:h-14 w-auto transition-transform duration-300 hover:scale-110" />
         <img src="vector31.svg" alt="Trust badge" className="h-10 md:h-14 w-auto transition-transform duration-300 hover:scale-110" />
       </div>
