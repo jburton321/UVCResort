@@ -1038,10 +1038,6 @@ input,
   width: 0.625rem;
 }
 
-.w-20 {
-  width: 5rem;
-}
-
 .w-3\.5 {
   width: 0.875rem;
 }
@@ -1068,14 +1064,6 @@ input,
 
 .w-\[100px\] {
   width: 100px;
-}
-
-.w-\[120px\] {
-  width: 120px;
-}
-
-.w-\[140px\] {
-  width: 140px;
 }
 
 .w-\[143\.96px\] {
@@ -1177,14 +1165,6 @@ input,
 
 .max-w-6xl {
   max-width: 72rem;
-}
-
-.max-w-\[1067\.52px\] {
-  max-width: 1067.52px;
-}
-
-.max-w-\[1200px\] {
-  max-width: 1200px;
 }
 
 .max-w-\[1280px\] {
@@ -1410,6 +1390,10 @@ input,
   gap: 0.25rem;
 }
 
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1432,10 +1416,6 @@ input,
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-\[2\.88px\] {
-  gap: 2.88px;
 }
 
 .gap-\[88px\] {
@@ -1506,10 +1486,6 @@ input,
   white-space: nowrap;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1520,10 +1496,6 @@ input,
 
 .rounded-\[50\%\] {
   border-radius: 50%;
-}
-
-.rounded-\[6\.71px\] {
-  border-radius: 6.71px;
 }
 
 .rounded-full {
@@ -1578,10 +1550,6 @@ input,
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.border-\[transparent\] {
-  border-color: transparent;
-}
-
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
@@ -1634,11 +1602,6 @@ input,
   background-color: rgb(43 53 61 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#3579ea\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(53 121 234 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[\#7535ad\] {
   --tw-bg-opacity: 1;
   background-color: rgb(117 53 173 / var(--tw-bg-opacity, 1));
@@ -1681,11 +1644,6 @@ input,
 .bg-\[\#ffd174\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 209 116 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#ffffff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[rgba\(255\2c 251\2c 83\2c 0\.50\)\] {
@@ -1961,14 +1919,6 @@ input,
   padding-bottom: clamp(2rem, 1.6rem + 2vw, 4rem);
 }
 
-.pb-0\.5 {
-  padding-bottom: 0.125rem;
-}
-
-.pb-1\.5 {
-  padding-bottom: 0.375rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1997,14 +1947,6 @@ input,
   padding-bottom: 13px;
 }
 
-.pl-0\.5 {
-  padding-left: 0.125rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -2025,14 +1967,6 @@ input,
   padding-right: 0.25rem;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
 .pr-6 {
   padding-right: 1.5rem;
 }
@@ -2051,14 +1985,6 @@ input,
 
 .pt-0 {
   padding-top: 0px;
-}
-
-.pt-0\.5 {
-  padding-top: 0.125rem;
-}
-
-.pt-1\.5 {
-  padding-top: 0.375rem;
 }
 
 .pt-10 {
@@ -2121,16 +2047,8 @@ input,
   font-family: 'Inter-Medium', sans-serif;
 }
 
-.font-\[\'Inter-Regular\'\2c _sans-serif\] {
-  font-family: 'Inter-Regular', sans-serif;
-}
-
 .font-\[\'Inter-SemiBold\'\2c _sans-serif\] {
   font-family: 'Inter-SemiBold', sans-serif;
-}
-
-.font-\[\'Roboto\'\2c _sans-serif\] {
-  font-family: 'Roboto', sans-serif;
 }
 
 .font-roboto {
@@ -2157,10 +2075,6 @@ input,
 
 .text-\[12px\] {
   font-size: 12px;
-}
-
-.text-\[13px\] {
-  font-size: 13px;
 }
 
 .text-\[14px\] {
@@ -2205,14 +2119,6 @@ input,
 
 .text-\[43\.75px\] {
   font-size: 43.75px;
-}
-
-.text-\[5px\] {
-  font-size: 5px;
-}
-
-.text-\[6px\] {
-  font-size: 6px;
 }
 
 .text-\[70px\] {
@@ -2318,14 +2224,6 @@ input,
 .tabular-nums {
   --tw-numeric-spacing: tabular-nums;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
-}
-
-.leading-4 {
-  line-height: 1rem;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
 }
 
 .leading-8 {
@@ -3149,10 +3047,6 @@ img.hero-couple-element {
     width: 3rem;
   }
 
-  .sm\:w-24 {
-    width: 6rem;
-  }
-
   .sm\:w-5 {
     width: 1.25rem;
   }
@@ -3163,10 +3057,6 @@ img.hero-couple-element {
 
   .sm\:w-\[123px\] {
     width: 123px;
-  }
-
-  .sm\:w-\[160px\] {
-    width: 160px;
   }
 
   .sm\:max-w-\[350px\] {
@@ -3185,20 +3075,8 @@ img.hero-couple-element {
     flex-direction: row;
   }
 
-  .sm\:items-center {
-    align-items: center;
-  }
-
   .sm\:justify-end {
     justify-content: flex-end;
-  }
-
-  .sm\:gap-1\.5 {
-    gap: 0.375rem;
-  }
-
-  .sm\:gap-2 {
-    gap: 0.5rem;
   }
 
   .sm\:gap-2\.5 {
@@ -3219,10 +3097,6 @@ img.hero-couple-element {
 
   .sm\:gap-8 {
     gap: 2rem;
-  }
-
-  .sm\:gap-\[10px\] {
-    gap: 10px;
   }
 
   .sm\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -3284,10 +3158,6 @@ img.hero-couple-element {
     padding-bottom: 2rem;
   }
 
-  .sm\:pl-0 {
-    padding-left: 0px;
-  }
-
   .sm\:pl-6 {
     padding-left: 1.5rem;
   }
@@ -3319,14 +3189,6 @@ img.hero-couple-element {
     line-height: 2.5rem;
   }
 
-  .sm\:text-\[6px\] {
-    font-size: 6px;
-  }
-
-  .sm\:text-\[7px\] {
-    font-size: 7px;
-  }
-
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3345,11 +3207,6 @@ img.hero-couple-element {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 }
 
@@ -3543,14 +3400,6 @@ img.hero-couple-element {
     width: 2rem;
   }
 
-  .md\:w-\[140px\] {
-    width: 140px;
-  }
-
-  .md\:w-\[177px\] {
-    width: 177px;
-  }
-
   .md\:w-\[260px\] {
     width: 260px;
   }
@@ -3631,10 +3480,6 @@ img.hero-couple-element {
     gap: 1rem;
   }
 
-  .md\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .md\:gap-6 {
     gap: 1.5rem;
   }
@@ -3708,16 +3553,6 @@ img.hero-couple-element {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:px-\[54px\] {
-    padding-left: 54px;
-    padding-right: 54px;
-  }
-
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
 
   .md\:py-16 {
@@ -3823,11 +3658,6 @@ img.hero-couple-element {
     line-height: 1;
   }
 
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .md\:text-fluid-2xl {
     font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
     line-height: 1.25;
@@ -3866,10 +3696,6 @@ img.hero-couple-element {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:leading-6 {
-    line-height: 1.5rem;
   }
 }
 

@@ -1,38 +1,5 @@
-export interface INavbarStateDesktopProps {
-  className?: string;
-}
-
-const NavbarStateDesktop = ({
-  className,
-}: INavbarStateDesktopProps): JSX.Element => {
-  return (
-    <div
-      className={
-        "bg-neutral-white py-2 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-row items-center justify-between relative " +
-        className
-      }
-      style={{ boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.20)" }}
-    >
-      <img
-        className="border-solid border-[transparent] border shrink-0 w-[140px] sm:w-[160px] md:w-[177px] h-auto relative"
-        style={{ objectFit: "cover" }}
-        src="thank-you/vacation-vip-full-color-horiz0.png"
-      />
-      <div className="bg-[#3579ea] rounded pt-1.5 pr-2 pb-1.5 pl-2 shrink-0 h-7 relative flex items-center gap-1">
-        <img
-          className="w-4 h-4 overflow-visible"
-          src="thank-you/icon0.svg"
-        />
-        <div className="text-[#ffffff] text-left font-['-',_sans-serif] text-[13px] leading-4 font-normal">
-          <span>
-            <span className="like-1-9-k-span">Like </span>
-            <span className="like-1-9-k-span2">1.9K</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { Header } from '../components/Header';
+import { InteriorFooter } from '../components/InteriorFooter';
 
 export interface IStickerProps {
   className?: string;
@@ -108,74 +75,6 @@ const ActionRequiredMessageStateDefault = ({
   );
 };
 
-export interface IFooterDesktopProps {
-  className?: string;
-}
-
-const FooterDesktop = ({
-  className,
-}: IFooterDesktopProps): JSX.Element => {
-  return (
-    <div
-      className={
-        "bg-[#2a323b] py-8 md:py-10 px-4 sm:px-8 md:px-[54px] flex flex-col gap-4 md:gap-5 items-center justify-center relative " +
-        className
-      }
-    >
-      <div className="shrink-0 w-[120px] md:w-[140px] h-auto relative overflow-hidden">
-        <img
-          className="w-full h-auto overflow-visible"
-          src="thank-you/layer-20.svg"
-        />
-      </div>
-      <div className="text-neutral-white text-center font-['Roboto',_sans-serif] text-xs sm:text-sm md:text-base leading-5 md:leading-6 font-normal relative w-full max-w-[1200px] px-2">
-        THIS ADVERTISING MATERIAL IS BEING USED FOR THE PURPOSE OF SOLICITING
-        SALES OF TIMESHARE INTERESTS OR PLANS
-      </div>
-      <div className="bg-[#ffffff] rounded-[6.71px] pt-0.5 pr-3 pb-0.5 pl-0.5 flex flex-row gap-2.5 items-center justify-center shrink-0 relative">
-        <img
-          className="shrink-0 w-20 sm:w-24 h-auto relative overflow-visible"
-          src="thank-you/group0.svg"
-        />
-        <div className="flex flex-col gap-[2.88px] items-center justify-start shrink-0 relative">
-          <div className="text-[#000000] text-center font-['Inter-Bold',_sans-serif] text-[6px] sm:text-[7px] leading-none font-bold relative">
-            BBB Rating: A
-          </div>
-          <div className="text-[#000000] text-center font-['Inter-Regular',_sans-serif] text-[5px] sm:text-[6px] leading-none font-normal relative">
-            As of 8/25/2025
-            <br />
-            Click for Profile
-          </div>
-        </div>
-      </div>
-      <div className="text-neutral-white text-center font-['Roboto',_sans-serif] text-xs sm:text-sm md:text-base leading-5 md:leading-6 font-normal relative w-full max-w-[1200px]">
-        Sogno Tours, LLC d/b/a VacationVIP.com
-      </div>
-      <div className="flex flex-col gap-0 items-center justify-start w-full shrink-0 max-w-[1067.52px] relative">
-        <div className="text-[#ffffff] text-center font-['Roboto',_sans-serif] text-xs sm:text-sm md:text-base leading-5 md:leading-6 font-normal relative self-stretch">
-          9900 Lake Ellenor Drive Suite 300, Orlando, FL 32809
-        </div>
-      </div>
-      <div className="flex flex-row gap-2 sm:gap-[10px] items-center justify-center shrink-0 relative flex-wrap">
-        <div className="text-neutral-white text-center font-['Roboto',_sans-serif] text-xs sm:text-sm md:text-base leading-5 md:leading-6 font-normal relative">
-          Copyright © 2026
-        </div>
-        <div className="text-neutral-white text-center font-['Roboto',_sans-serif] text-xs sm:text-sm md:text-base leading-5 md:leading-6 font-normal relative">
-          |
-        </div>
-        <div className="text-neutral-white text-center font-['Roboto',_sans-serif] text-xs sm:text-sm md:text-base leading-5 md:leading-6 font-normal relative">
-          All Rights Reserved.
-        </div>
-      </div>
-      <div className="flex flex-col gap-0 items-center justify-start w-full shrink-0 max-w-[1067.52px] relative px-2">
-        <div className="text-[#ffffff] text-center font-['Roboto',_sans-serif] text-[10px] sm:text-xs md:text-base leading-4 md:leading-6 font-normal relative self-stretch">
-          SOT: Florida: ST44683 | Washington: 605354522 | California: 2156600-50
-          | Hawaii: 7531
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export interface IDesktopProps {
   className?: string;
@@ -191,7 +90,7 @@ export const ThankYouPage = ({
         className
       }
     >
-      <NavbarStateDesktop className="!self-stretch !shrink-0" />
+      <Header />
       <div className="bg-neutral-30 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-20 flex flex-row gap-6 items-start justify-center self-stretch shrink-0 relative">
         <div
           className="bg-neutral-white rounded-2xl flex flex-col gap-0 items-start justify-start w-full max-w-[1280px] relative overflow-hidden"
@@ -265,201 +164,142 @@ export const ThankYouPage = ({
                     Vacation package
                   </div>
                 </div>
-                <div className="flex flex-col gap-2 sm:gap-1.5 items-start justify-start self-stretch shrink-0 relative">
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/assignment-turned-in0.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Purchaser Name:
-                      </div>
+                <div className="flex flex-col gap-1.5 items-start justify-start self-stretch shrink-0 relative">
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/assignment-turned-in0.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Purchaser Name:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       {"{{purchaser.fullname}}"}
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/assignment-turned-in1.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Purchaser Email:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/assignment-turned-in1.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Purchaser Email:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       {"{{email}}"}
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/assignment-turned-in2.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Purchase Date:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/assignment-turned-in2.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Purchase Date:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       mm/dd/yyyy
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/assignment-turned-in3.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Receipt No:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/assignment-turned-in3.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Receipt No:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       1234567890
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/concierge0.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Accommodations:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/concierge0.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Accommodations:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       Hyatt Zilara Riviera Maya
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/king-bed0.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Unit type:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/king-bed0.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Unit type:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       Standard Room
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/bedtime0.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Number of nights:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/bedtime0.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Number of nights:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       4 nights
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/group1.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Guests:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/group1.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Guests:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       2 Adults
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/calendar-month0.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Preferred check-in:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/calendar-month0.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Preferred check-in:
                     </div>
                     <a
                       href="tel:800-88-gurus"
-                      className="text-blue-link text-left font-['Inter-Bold',_sans-serif] text-xs sm:text-sm leading-normal font-bold relative overflow-hidden pl-6 sm:pl-0"
-                      style={{
-                        textDecoration: "underline",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                      }}
+                      className="text-blue-link text-left font-['Inter-Bold',_sans-serif] text-xs sm:text-sm leading-normal font-bold relative underline"
                     >
                       Call now to book your travel dates. %PHONE%
                     </a>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/calendar-month1.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Preferred check-out:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/calendar-month1.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Preferred check-out:
                     </div>
                     <a
                       href="tel:800-88-gurus"
-                      className="text-blue-link text-left font-['Inter-Bold',_sans-serif] text-xs sm:text-sm leading-normal font-bold relative overflow-hidden pl-6 sm:pl-0"
-                      style={{
-                        textDecoration: "underline",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                      }}
+                      className="text-blue-link text-left font-['Inter-Bold',_sans-serif] text-xs sm:text-sm leading-normal font-bold relative underline"
                     >
                       Call now to book your travel dates. %PHONE%
                     </a>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 items-start sm:items-center justify-start self-stretch shrink-0 relative">
-                    <div className="flex flex-row gap-2 items-center">
-                      <img
-                        className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
-                        src="thank-you/credit-score0.svg"
-                      />
-                      <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
-                        Package Price:
-                      </div>
+                  <div className="flex flex-row gap-2 items-center justify-start self-stretch shrink-0 relative flex-wrap">
+                    <img
+                      className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 relative overflow-visible"
+                      src="thank-you/credit-score0.svg"
+                    />
+                    <div className="text-[#2a323b] text-left font-['Inter-SemiBold',_sans-serif] text-xs sm:text-sm leading-normal font-semibold relative">
+                      Package Price:
                     </div>
-                    <div
-                      className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative overflow-hidden pl-6 sm:pl-0"
-                      style={{ textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-                    >
+                    <div className="text-[#2a323b] text-left font-['Inter-Medium',_sans-serif] text-xs sm:text-sm leading-normal font-medium relative">
                       $299.00
                     </div>
                   </div>
@@ -494,7 +334,7 @@ export const ThankYouPage = ({
           </div>
         </div>
       </div>
-      <FooterDesktop className="!self-stretch !shrink-0" />
+      <InteriorFooter />
     </div>
   );
 };
