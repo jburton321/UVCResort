@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Page = 'home' | 'accommodations' | 'amenities' | 'things-to-do' | 'all-inclusive';
+type Page = 'home' | 'accommodations' | 'amenities' | 'things-to-do' | 'all-inclusive' | 'thank-you';
 
 interface RouterContextType {
   currentPage: Page;

@@ -7,9 +7,14 @@ import { AccommodationsPage } from "./pages/AccommodationsPage";
 import { AmenitiesPage } from "./pages/AmenitiesPage";
 import { ThingsToDoPage } from "./pages/ThingsToDoPage";
 import { AllInclusivePage } from "./pages/AllInclusivePage";
+import { ThankYouPage } from "./pages/ThankYouPage";
 
 function AppContent() {
   const { currentPage } = useRouter();
+
+  if (currentPage === 'thank-you') {
+    return <ThankYouPage />;
+  }
 
   return (
     <div className="bg-white min-h-screen pb-20 lg:pb-0">
