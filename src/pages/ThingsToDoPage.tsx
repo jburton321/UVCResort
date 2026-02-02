@@ -11,7 +11,7 @@ export function ThingsToDoPage() {
   return (
     <>
       <InteriorHero
-        backgroundImage="things-to-do/things-to-do-photo-10.png"
+        backgroundImage="things-to-do/hero_herobackground.png"
         footer={
           <>
             <AccommodationsPriceBar />
@@ -47,7 +47,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="/things-to-do/things-to-do-photo-12.png"
+                src="/things-to-do/downtown.png"
                 alt="Downtown Playa del Carmen Nightlife"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -73,7 +73,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="/things-to-do/things-to-do-photo-13.png"
+                src="/things-to-do/mixology.png"
                 alt="Specialty Tequila and Mixology Scene"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -99,7 +99,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="/things-to-do/things-to-do-photo-14.png"
+                src="/things-to-do/chichenitza.png"
                 alt="Chichen Itza"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
