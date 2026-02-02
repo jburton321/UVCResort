@@ -11,7 +11,7 @@ export function AllInclusivePage() {
   return (
     <>
       <InteriorHero
-        backgroundImage="all-inclusive/things-to-do-photo-10.png"
+        backgroundImage="all-inclusive/hero-heroback.png"
         footer={
           <>
             <AccommodationsPriceBar />
@@ -47,7 +47,7 @@ export function AllInclusivePage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="all-inclusive/things-to-do-photo-12.png"
+                src="all-inclusive/drinks.png"
                 alt="Unlimited Dining and Drinks"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -73,7 +73,7 @@ export function AllInclusivePage() {
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="all-inclusive/things-to-do-photo-13.png"
+                src="all-inclusive/resorts-beaches.png"
                 alt="Resort and Beach Access Included"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -99,7 +99,7 @@ export function AllInclusivePage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="all-inclusive/things-to-do-photo-14.png"
+                src="all-inclusive/service.png"
                 alt="Comfort, Service, and Added Ease"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
