@@ -1,12 +1,12 @@
 const amenities = [
-  { image: 'image0.png', label: 'BEACHFRONT ACCESS' },
-  { image: 'image2.png', label: 'TENNIS COURT' },
-  { image: 'image4.png', label: 'OUTDOOR ADVENTURES' },
-  { image: 'image6.png', label: 'HOT TUB OR SPA' },
-  { image: 'image1.png', label: 'SWIMMING POOL - OUTDOOR' },
-  { image: 'image3.png', label: 'FITNESS CENTER' },
-  { image: 'image5.png', label: 'PREMIUM COCKTAILS' },
-  { image: 'image7.png', label: 'ONSITE DINING' },
+  { image: 'home/image0.png', label: 'BEACHFRONT ACCESS' },
+  { image: 'home/image2.png', label: 'TENNIS COURT' },
+  { image: 'home/image4.png', label: 'OUTDOOR ADVENTURES' },
+  { image: 'home/image6.png', label: 'HOT TUB OR SPA' },
+  { image: 'home/image1.png', label: 'SWIMMING POOL - OUTDOOR' },
+  { image: 'home/image3.png', label: 'FITNESS CENTER' },
+  { image: 'home/image5.png', label: 'PREMIUM COCKTAILS' },
+  { image: 'home/image7.png', label: 'ONSITE DINING' },
 ];
 
 export function AmenitiesGrid() {
@@ -15,7 +15,7 @@ export function AmenitiesGrid() {
       <div className="max-w-content mx-auto text-center">
         <img
           className="h-10 sm:h-12 md:h-14 mx-auto mb-6 sm:mb-8 transition-transform duration-300 hover:scale-105"
-          src="image-30.png"
+          src="home/image-30.png"
           alt="Hyatt Zilara"
         />
 

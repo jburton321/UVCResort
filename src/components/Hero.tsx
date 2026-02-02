@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <>
       <BackgroundSection
-        backgroundImage="section0.png"
+        backgroundImage="home/section0.png"
         overlay
         overlayOpacity={30}
         className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[800px] flex flex-col overflow-visible"
@@ -20,14 +20,14 @@ export function Hero() {
             <div className="flex flex-col items-center order-1">
               <img
                 className="hero-sticker-element"
-                src="mexico-10.png"
+                src="home/mexico-10.png"
                 alt="Mexico destination"
                 loading="eager"
               />
               <div className="relative lg:hidden">
                 <img
                   className="hero-couple-element"
-                  src="layer-0-10.png"
+                  src="home/layer-0-10.png"
                   alt="Couple enjoying resort"
                   loading="eager"
                 />
@@ -53,7 +53,7 @@ export function Hero() {
               <div className="relative">
               <img
                 className="hero-couple-element"
-                src="layer-0-10.png"
+                src="home/layer-0-10.png"
                 alt="Couple enjoying resort"
                 loading="eager"
               />
