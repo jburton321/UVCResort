@@ -90,7 +90,7 @@ export function AccommodationsPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="accommodations/resort-photo-11.png"
+                src="accommodations/deluxeroom.png"
                 alt="Finely Appointed Luxury Room"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -114,7 +114,7 @@ export function AccommodationsPage() {
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="accommodations/resort-photo-21.png"
+                src="accommodations/convienance.png"
                 alt="Ultimate Convenience Amenities"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -138,7 +138,7 @@ export function AccommodationsPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="accommodations/resort-photo-31.png"
+                src="accommodations/balcony.png"
                 alt="Suite with Private Balcony"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
