@@ -49,29 +49,10 @@ const Sticker = ({
       }
     >
       <img
-        className="absolute inset-0 w-full h-full object-contain opacity-20 md:opacity-100"
-        src="thank-you/group0.svg"
+        className="w-full h-auto max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px] object-contain"
+        src="/mexico-10.png"
+        alt="5-Day/4-Night Beachfront Riviera Cancun Vacation"
       />
-      <div className="flex flex-col gap-2 md:gap-3 items-center justify-center relative z-10 py-4 md:py-8">
-        <div className="text-[#ffffff] text-center font-['Poppins-Bold',_sans-serif] text-xl sm:text-2xl md:text-4xl lg:text-[61px] font-bold uppercase">
-          5-Day/4-Night
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="text-[#000000] text-center font-['Playfair-Medium',_sans-serif] text-2xl sm:text-3xl md:text-5xl lg:text-[84px] font-medium">
-            BEACHFRONT
-          </div>
-          <div
-            className="text-center font-['Playfair-Medium',_sans-serif] text-3xl sm:text-4xl md:text-6xl lg:text-[100px] xl:text-[126px] font-medium -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-8"
-          >
-            <span>
-              <span className="riviera-cancun-vacation-span">
-                RIVIERA CANCUN{" "}
-              </span>
-              <span className="riviera-cancun-vacation-span2">VACATION</span>
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

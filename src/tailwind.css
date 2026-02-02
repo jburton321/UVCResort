@@ -782,10 +782,6 @@ input,
   margin-right: -0.5rem;
 }
 
-.-mt-1 {
-  margin-top: -0.25rem;
-}
-
 .-mt-\[10px\] {
   margin-top: -10px;
 }
@@ -1193,6 +1189,10 @@ input,
 
 .max-w-\[1280px\] {
   max-width: 1280px;
+}
+
+.max-w-\[280px\] {
+  max-width: 280px;
 }
 
 .max-w-\[358px\] {
@@ -2129,14 +2129,6 @@ input,
   font-family: 'Inter-SemiBold', sans-serif;
 }
 
-.font-\[\'Playfair-Medium\'\2c _sans-serif\] {
-  font-family: 'Playfair-Medium', sans-serif;
-}
-
-.font-\[\'Poppins-Bold\'\2c _sans-serif\] {
-  font-family: 'Poppins-Bold', sans-serif;
-}
-
 .font-\[\'Roboto\'\2c _sans-serif\] {
   font-family: 'Roboto', sans-serif;
 }
@@ -2572,10 +2564,6 @@ input,
 
 .opacity-100 {
   opacity: 1;
-}
-
-.opacity-20 {
-  opacity: 0.2;
 }
 
 .shadow-2xl {
@@ -3105,10 +3093,6 @@ img.hero-couple-element {
     right: 0.5rem;
   }
 
-  .sm\:-mt-2 {
-    margin-top: -0.5rem;
-  }
-
   .sm\:mb-10 {
     margin-bottom: 2.5rem;
   }
@@ -3183,6 +3167,10 @@ img.hero-couple-element {
 
   .sm\:w-\[160px\] {
     width: 160px;
+  }
+
+  .sm\:max-w-\[350px\] {
+    max-width: 350px;
   }
 
   .sm\:grid-cols-2 {
@@ -3399,10 +3387,6 @@ img.hero-couple-element {
     margin-right: -1.5rem;
   }
 
-  .md\:-mt-4 {
-    margin-top: -1rem;
-  }
-
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
@@ -3593,6 +3577,10 @@ img.hero-couple-element {
 
   .md\:min-w-\[280px\] {
     min-width: 280px;
+  }
+
+  .md\:max-w-\[450px\] {
+    max-width: 450px;
   }
 
   .md\:max-w-\[500px\] {
@@ -3835,11 +3823,6 @@ img.hero-couple-element {
     line-height: 1;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3888,10 +3871,6 @@ img.hero-couple-element {
   .md\:leading-6 {
     line-height: 1.5rem;
   }
-
-  .md\:opacity-100 {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -3919,10 +3898,6 @@ img.hero-couple-element {
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .lg\:-mt-8 {
-    margin-top: -2rem;
   }
 
   .lg\:block {
@@ -3991,6 +3966,10 @@ img.hero-couple-element {
 
   .lg\:min-w-\[320px\] {
     min-width: 320px;
+  }
+
+  .lg\:max-w-\[550px\] {
+    max-width: 550px;
   }
 
   .lg\:max-w-\[600px\] {
@@ -4117,18 +4096,6 @@ img.hero-couple-element {
     line-height: 1;
   }
 
-  .lg\:text-\[100px\] {
-    font-size: 100px;
-  }
-
-  .lg\:text-\[61px\] {
-    font-size: 61px;
-  }
-
-  .lg\:text-\[84px\] {
-    font-size: 84px;
-  }
-
   .lg\:text-fluid-3xl {
     font-size: clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
     line-height: 1.2;
@@ -4199,10 +4166,6 @@ img.hero-couple-element {
   .xl\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-
-  .xl\:text-\[126px\] {
-    font-size: 126px;
   }
 
   .xl\:text-\[58px\] {
