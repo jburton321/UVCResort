@@ -44,7 +44,7 @@ export function AmenitiesPage() {
           </div>
           <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
             <img
-              src="amenities/image-copy.png"
+              src="things-to-do/todo.png"
               alt="All-Inclusive Amenities"
               className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
             />
