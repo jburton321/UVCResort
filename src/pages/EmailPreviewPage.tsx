@@ -32,7 +32,6 @@ export function EmailPreviewPage() {
   const getProcessedHtml = (useAbsoluteUrls = true) => {
     let processed = emailHtml;
     if (useAbsoluteUrls) {
-      processed = processed.replace(/\{\{BASE_URL\}\}/g, baseUrl);
       processed = processed.replace('<head>', `<head><base href="${baseUrl}/">`);
     }
     processed = processed.replace(/\{\{PHONE\}\}/g, '800-88-GURUS');
@@ -73,8 +72,11 @@ export function EmailPreviewPage() {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
     const imagesFolder = zip.folder('images');
-    const processedHtml = getProcessedHtml(false)
-      .replace(/\{\{BASE_URL\}\}\//g, 'images/');
+    let processedHtml = getProcessedHtml(false);
+    processedHtml = processedHtml.replace(/src="\/thank-you\//g, 'src="images/');
+    processedHtml = processedHtml.replace(/src="\/mexico/g, 'src="images/mexico');
+    processedHtml = processedHtml.replace(/src="\/group/g, 'src="images/group');
+    processedHtml = processedHtml.replace(/url\('\/thank-you\//g, "url('images/");
 
     zip.file('email-template.html', processedHtml);
 
