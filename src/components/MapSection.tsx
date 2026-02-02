@@ -3,6 +3,7 @@ import { divIcon } from 'leaflet';
 import { Heart } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 import { Button } from './Button';
+import { useRouter } from '../context/RouterContext';
 
 const locations = [
   {
@@ -110,6 +111,7 @@ interface MapSectionProps {
 
 export function MapSection({ children }: MapSectionProps) {
   const center: [number, number] = [20.6976, -87.0198];
+  const { navigateTo } = useRouter();
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-100 relative z-0">
@@ -160,7 +162,7 @@ export function MapSection({ children }: MapSectionProps) {
           )}
 
           <div className="px-6 pb-10">
-            <Button className="w-full">Reserve Now</Button>
+            <Button className="w-full" onClick={() => navigateTo('thank-you')}>Reserve Now</Button>
           </div>
         </div>
       </div>

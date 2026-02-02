@@ -56,7 +56,7 @@ export function Header() {
                 </li>
               ))}
             </ul>
-            <Button variant="small">reserve now</Button>
+            <Button variant="small" onClick={() => navigateTo('thank-you')}>reserve now</Button>
           </nav>
 
           <button
@@ -86,7 +86,7 @@ export function Header() {
               ))}
             </ul>
             <div className="mt-4 px-2">
-              <Button variant="small" className="w-full min-h-touch">reserve now</Button>
+              <Button variant="small" className="w-full min-h-touch" onClick={() => navigateTo('thank-you')}>reserve now</Button>
             </div>
           </nav>
         </div>

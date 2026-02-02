@@ -1,6 +1,7 @@
 import { Zap, Bed, Wine, Eye } from 'lucide-react';
 import { Button } from './Button';
 import { useCountdown } from '../hooks/useCountdown';
+import { useRouter } from '../context/RouterContext';
 
 interface BookingCardProps {
   normalRate?: string;
@@ -14,6 +15,7 @@ export function BookingCard({
   roomDescription = 'Deluxe Room for two adults at the 5-Star Hyatt Zilara Riviera Maya',
 }: BookingCardProps) {
   const { hours, minutes, seconds, isExpired } = useCountdown(45);
+  const { navigateTo } = useRouter();
 
   return (
     <aside className="bg-white shadow-xl w-full max-w-none lg:max-w-md lg:rounded-xl overflow-hidden backdrop-blur-sm hover:shadow-2xl transition-shadow duration-500">
@@ -89,7 +91,7 @@ export function BookingCard({
       </div>
 
       <div className="px-4 md:px-8 pb-4">
-        <Button className="w-full min-h-touch touch-manipulation">Reserve Now</Button>
+        <Button className="w-full min-h-touch touch-manipulation" onClick={() => navigateTo('thank-you')}>Reserve Now</Button>
       </div>
 
       <div className="flex items-center justify-center gap-3 md:gap-4 py-4 md:py-5 px-4">

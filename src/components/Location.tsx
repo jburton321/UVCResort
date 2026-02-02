@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './Button';
 import { ImageCard } from './ImageCard';
+import { useRouter } from '../context/RouterContext';
 
 const nearbyPlaces = [
   { image: 'resort-photo-12.png', label: 'Puerto Morelos' },
@@ -14,6 +15,7 @@ export function Location() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const { navigateTo } = useRouter();
 
   const checkScrollability = () => {
     if (scrollRef.current) {
@@ -107,7 +109,7 @@ export function Location() {
         </article>
 
         <div className="mt-fluid-6 flex justify-center px-2">
-          <Button className="w-full md:w-auto md:min-w-[280px] lg:min-w-[320px] xl:min-w-[400px]">
+          <Button className="w-full md:w-auto md:min-w-[280px] lg:min-w-[320px] xl:min-w-[400px]" onClick={() => navigateTo('thank-you')}>
             Reserve Now
           </Button>
         </div>
