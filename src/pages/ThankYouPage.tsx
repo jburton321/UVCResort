@@ -1,5 +1,6 @@
 import { Header } from '../components/Header';
-import { InteriorFooter } from '../components/InteriorFooter';
+import { Footer } from '../components/Footer';
+import { Button } from '../components/Button';
 
 export interface IStickerProps {
   className?: string;
@@ -63,13 +64,8 @@ const ActionRequiredMessageStateDefault = ({
           {hours}
         </div>
       </div>
-      <a
-        href="tel:800-88-gurus"
-        className="bg-blue-ribbon-dark-blue rounded-lg py-3 px-4 sm:pt-4 sm:pr-6 sm:pb-4 sm:pl-6 flex flex-row gap-2.5 items-center justify-center shrink-0 relative w-full md:w-auto"
-      >
-        <div className="text-neutral-white text-center md:text-left font-['Inter-SemiBold',_sans-serif] text-sm sm:text-base leading-[120%] font-semibold uppercase relative">
-          Call now: 800-88-gurus
-        </div>
+      <a href="tel:800-88-gurus" className="w-full md:w-auto">
+        <Button className="w-full md:w-auto">Call now: %PHONE%</Button>
       </a>
     </div>
   );
@@ -90,7 +86,7 @@ export const ThankYouPage = ({
         className
       }
     >
-      <Header />
+      <Header fullWidth />
       <div className="bg-neutral-30 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-20 flex flex-row gap-6 items-start justify-center self-stretch shrink-0 relative">
         <div
           className="bg-neutral-white rounded-2xl flex flex-col gap-0 items-start justify-start w-full max-w-[1280px] relative overflow-hidden"
@@ -334,7 +330,7 @@ export const ThankYouPage = ({
           </div>
         </div>
       </div>
-      <InteriorFooter />
+      <Footer fullWidth />
     </div>
   );
 };

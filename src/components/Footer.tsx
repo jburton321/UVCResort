@@ -1,7 +1,11 @@
-export function Footer() {
+interface FooterProps {
+  fullWidth?: boolean;
+}
+
+export function Footer({ fullWidth = false }: FooterProps) {
   return (
-    <footer className="bg-[#2A323B] py-fluid-6 px-4 md:px-6">
-      <div className="max-w-content mx-auto text-center">
+    <footer className="bg-[#2A323B] py-fluid-6 px-4 md:px-6 w-full">
+      <div className={`${fullWidth ? '' : 'max-w-content mx-auto'} text-center`}>
         <img
           src="layer-20.svg"
           alt="VacationVIP"
