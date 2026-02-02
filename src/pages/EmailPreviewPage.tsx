@@ -33,6 +33,7 @@ export function EmailPreviewPage() {
     let processed = emailHtml;
     if (useAbsoluteUrls) {
       processed = processed.replace(/\{\{BASE_URL\}\}/g, baseUrl);
+      processed = processed.replace('<head>', `<head><base href="${baseUrl}/">`);
     }
     processed = processed.replace(/\{\{PHONE\}\}/g, '800-88-GURUS');
     processed = processed.replace(/\{\{purchaser\.fullname\}\}/g, 'John Doe');
@@ -154,7 +155,7 @@ export function EmailPreviewPage() {
       </div>
 
       <div className="flex-1">
-        {emailHtml ? (
+        {emailHtml && baseUrl ? (
           <iframe
             ref={iframeRef}
             srcDoc={getProcessedHtml(true)}
