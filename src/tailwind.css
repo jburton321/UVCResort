@@ -1171,6 +1171,10 @@ input,
   max-width: 1280px;
 }
 
+.max-w-\[180px\] {
+  max-width: 180px;
+}
+
 .max-w-\[280px\] {
   max-width: 280px;
 }
@@ -1396,10 +1400,6 @@ input,
 
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-2\.5 {
-  gap: 0.625rem;
 }
 
 .gap-3 {
@@ -2407,11 +2407,6 @@ input,
   color: rgb(10 10 10 / var(--tw-text-opacity, 1));
 }
 
-.text-neutral-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(117 53 173 / var(--tw-text-opacity, 1));
@@ -3150,28 +3145,12 @@ img.hero-couple-element {
     padding-bottom: 3rem;
   }
 
-  .sm\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
   .sm\:pb-8 {
     padding-bottom: 2rem;
   }
 
-  .sm\:pl-6 {
-    padding-left: 1.5rem;
-  }
-
-  .sm\:pr-6 {
-    padding-right: 1.5rem;
-  }
-
   .sm\:pt-12 {
     padding-top: 3rem;
-  }
-
-  .sm\:pt-4 {
-    padding-top: 1rem;
   }
 
   .sm\:text-2xl {
@@ -3632,10 +3611,6 @@ img.hero-couple-element {
 
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:text-left {
-    text-align: left;
   }
 
   .md\:text-2xl {
