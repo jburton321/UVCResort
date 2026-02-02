@@ -14,7 +14,16 @@ function AppContent() {
   const { currentPage } = useRouter();
 
   if (currentPage === 'thank-you') {
-    return <ThankYouPage />;
+    return (
+      <div className="bg-white min-h-screen pb-20 lg:pb-0">
+        <Header />
+        <main>
+          <ThankYouPage />
+        </main>
+        <Footer />
+        <MobileStickyCTA />
+      </div>
+    );
   }
 
   if (currentPage === 'email-preview') {

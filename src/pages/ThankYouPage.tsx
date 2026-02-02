@@ -1,29 +1,8 @@
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
+import { useState } from 'react';
+import { Play } from 'lucide-react';
 import { Button } from '../components/Button';
-
-export interface IStickerProps {
-  className?: string;
-}
-
-const Sticker = ({
-  className,
-}: IStickerProps): JSX.Element => {
-  return (
-    <div
-      className={
-        "flex flex-col items-center justify-center relative overflow-hidden w-full px-4 " +
-        className
-      }
-    >
-      <img
-        className="w-full h-auto max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px] object-contain"
-        src="/mexico-10.png"
-        alt="5-Day/4-Night Beachfront Riviera Cancun Vacation"
-      />
-    </div>
-  );
-};
+import { BackgroundSection } from '../components/BackgroundSection';
+import { Lightbox } from '../components/Lightbox';
 
 export interface IActionRequiredMessageStateDefaultProps {
   message?: string;
@@ -79,30 +58,85 @@ export interface IDesktopProps {
 export const ThankYouPage = ({
   className,
 }: IDesktopProps): JSX.Element => {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
   return (
     <div
       className={
-        "flex flex-col gap-0 items-start justify-start min-h-screen relative " +
+        "flex flex-col gap-0 items-start justify-start relative " +
         className
       }
     >
-      <Header fullWidth />
-      <div className="bg-neutral-30 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-20 flex flex-row gap-6 items-start justify-center self-stretch shrink-0 relative">
+      <BackgroundSection
+        backgroundImage="home/section0.png"
+        overlay
+        overlayOpacity={30}
+        className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[800px] flex flex-col overflow-visible w-full"
+      >
+        <div className="max-w-content mx-auto px-4 md:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-fluid-3 w-full flex-1 flex flex-col">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-0 lg:gap-fluid-4 flex-1">
+            <div className="flex flex-col items-center order-1">
+              <img
+                className="hero-sticker-element"
+                src="home/mexico-10.png"
+                alt="Mexico destination"
+                loading="eager"
+              />
+              <div className="relative lg:hidden">
+                <img
+                  className="hero-couple-element"
+                  src="home/layer-0-10.png"
+                  alt="Couple enjoying resort"
+                  loading="eager"
+                />
+                <button
+                  onClick={() => setIsLightboxOpen(true)}
+                  className="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 md:gap-3 bg-white/95 backdrop-blur-sm px-3 py-2 md:px-5 md:py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group"
+                >
+                  <span className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
+                    <Play className="w-5 h-5 md:w-6 md:h-6 text-white fill-white ml-0.5" />
+                  </span>
+                  <span className="text-gray-900 font-semibold text-base md:text-lg pr-1">Play video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:flex absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
+          <div className="max-w-content w-full mx-auto px-4 md:px-6 lg:px-8 flex justify-center">
+            <div className="relative pointer-events-auto">
+              <img
+                className="hero-couple-element"
+                src="home/layer-0-10.png"
+                alt="Couple enjoying resort"
+                loading="eager"
+              />
+              <button
+                onClick={() => setIsLightboxOpen(true)}
+                className="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300 group"
+              >
+                <span className="flex items-center justify-center w-12 h-12 bg-amber-500 rounded-full group-hover:bg-amber-600 transition-colors">
+                  <Play className="w-6 h-6 text-white fill-white ml-0.5" />
+                </span>
+                <span className="text-gray-900 font-semibold text-lg pr-1">Play video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </BackgroundSection>
+
+      <Lightbox
+        isOpen={isLightboxOpen}
+        onClose={() => setIsLightboxOpen(false)}
+        title="Resort Video"
+      />
+
+      <div className="bg-neutral-30 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-20 flex flex-row gap-6 items-start justify-center self-stretch shrink-0 relative w-full">
         <div
           className="bg-neutral-white rounded-2xl flex flex-col gap-0 items-start justify-start w-full max-w-[1280px] relative overflow-hidden"
           style={{ boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.25)" }}
         >
           <div className="flex flex-col gap-0 items-end justify-start shrink-0 w-full relative">
-            <div
-              className="flex flex-col gap-2 md:gap-[15px] items-center justify-center self-stretch shrink-0 min-h-[180px] sm:min-h-[220px] md:min-h-[280px] relative"
-              style={{
-                background: "url(thank-you/topper1.png) center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <Sticker className="!shrink-0 w-full max-w-[358px] md:max-w-[500px] lg:max-w-[600px]" />
-            </div>
             <div className="bg-[#2a323b] py-3 px-4 sm:py-4 sm:px-6 md:px-12 flex flex-col sm:flex-row gap-2 sm:gap-2.5 items-center justify-between self-stretch shrink-0 relative">
               <div
                 className="shrink-0 w-[100px] sm:w-[123px] h-auto relative overflow-hidden"
@@ -330,7 +364,6 @@ export const ThankYouPage = ({
           </div>
         </div>
       </div>
-      <Footer fullWidth />
     </div>
   );
 };
