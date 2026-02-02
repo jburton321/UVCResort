@@ -47,7 +47,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/things-to-do-photo-12.png"
+                src="/things-to-do/things-to-do-photo-12.png"
                 alt="Downtown Playa del Carmen Nightlife"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -73,7 +73,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/things-to-do-photo-13.png"
+                src="/things-to-do/things-to-do-photo-13.png"
                 alt="Specialty Tequila and Mixology Scene"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -99,7 +99,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/things-to-do-photo-14.png"
+                src="/things-to-do/things-to-do-photo-14.png"
                 alt="Chichen Itza"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -125,7 +125,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/tulumruins.png"
+                src="/things-to-do/tulumruins.png"
                 alt="Tulum Ruins"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -151,7 +151,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/cenotes.png"
+                src="/things-to-do/cenotes.png"
                 alt="Cenotes"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -177,7 +177,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/xcaret.png"
+                src="/things-to-do/xcaret.png"
                 alt="Xcaret Eco-Archaeological Park"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
@@ -203,7 +203,7 @@ export function ThingsToDoPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
               <img
-                src="things-to-do/playadelcarmenday.png"
+                src="/things-to-do/playadelcarmenday.png"
                 alt="Playa del Carmen Day Scene"
                 className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
               />
