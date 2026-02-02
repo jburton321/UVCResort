@@ -21,7 +21,7 @@ export function AmenitiesPage() {
   return (
     <>
       <InteriorHero
-        backgroundImage="amenities/image.png"
+        backgroundImage="things-to-do/todo.png"
         footer={
           <>
             <AccommodationsPriceBar />
