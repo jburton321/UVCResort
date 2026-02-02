@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 type Page = 'home' | 'accommodations' | 'amenities' | 'things-to-do' | 'all-inclusive' | 'thank-you';
 
@@ -9,10 +9,30 @@ interface RouterContextType {
 
 const RouterContext = createContext<RouterContextType | undefined>(undefined);
 
+const validPages: Page[] = ['home', 'accommodations', 'amenities', 'things-to-do', 'all-inclusive', 'thank-you'];
+
+function getPageFromHash(): Page {
+  const hash = window.location.hash.slice(1);
+  if (validPages.includes(hash as Page)) {
+    return hash as Page;
+  }
+  return 'home';
+}
+
 export function RouterProvider({ children }: { children: ReactNode }) {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [currentPage, setCurrentPage] = useState<Page>(getPageFromHash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPage(getPageFromHash());
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const navigateTo = (page: Page) => {
+    window.location.hash = page;
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
