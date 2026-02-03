@@ -117,8 +117,7 @@ export const ThankYouPage = ({
                 Congrats! All set!
               </div>
               <div className="text-black text-left font-['Inter-Medium',_sans-serif] text-sm sm:text-base leading-normal font-medium relative self-stretch">
-                Here are your vacation package details, bonuses and the travel
-                perks you paid for.
+                Thank you for your initial payment of $299. This confirms your deposit is successfully processed. Please note that the remaining balance of $600 will be due once you finalize and book your specific dates.
               </div>
             </div>
             <ActionRequiredMessageStateDefault
