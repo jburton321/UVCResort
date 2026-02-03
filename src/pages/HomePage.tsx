@@ -69,7 +69,7 @@ export function HomePage() {
       <div style={{ backgroundColor: '#F2F4F6' }}>
         <img
           className="w-full h-32 sm:h-40 md:h-56 object-cover"
-          src="home/frame-19840779511.png"
+          src="home/home-bttm.png"
           alt="Beach scene"
         />
       </div>
