@@ -34,7 +34,7 @@ export function AllInclusivePage() {
           </div>
           <div className="w-full lg:w-1/2 group overflow-hidden rounded-2xl">
             <img
-              src="all-inclusive/things-to-do-photo-11.png"
+              src="all-inclusive/hero-heroback.png"
               alt="All-Inclusive Escape"
               className="w-full h-auto shadow-lg object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
             />
