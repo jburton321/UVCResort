@@ -68,7 +68,7 @@ export const ThankYouPage = ({
       }
     >
       <BackgroundSection
-        backgroundImage="home/section0.png"
+        backgroundImage="thank-you/topper1.png"
         overlay
         overlayOpacity={30}
         className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[800px] flex flex-col overflow-visible w-full"
