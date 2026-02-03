@@ -1014,6 +1014,10 @@ input,
   max-height: 85vh;
 }
 
+.min-h-\[300px\] {
+  min-height: 300px;
+}
+
 .min-h-\[44px\] {
   min-height: 44px;
 }
@@ -3374,6 +3378,10 @@ img.hero-couple-element {
     height: 600px;
   }
 
+  .md\:min-h-\[400px\] {
+    min-height: 400px;
+  }
+
   .md\:min-h-\[600px\] {
     min-height: 600px;
   }
@@ -3762,6 +3770,10 @@ img.hero-couple-element {
 
   .lg\:h-\[280px\] {
     height: 280px;
+  }
+
+  .lg\:min-h-\[500px\] {
+    min-height: 500px;
   }
 
   .lg\:min-h-\[800px\] {
