@@ -11,7 +11,7 @@ export function AllInclusivePage() {
   return (
     <>
       <InteriorHero
-        backgroundImage="all-inclusive/things-to-do-photo-11.png"
+        backgroundImage="all-inclusive/hero-heroback.png"
         footer={
           <>
             <AccommodationsPriceBar />

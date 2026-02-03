@@ -25,7 +25,7 @@ const galleryImages = [
 const locationGalleryImages = [
   { src: 'home/puertomorelos.png', label: 'Puerto Morelos' },
   { src: 'home/downtownplayadel_carmen.png', label: 'Downtown Playa del Carmen' },
-  { src: 'home/elcamaleóngolfcourse.png', label: 'El Camaleón Golf Course' },
+  { src: 'home/elcamaleongolfcourse.png', label: 'El Camaleón Golf Course' },
   { src: 'home/xcaretpark.png', label: 'Xcaret Park' },
   { src: 'home/tulumruins.png', label: 'Tulum Ruins' },
   { src: 'home/cenoteazul.png', label: 'Cenote Azul' },
