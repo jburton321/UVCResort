@@ -727,6 +727,10 @@ input,
   top: 42px;
 }
 
+.top-\[52px\] {
+  top: 52px;
+}
+
 .top-\[55\.78px\] {
   top: 55.78px;
 }
@@ -3267,6 +3271,10 @@ img.hero-couple-element {
 
   .md\:right-4 {
     right: 1rem;
+  }
+
+  .md\:top-\[56px\] {
+    top: 56px;
   }
 
   .md\:-mx-6 {

@@ -35,27 +35,37 @@ export function HomePage() {
     <>
       <Hero />
       <SubNav />
-      <Gallery images={galleryImages} />
-      <AboutPackage />
-      <ParadiseSection />
-      <Amenities />
-      <div className="relative hidden sm:block">
-        <img
-          className="w-full h-auto"
-          src="home/banner.png"
-          alt="Save Now Travel Later banner"
-        />
-        <img
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-[97px] z-50 w-[40%] max-w-md"
-          src="home/tag.png"
-          alt="Special offer tag"
-        />
-      </div>
-      <AmenitiesGrid />
-      <Testimonials />
-      <MapSection>
-        <Gallery images={locationGalleryImages} className="bg-transparent" />
-      </MapSection>
+      <section id="resort-video">
+        <Gallery images={galleryImages} />
+      </section>
+      <section id="what-you-get">
+        <AboutPackage />
+        <ParadiseSection />
+      </section>
+      <section id="resort-details">
+        <Amenities />
+        <div className="relative hidden sm:block">
+          <img
+            className="w-full h-auto"
+            src="home/banner.png"
+            alt="Save Now Travel Later banner"
+          />
+          <img
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-[97px] z-50 w-[40%] max-w-md"
+            src="home/tag.png"
+            alt="Special offer tag"
+          />
+        </div>
+        <AmenitiesGrid />
+      </section>
+      <section id="guest-reviews">
+        <Testimonials />
+      </section>
+      <section id="reserve-now">
+        <MapSection>
+          <Gallery images={locationGalleryImages} className="bg-transparent" />
+        </MapSection>
+      </section>
       <div style={{ backgroundColor: '#F2F4F6' }}>
         <img
           className="w-full h-32 sm:h-40 md:h-56 object-cover"
