@@ -84,8 +84,9 @@ export function BookingCard({
         <div className="flex items-start gap-2">
           <Wine className="w-5 h-5 text-accent shrink-0 mt-0.5" />
           <p className="text-black text-fluid-sm">
-            <span className="font-bold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
-            Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
+            <span className="font-bold">Complimentary round-trip transportation 
+</span>{' '}
+           from the airport to Hyatt Zilara upon your arrival, and return transportation from the hotel to the airport upon your departure.
           </p>
         </div>
 
