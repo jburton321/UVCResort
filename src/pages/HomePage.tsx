@@ -8,6 +8,7 @@ import {
   AmenitiesGrid,
   Testimonials,
   MapSection,
+  Button,
 } from '../components';
 
 const galleryImages = [
@@ -22,12 +23,12 @@ const galleryImages = [
 ];
 
 const locationGalleryImages = [
-  { src: 'home/resort-photo-10.png', label: 'Puerto Morelos' },
-  { src: 'home/resort-photo-20.png', label: 'Downtown Playa del Carmen' },
-  { src: 'home/resort-photo-30.png', label: 'El Camaleón Golf Course' },
-  { src: 'home/resort-photo-40.png', label: 'Xcaret Park' },
-  { src: 'home/resort-photo-50.png', label: 'Tulum Ruins' },
-  { src: 'home/link-dialog-open-lightbox5.png', label: 'Cenote Azul' },
+  { src: 'home/puertomorelos.png', label: 'Puerto Morelos' },
+  { src: 'home/downtownplayadel_carmen.png', label: 'Downtown Playa del Carmen' },
+  { src: 'home/elcamaleóngolfcourse.png', label: 'El Camaleón Golf Course' },
+  { src: 'home/xcaretpark.png', label: 'Xcaret Park' },
+  { src: 'home/tulumruins.png', label: 'Tulum Ruins' },
+  { src: 'home/cenoteazul.png', label: 'Cenote Azul' },
 ];
 
 export function HomePage() {
@@ -66,6 +67,12 @@ export function HomePage() {
           <Gallery images={locationGalleryImages} className="bg-transparent" />
         </MapSection>
       </section>
+      <div style={{ backgroundColor: '#F2F4F6' }} className="text-center px-4 pt-12 pb-0">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 max-w-5xl mx-auto leading-tight mb-8">
+          Relax in Ultimate Luxury with Your Premium All-Inclusive Hyatt Zilara Experience Package
+        </h2>
+        <Button className="w-full max-w-2xl mx-auto block">RESERVE NOW</Button>
+      </div>
       <div style={{ backgroundColor: '#F2F4F6' }}>
         <img
           className="w-full"

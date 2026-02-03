@@ -1950,6 +1950,10 @@ input,
   padding-bottom: clamp(2rem, 1.6rem + 2vw, 4rem);
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2020,6 +2024,10 @@ input,
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .pt-16 {
