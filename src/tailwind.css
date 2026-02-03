@@ -922,10 +922,6 @@ input,
   height: 0.875rem;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -3071,10 +3067,6 @@ img.hero-couple-element {
     height: 9rem;
   }
 
-  .sm\:h-40 {
-    height: 10rem;
-  }
-
   .sm\:h-5 {
     height: 1.25rem;
   }
@@ -3356,10 +3348,6 @@ img.hero-couple-element {
 
   .md\:h-5 {
     height: 1.25rem;
-  }
-
-  .md\:h-56 {
-    height: 14rem;
   }
 
   .md\:h-6 {
