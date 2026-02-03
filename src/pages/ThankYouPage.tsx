@@ -67,7 +67,16 @@ export const ThankYouPage = ({
         overlay
         overlayOpacity={30}
         className="relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] flex flex-col overflow-visible w-full"
-      />
+      >
+        <div className="max-w-content mx-auto px-4 md:px-6 lg:px-8 w-full flex-1 flex items-center justify-center">
+          <img
+            className="hero-sticker-element"
+            src="home/mexico-10.png"
+            alt="Mexico destination"
+            loading="eager"
+          />
+        </div>
+      </BackgroundSection>
 
       <div className="bg-neutral-30 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-12 lg:py-10 lg:px-20 flex flex-row gap-6 items-start justify-center self-stretch shrink-0 relative w-full">
         <div
