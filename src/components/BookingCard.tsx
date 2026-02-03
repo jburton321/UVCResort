@@ -1,4 +1,4 @@
-import { Zap, Bed, Wine, Eye } from 'lucide-react';
+import { Zap, Bed, Wine, Eye, Car } from 'lucide-react';
 import { Button } from './Button';
 import { useCountdown } from '../hooks/useCountdown';
 import { useRouter } from '../context/RouterContext';
@@ -86,6 +86,14 @@ export function BookingCard({
           <p className="text-black text-fluid-sm">
             <span className="font-bold">Unlimited-Luxury, Where Everything's Included:</span>{' '}
             Unlimited Dining, Drinks, Wifi, Entertainment, Resort & Beach Amenities!
+          </p>
+        </div>
+
+        <div className="flex items-start gap-2">
+          <Car className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+          <p className="text-black text-fluid-sm">
+            <span className="font-bold">Private Airport Transfers:</span>{' '}
+            Complimentary round-trip ride
           </p>
         </div>
       </div>
