@@ -16,18 +16,18 @@ export function PriceBadge({
   newPrice = "77",
   ribbonText = "ONLY",
   footerText = "ENTIRE STAY",
-  width = 320,
+  width = 220,
   className = "",
 }: PriceBadgeProps) {
   const scale = width / BASE_SIZE;
 
   return (
     <div
-      className={`flex-shrink-0 ${className}`}
+      className={`flex-shrink-0 overflow-visible ${className}`}
       style={{ width: `${width}px`, height: `${width}px` }}
     >
       <div
-        className="relative"
+        className="relative overflow-visible"
         style={{
           width: `${BASE_SIZE}px`,
           height: `${BASE_SIZE}px`,

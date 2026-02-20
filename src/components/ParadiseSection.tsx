@@ -17,7 +17,7 @@ export function ParadiseSection() {
         </div>
 
         <div className="mb-6 sm:mb-8 flex justify-center">
-          <PriceBadge width={400} className="max-w-full" />
+          <PriceBadge width={260} className="max-w-full" />
         </div>
       </div>
 

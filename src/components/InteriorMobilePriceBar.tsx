@@ -48,7 +48,7 @@ export function InteriorMobilePriceBar() {
 
       <div className="bg-[#e8e8e8] px-6 py-10">
         <div className="flex justify-center">
-          <PriceBadge width={340} />
+          <PriceBadge width={220} />
         </div>
       </div>
 
