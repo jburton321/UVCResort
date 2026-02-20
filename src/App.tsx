@@ -15,7 +15,7 @@ function AppContent() {
 
   if (currentPage === 'thank-you') {
     return (
-      <div className="bg-white min-h-screen pb-20 lg:pb-0">
+      <div className="bg-white min-h-screen pb-20 lg:pb-0" style={{ overflowX: 'clip' }}>
         <Header />
         <main>
           <ThankYouPage />
@@ -31,7 +31,7 @@ function AppContent() {
   }
 
   return (
-    <div className="bg-white min-h-screen pb-20 lg:pb-0">
+    <div className="bg-white min-h-screen pb-20 lg:pb-0" style={{ overflowX: 'clip' }}>
       <Header />
       <main>
         {currentPage === 'home' && <HomePage />}
