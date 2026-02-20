@@ -36,13 +36,13 @@ export function Header() {
             />
           </button>
 
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <ul className="flex items-center gap-4 xl:gap-6">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-6">
+            <ul className="flex items-center gap-2 xl:gap-5">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => handleNavClick(link.page)}
-                    className={`relative text-fluid-sm font-normal uppercase tracking-wide transition-colors duration-300 py-2 group min-h-touch flex items-center touch-manipulation ${
+                    className={`relative text-fluid-xs xl:text-fluid-sm font-normal uppercase tracking-wide transition-colors duration-300 py-2 px-1 group min-h-touch flex items-center touch-manipulation whitespace-nowrap ${
                       currentPage === link.page
                         ? 'text-primary font-semibold'
                         : 'text-brand-700 hover:text-primary'

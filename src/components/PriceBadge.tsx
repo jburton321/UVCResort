@@ -8,8 +8,8 @@ export function PriceBadge({ className = "", width = 320 }: PriceBadgeProps) {
     <img
       src="price-badge.png"
       alt="5-Days $299 Per Package - Save 84%"
-      className={className}
-      style={{ width: `${width}px`, height: 'auto' }}
+      className={`max-w-full h-auto ${className}`}
+      style={{ width: `${width}px` }}
     />
   );
 }
