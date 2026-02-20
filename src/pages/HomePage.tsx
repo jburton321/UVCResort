@@ -23,12 +23,12 @@ const galleryImages = [
 ];
 
 const locationGalleryImages = [
-  { src: 'home/puertomorelos.png', label: 'Puerto Morelos' },
-  { src: 'home/downtownplayadel_carmen.png', label: 'Downtown Playa del Carmen' },
-  { src: 'home/elcamaleongolfcourse.png', label: 'El Camaleón Golf Course' },
-  { src: 'home/xcaretpark.png', label: 'Xcaret Park' },
-  { src: 'home/tulumruins.png', label: 'Tulum Ruins' },
-  { src: 'home/cenoteazul.png', label: 'Cenote Azul' },
+  { src: 'things-to-do/playadelcarmenday.png', label: 'Playa del Carmen' },
+  { src: 'things-to-do/downtown.png', label: 'Downtown Playa del Carmen' },
+  { src: 'things-to-do/chichenitza.png', label: 'Chichen Itza' },
+  { src: 'things-to-do/xcaret.png', label: 'Xcaret Park' },
+  { src: 'things-to-do/tulumruins.png', label: 'Tulum Ruins' },
+  { src: 'things-to-do/cenotes.png', label: 'Cenotes' },
 ];
 
 export function HomePage() {
