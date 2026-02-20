@@ -1145,11 +1145,6 @@ input,
   min-width: 44px;
 }
 
-.min-w-max {
-  min-width: -webkit-max-content;
-  min-width: max-content;
-}
-
 .min-w-touch {
   min-width: 44px;
 }
@@ -3850,6 +3845,10 @@ img.hero-couple-element {
 
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
   }
 
   .lg\:gap-12 {

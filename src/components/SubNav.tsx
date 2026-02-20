@@ -48,7 +48,7 @@ export function SubNav() {
 
   return (
     <nav className="bg-gray-100 py-1.5 md:py-2 overflow-x-auto shadow-sm scrollbar-hide sticky top-[52px] md:top-[56px] z-40 border-b border-gray-200">
-      <ul className="max-w-content mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-start md:justify-center gap-1 sm:gap-2 md:gap-4 min-w-max">
+      <ul className="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-start lg:justify-center gap-1 sm:gap-2 md:gap-4 whitespace-nowrap">
         {navItems.map((item) => (
           <li key={item.label}>
             <a
