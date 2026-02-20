@@ -38,7 +38,7 @@ export function PriceBadge({
         <div
           className="absolute left-[-15px] top-1/2 -translate-y-1/2 z-10 whitespace-nowrap"
           style={{
-            backgroundColor: "#f05a5a",
+            backgroundColor: "#00c0d5",
             color: "white",
             padding: "10px 20px",
             fontSize: "24px",
@@ -51,8 +51,8 @@ export function PriceBadge({
         <div
           className="w-full h-full rounded-full flex flex-col items-center justify-center text-white box-border"
           style={{
-            backgroundColor: "#363678",
-            border: "14px solid #ff8a7a",
+            backgroundColor: "#182b56",
+            border: "14px solid #e9b25a",
             outline: "8px solid white",
             outlineOffset: "-22px",
           }}
