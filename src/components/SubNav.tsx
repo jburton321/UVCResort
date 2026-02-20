@@ -47,14 +47,14 @@ export function SubNav() {
   };
 
   return (
-    <nav className="bg-white py-2 md:py-3 px-2 sm:px-3 md:px-4 overflow-x-auto shadow-sm scrollbar-hide sticky top-[52px] md:top-[56px] z-40">
-      <ul className="flex items-center justify-start md:justify-center gap-1 sm:gap-3 md:gap-5 min-w-max">
+    <nav className="bg-gray-100 py-1.5 md:py-2 px-2 sm:px-3 md:px-4 overflow-x-auto shadow-sm scrollbar-hide sticky top-[52px] md:top-[56px] z-40 border-b border-gray-200">
+      <ul className="flex items-center justify-start md:justify-center gap-1 sm:gap-2 md:gap-4 min-w-max">
         {navItems.map((item) => (
           <li key={item.label}>
             <a
               href={item.href}
               onClick={(e) => handleClick(e, item.href)}
-              className={`text-fluid-xs md:text-fluid-sm font-normal uppercase tracking-wide transition-colors py-2 px-1.5 sm:px-2 flex items-center min-h-touch touch-manipulation whitespace-nowrap ${
+              className={`text-[11px] md:text-xs font-normal uppercase tracking-wide transition-colors py-1.5 px-1.5 sm:px-2 flex items-center min-h-[36px] touch-manipulation whitespace-nowrap ${
                 activeSection === item.href.slice(1)
                   ? 'text-primary font-semibold'
                   : 'text-brand-700 hover:text-primary'
